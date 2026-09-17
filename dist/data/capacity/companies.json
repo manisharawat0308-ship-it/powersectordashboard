@@ -1,0 +1,46 @@
+{
+  "central_psu": [
+    { "name": "NTPC Ltd", "capacityMW": 72304, "generationBU": 362.5, "sourceBreakdown": { "coal": 58000, "gas": 4500, "solar": 7304, "wind": 2500 } },
+    { "name": "Nuclear Power Corp (NPCIL)", "capacityMW": 8180, "generationBU": 51.5, "sourceBreakdown": { "nuclear": 8180 } },
+    { "name": "DVC (Damodar Valley Corp)", "capacityMW": 7573, "generationBU": 34.2, "sourceBreakdown": { "coal": 6900, "large_hydro": 673 } },
+    { "name": "NHPC Ltd", "capacityMW": 7071, "generationBU": 26.8, "sourceBreakdown": { "large_hydro": 7071 } },
+    { "name": "NLC India Ltd", "capacityMW": 6621, "generationBU": 28.4, "sourceBreakdown": { "lignite": 4121, "solar": 2000, "wind": 500 } },
+    { "name": "SJVN Ltd", "capacityMW": 2415, "generationBU": 9.2, "sourceBreakdown": { "large_hydro": 1912, "solar": 403, "wind": 100 } },
+    { "name": "Satluj Jal Vidyut Nigam", "capacityMW": 2015, "generationBU": 7.8, "sourceBreakdown": { "large_hydro": 2015 } },
+    { "name": "THDC India Ltd", "capacityMW": 1587, "generationBU": 5.6, "sourceBreakdown": { "large_hydro": 1387, "wind": 200 } },
+    { "name": "NHDC Ltd", "capacityMW": 1520, "generationBU": 4.8, "sourceBreakdown": { "large_hydro": 1520 } },
+    { "name": "IREDA (Solar Parks)", "capacityMW": 980, "generationBU": 1.6, "sourceBreakdown": { "solar": 980 } }
+  ],
+  "state_psu": [
+    { "name": "MAHAGENCO (Maharashtra)", "capacityMW": 13602, "generationBU": 58.4, "sourceBreakdown": { "coal": 9402, "gas": 1200, "large_hydro": 2600, "solar": 400 } },
+    { "name": "GSECL (Gujarat)", "capacityMW": 7856, "generationBU": 32.6, "sourceBreakdown": { "coal": 4500, "gas": 1200, "lignite": 500, "solar": 1356, "wind": 300 } },
+    { "name": "TANGEDCO (Tamil Nadu)", "capacityMW": 7689, "generationBU": 28.9, "sourceBreakdown": { "coal": 4200, "gas": 700, "wind": 1589, "solar": 1200 } },
+    { "name": "KPCL (Karnataka)", "capacityMW": 7250, "generationBU": 24.5, "sourceBreakdown": { "large_hydro": 3800, "solar": 1600, "wind": 1050, "coal": 800 } },
+    { "name": "RVUNL (Rajasthan)", "capacityMW": 6150, "generationBU": 26.8, "sourceBreakdown": { "coal": 3800, "gas": 700, "large_hydro": 750, "solar": 900 } },
+    { "name": "APGENCO (Andhra Pradesh)", "capacityMW": 5585, "generationBU": 22.1, "sourceBreakdown": { "coal": 3100, "large_hydro": 1600, "gas": 500, "solar": 385 } },
+    { "name": "MPPGCL (Madhya Pradesh)", "capacityMW": 5420, "generationBU": 24.2, "sourceBreakdown": { "coal": 3620, "large_hydro": 1200, "solar": 600 } },
+    { "name": "WBPDCL (West Bengal)", "capacityMW": 5280, "generationBU": 26.4, "sourceBreakdown": { "coal": 5280 } },
+    { "name": "TSGENCO (Telangana)", "capacityMW": 4962, "generationBU": 21.8, "sourceBreakdown": { "coal": 3200, "large_hydro": 1200, "solar": 562 } },
+    { "name": "PSPCL (Punjab)", "capacityMW": 4862, "generationBU": 18.6, "sourceBreakdown": { "coal": 3100, "large_hydro": 1200, "solar": 562 } },
+    { "name": "UPRVUNL (Uttar Pradesh)", "capacityMW": 4620, "generationBU": 22.5, "sourceBreakdown": { "coal": 4120, "gas": 500 } },
+    { "name": "CSPDCL (Chhattisgarh)", "capacityMW": 3800, "generationBU": 18.2, "sourceBreakdown": { "coal": 3200, "solar": 600 } },
+    { "name": "HPGCL (Haryana)", "capacityMW": 3450, "generationBU": 14.8, "sourceBreakdown": { "coal": 2600, "solar": 600, "biomass": 250 } }
+  ],
+  "private": [
+    { "name": "Adani Green Energy Ltd", "capacityMW": 20400, "generationBU": 32.4, "sourceBreakdown": { "solar": 14280, "wind": 6120 } },
+    { "name": "Adani Power Ltd", "capacityMW": 16848, "generationBU": 82.6, "sourceBreakdown": { "coal": 15450, "solar": 1398 } },
+    { "name": "Tata Power Co Ltd", "capacityMW": 14156, "generationBU": 52.8, "sourceBreakdown": { "coal": 4000, "solar": 5600, "wind": 2756, "large_hydro": 1800 } },
+    { "name": "ReNew Energy Global Plc", "capacityMW": 13400, "generationBU": 21.2, "sourceBreakdown": { "solar": 8040, "wind": 5360 } },
+    { "name": "Greenko Group", "capacityMW": 9200, "generationBU": 16.8, "sourceBreakdown": { "solar": 4200, "wind": 3500, "large_hydro": 1500 } },
+    { "name": "JSW Energy Ltd", "capacityMW": 7446, "generationBU": 32.4, "sourceBreakdown": { "coal": 3800, "large_hydro": 1200, "solar": 1446, "wind": 1000 } },
+    { "name": "Sembcorp Energy India", "capacityMW": 5570, "generationBU": 24.8, "sourceBreakdown": { "coal": 2640, "solar": 1800, "wind": 1130 } },
+    { "name": "Acme Solar Holdings", "capacityMW": 5100, "generationBU": 8.2, "sourceBreakdown": { "solar": 5100 } },
+    { "name": "Jindal Power Ltd", "capacityMW": 4200, "generationBU": 22.4, "sourceBreakdown": { "coal": 4200 } },
+    { "name": "Torrent Power Ltd", "capacityMW": 3879, "generationBU": 18.6, "sourceBreakdown": { "gas": 1800, "coal": 1000, "solar": 1079 } },
+    { "name": "Vedanta Ltd (Sterlite)", "capacityMW": 3819, "generationBU": 21.2, "sourceBreakdown": { "coal": 3819 } },
+    { "name": "Hero Future Energies", "capacityMW": 3600, "generationBU": 5.8, "sourceBreakdown": { "solar": 2200, "wind": 1400 } },
+    { "name": "Azure Power Global", "capacityMW": 3200, "generationBU": 5.1, "sourceBreakdown": { "solar": 3200 } },
+    { "name": "CESC Ltd (RP-Sanjiv Goenka)", "capacityMW": 3208, "generationBU": 16.4, "sourceBreakdown": { "coal": 3208 } },
+    { "name": "Mytrah Energy", "capacityMW": 2200, "generationBU": 3.8, "sourceBreakdown": { "wind": 1500, "solar": 700 } }
+  ]
+}

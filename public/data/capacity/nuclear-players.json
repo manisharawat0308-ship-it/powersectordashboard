@@ -1,0 +1,315 @@
+{
+  "lastUpdated": "2026-07-01",
+  "dataAsOf": "June 2026",
+  "dataSource": "NPCIL Annual Report 2024-25, BHAVINI disclosures, DAE Annual Report 2024-25, CEA installed capacity data",
+  "note": "Nuclear reactor technology and equipment data from NPCIL annual reports and press releases. Reactor supplier data from publicly available DAE/NPCIL disclosures. All capacity in MWe (electric).",
+
+  "reactorTechnology": {
+    "PHWR_220": {
+      "id": "PHWR_220",
+      "name": "Pressurised Heavy Water Reactor — 220 MWe",
+      "fullName": "PHWR-220",
+      "description": "India's indigenous reactor design based on Canadian CANDU. Uses natural uranium fuel and heavy water moderator/coolant. 220 MWe class — 19 units operating.",
+      "fuelType": "Natural Uranium (UO₂)",
+      "coolantModerator": "Heavy Water (D₂O)",
+      "thermalEfficiency": "~29%",
+      "designLifeYears": 40,
+      "turbineGenerator": "BHEL (steam turbine + generator)",
+      "reactorVesselOEM": "BHEL / NPCIL in-house",
+      "steamGeneratorOEM": "BHEL / L&T",
+      "heavyWaterSupplier": "Heavy Water Board (DAE)",
+      "fuelFabricator": "Nuclear Fuel Complex (NFC), Hyderabad",
+      "note": "Fully indigenous. BHEL supplies turbine island; reactor island by NPCIL/BHEL jointly."
+    },
+    "PHWR_700": {
+      "id": "PHWR_700",
+      "name": "Pressurised Heavy Water Reactor — 700 MWe",
+      "fullName": "PHWR-700",
+      "description": "Upscaled indigenous PHWR. First two units at Kakrapar (KAPS-3&4, Gujarat) — commissioned 2023–24. Ten more units approved under fleet mode.",
+      "fuelType": "Natural Uranium (UO₂)",
+      "coolantModerator": "Heavy Water (D₂O)",
+      "thermalEfficiency": "~31%",
+      "designLifeYears": 60,
+      "turbineGenerator": "BHEL (steam turbine 700 MWe, 3000 rpm)",
+      "reactorVesselOEM": "L&T Heavy Engineering, Hazira",
+      "steamGeneratorOEM": "Godrej & Boyce, Mumbai",
+      "pressuriserOEM": "L&T / BHEL",
+      "heavyWaterSupplier": "Heavy Water Board (DAE)",
+      "fuelFabricator": "Nuclear Fuel Complex (NFC), Hyderabad",
+      "note": "Major domestic content. L&T Hazira fabricated reactor assemblies. BHEL 700 MWe turbine generator is largest nuclear TG in India."
+    },
+    "VVER_1000": {
+      "id": "VVER_1000",
+      "name": "Water-Water Energetic Reactor — 1000 MWe (Russian PWR)",
+      "fullName": "VVER-1000 (AES-92)",
+      "description": "Russian PWR design by Rosatom/ATOMSTROYEXPORT. Two units at Kudankulam (KKNPP-1&2) operating. Two more (KKNPP-3&4) under construction.",
+      "fuelType": "Low-Enriched Uranium (LEU) — imported from Russia (TVEL)",
+      "coolantModerator": "Light Water (H₂O)",
+      "thermalEfficiency": "~33%",
+      "designLifeYears": 60,
+      "reactorSupplier": "Rosatom / Atomstroyexport (Russia)",
+      "turbineGenerator": "AtomEnergomash (Russia) — 1000 MWe steam turbine",
+      "reactorVesselOEM": "OMZ Izhora (Russia)",
+      "steamGeneratorOEM": "OMZ Izhora (Russia)",
+      "turbineIslandAssembly": "BHEL (local assembly, Russian components)",
+      "fuelSupplier": "TVEL (Russia) — LEU fuel assemblies",
+      "civilConstruction": "L&T, HCC, Tata Projects (Indian)",
+      "note": "Reactor island fully Russian. Turbine island assembled by BHEL from Russian components. Fuel supply dependent on Russia (strategic vulnerability)."
+    },
+    "FBR_500": {
+      "id": "FBR_500",
+      "name": "Prototype Fast Breeder Reactor — 500 MWe",
+      "fullName": "PFBR (Sodium-cooled FBR)",
+      "description": "India's indigenous fast breeder reactor. Sodium-cooled. Breeds plutonium from thorium/uranium blanket. Stage 2 of India's 3-stage nuclear programme. At Kalpakkam.",
+      "fuelType": "Mixed Oxide (MOX) — Plutonium + Uranium",
+      "coolantModerator": "Liquid Sodium (Na)",
+      "thermalEfficiency": "~40%",
+      "designLifeYears": 40,
+      "reactorSupplier": "BHAVINI (Bharatiya Nabhikiya Vidyut Nigam Ltd) — India",
+      "turbineGenerator": "BHEL (500 MWe steam turbine)",
+      "reactorVesselOEM": "BHEL / Mishra Dhatu Nigam (MIDHANI)",
+      "steamGeneratorOEM": "BHEL",
+      "sodiumPumpsOEM": "BHEL",
+      "fuelFabricator": "BARC / IGCAR (DAE)",
+      "note": "Fully indigenous design by IGCAR (Indira Gandhi Centre for Atomic Research). Commissioned 2026. Key milestone for Stage 2 of India's nuclear programme."
+    }
+  },
+
+  "operators": [
+    {
+      "rank": 1,
+      "name": "Nuclear Power Corporation of India Ltd (NPCIL)",
+      "shortName": "NPCIL",
+      "ownership": "central_psu",
+      "listed": "Unlisted (100% GoI)",
+      "totalOperatingMW": 7680,
+      "totalUCMW": 4200,
+      "headquarters": "Mumbai",
+      "employees": 12000,
+      "source": "NPCIL Annual Report 2024-25; DAE Annual Report 2024-25",
+      "notes": "India's sole nuclear power utility (~95% of nuclear capacity). Operates all PHWRs and Kudankulam VVER units. Regulated by Atomic Energy Regulatory Board (AERB).",
+      "financials": {
+        "revenueINRCr": 18240,
+        "netProfitINRCr": 4820,
+        "fy": "2024-25"
+      },
+      "plants": [
+        {
+          "plantId": "TAPS",
+          "plantName": "Tarapur Atomic Power Station",
+          "state": "MH",
+          "totalCapacityMW": 1400,
+          "unitConfig": "2×160 MW (BWR) + 2×540 MW (PHWR)",
+          "units": [
+            {
+              "unit": "TAPS-1",
+              "capacityMW": 160,
+              "reactorType": "BWR",
+              "reactorSupplier": "GE (USA) — 1960s design",
+              "turbineOEM": "GE (USA)",
+              "commissioningYear": 1969,
+              "status": "operating",
+              "note": "India's first nuclear reactor. Oldest operating nuclear unit. Original design life extended. Fuel supplied by USA under 123 Agreement."
+            },
+            {
+              "unit": "TAPS-2",
+              "capacityMW": 160,
+              "reactorType": "BWR",
+              "reactorSupplier": "GE (USA)",
+              "turbineOEM": "GE (USA)",
+              "commissioningYear": 1969,
+              "status": "operating",
+              "note": "Twin of TAPS-1. BWR technology — only two BWRs in India."
+            },
+            {
+              "unit": "TAPS-3",
+              "capacityMW": 540,
+              "reactorType": "PHWR-540",
+              "reactorSupplier": "NPCIL (indigenous, upscaled from PHWR-220)",
+              "turbineOEM": "BHEL",
+              "commissioningYear": 2006,
+              "status": "operating",
+              "note": "Upscaled PHWR — 540 MWe class. Fully indigenous."
+            },
+            {
+              "unit": "TAPS-4",
+              "capacityMW": 540,
+              "reactorType": "PHWR-540",
+              "reactorSupplier": "NPCIL (indigenous)",
+              "turbineOEM": "BHEL",
+              "commissioningYear": 2005,
+              "status": "operating"
+            }
+          ],
+          "generationFY25BU": 9.8,
+          "cuf": 80.0,
+          "totalUnitCount": 4,
+          "operatingSince": 1969
+        },
+        {
+          "plantId": "RAPS",
+          "plantName": "Rajasthan Atomic Power Station",
+          "state": "RJ",
+          "totalCapacityMW": 1180,
+          "unitConfig": "1×200 MW + 5×220 MW (PHWR)",
+          "units": [
+            { "unit": "RAPS-1", "capacityMW": 100, "reactorType": "PHWR", "reactorSupplier": "AECL (Canada) — CANDU design", "turbineOEM": "BHEL", "commissioningYear": 1973, "status": "shutdown", "note": "Permanently shut down 2004. Original Canadian-designed CANDU." },
+            { "unit": "RAPS-2", "capacityMW": 200, "reactorType": "PHWR", "reactorSupplier": "AECL (Canada)/NPCIL", "turbineOEM": "BHEL", "commissioningYear": 1981, "status": "operating", "note": "Indo-Canadian collaboration. Indigenised after 1974 sanctions." },
+            { "unit": "RAPS-3", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 2000, "status": "operating" },
+            { "unit": "RAPS-4", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 2000, "status": "operating" },
+            { "unit": "RAPS-5", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 2010, "status": "operating" },
+            { "unit": "RAPS-6", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 2010, "status": "operating" }
+          ],
+          "generationFY25BU": 7.8,
+          "cuf": 82.3,
+          "totalUnitCount": 5,
+          "operatingSince": 1973
+        },
+        {
+          "plantId": "MAPS",
+          "plantName": "Madras Atomic Power Station",
+          "state": "TN",
+          "totalCapacityMW": 440,
+          "unitConfig": "2×220 MW (PHWR)",
+          "units": [
+            { "unit": "MAPS-1", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 1984, "status": "operating" },
+            { "unit": "MAPS-2", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 1986, "status": "operating", "note": "World record for continuous operation: 765 days in 2020-22." }
+          ],
+          "generationFY25BU": 3.4,
+          "cuf": 88.3,
+          "totalUnitCount": 2,
+          "operatingSince": 1984
+        },
+        {
+          "plantId": "NAPS",
+          "plantName": "Narora Atomic Power Station",
+          "state": "UP",
+          "totalCapacityMW": 440,
+          "unitConfig": "2×220 MW (PHWR)",
+          "units": [
+            { "unit": "NAPS-1", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 1991, "status": "operating", "note": "Turbine hall fire in 1993 — major incident. Safety upgrades implemented post-event." },
+            { "unit": "NAPS-2", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 1992, "status": "operating" }
+          ],
+          "generationFY25BU": 3.2,
+          "cuf": 83.2,
+          "totalUnitCount": 2,
+          "operatingSince": 1991
+        },
+        {
+          "plantId": "KAPS",
+          "plantName": "Kakrapar Atomic Power Station",
+          "state": "GJ",
+          "totalCapacityMW": 1840,
+          "unitConfig": "2×220 MW + 2×700 MW (PHWR)",
+          "units": [
+            { "unit": "KAPS-1", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 1993, "status": "operating", "note": "Heavy water leak incident in 1994 — safety regulations strengthened." },
+            { "unit": "KAPS-2", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 1995, "status": "operating" },
+            { "unit": "KAPS-3", "capacityMW": 700, "reactorType": "PHWR-700", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "reactorVesselOEM": "L&T Heavy Engineering", "steamGeneratorOEM": "Godrej & Boyce", "commissioningYear": 2023, "status": "operating", "note": "First PHWR-700 in India. L&T Hazira fabricated reactor vessel. BHEL 700 MWe turbine-generator." },
+            { "unit": "KAPS-4", "capacityMW": 700, "reactorType": "PHWR-700", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "reactorVesselOEM": "L&T Heavy Engineering", "steamGeneratorOEM": "Godrej & Boyce", "commissioningYear": 2024, "status": "operating", "note": "Second PHWR-700. Confirms indigenous manufacturing capability at scale." }
+          ],
+          "generationFY25BU": 12.4,
+          "cuf": 77.0,
+          "totalUnitCount": 4,
+          "operatingSince": 1993
+        },
+        {
+          "plantId": "KAIGA",
+          "plantName": "Kaiga Generating Station",
+          "state": "KA",
+          "totalCapacityMW": 880,
+          "unitConfig": "4×220 MW (PHWR)",
+          "units": [
+            { "unit": "KGS-1", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 2000, "status": "operating", "note": "World record: 962 days of continuous operation (2018–21) — longest by any nuclear reactor globally." },
+            { "unit": "KGS-2", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 2000, "status": "operating" },
+            { "unit": "KGS-3", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 2007, "status": "operating" },
+            { "unit": "KGS-4", "capacityMW": 220, "reactorType": "PHWR-220", "reactorSupplier": "NPCIL (indigenous)", "turbineOEM": "BHEL", "commissioningYear": 2011, "status": "operating", "note": "KGS-1 holds world record for consecutive operation days for a nuclear reactor." }
+          ],
+          "generationFY25BU": 7.0,
+          "cuf": 90.9,
+          "totalUnitCount": 4,
+          "operatingSince": 2000
+        },
+        {
+          "plantId": "KUDANKULAM",
+          "plantName": "Kudankulam Nuclear Power Plant",
+          "state": "TN",
+          "totalCapacityMW": 2000,
+          "unitConfig": "2×1000 MW (VVER) operating + 2×1000 MW under construction",
+          "units": [
+            { "unit": "KKNPP-1", "capacityMW": 1000, "reactorType": "VVER-1000 (AES-92)", "reactorSupplier": "Rosatom / Atomstroyexport (Russia)", "turbineOEM": "AtomEnergomash (Russia) — assembled by BHEL", "reactorVesselOEM": "OMZ Izhora (Russia)", "fuelSupplier": "TVEL (Russia)", "commissioningYear": 2013, "status": "operating", "note": "First Russian-designed reactor in India. Russia-India inter-governmental agreement. Fuel from Russia — creates supply dependency." },
+            { "unit": "KKNPP-2", "capacityMW": 1000, "reactorType": "VVER-1000 (AES-92)", "reactorSupplier": "Rosatom / Atomstroyexport (Russia)", "turbineOEM": "AtomEnergomash (Russia) — assembled by BHEL", "reactorVesselOEM": "OMZ Izhora (Russia)", "fuelSupplier": "TVEL (Russia)", "commissioningYear": 2016, "status": "operating" },
+            { "unit": "KKNPP-3", "capacityMW": 1000, "reactorType": "VVER-1000 (AES-92)", "reactorSupplier": "Rosatom (Russia)", "turbineOEM": "AtomEnergomash (Russia)", "commissioningYear": null, "status": "under_construction", "expectedYear": 2027 },
+            { "unit": "KKNPP-4", "capacityMW": 1000, "reactorType": "VVER-1000 (AES-92)", "reactorSupplier": "Rosatom (Russia)", "turbineOEM": "AtomEnergomash (Russia)", "commissioningYear": null, "status": "under_construction", "expectedYear": 2027 }
+          ],
+          "generationFY25BU": 13.5,
+          "cuf": 77.3,
+          "totalUnitCount": 4,
+          "operatingSince": 2013
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "BHAVINI (Bharatiya Nabhikiya Vidyut Nigam Ltd)",
+      "shortName": "BHAVINI",
+      "ownership": "central_psu",
+      "listed": "Unlisted (100% GoI, under DAE)",
+      "totalOperatingMW": 500,
+      "totalUCMW": 0,
+      "headquarters": "Kalpakkam, Tamil Nadu",
+      "source": "BHAVINI Annual Report 2024-25; DAE press releases",
+      "notes": "Operates Prototype Fast Breeder Reactor (PFBR) — central to India's Stage 2 nuclear programme. Uses plutonium from PHWR spent fuel.",
+      "financials": null,
+      "plants": [
+        {
+          "plantId": "PFBR",
+          "plantName": "Prototype Fast Breeder Reactor",
+          "state": "TN",
+          "totalCapacityMW": 500,
+          "unitConfig": "1×500 MW (Sodium-cooled FBR)",
+          "units": [
+            {
+              "unit": "PFBR-1",
+              "capacityMW": 500,
+              "reactorType": "Fast Breeder Reactor (Sodium-cooled)",
+              "reactorSupplier": "BHAVINI / IGCAR (100% indigenous design)",
+              "turbineOEM": "BHEL (500 MWe steam turbine)",
+              "reactorVesselOEM": "BHEL / MIDHANI",
+              "sodiumPumpsOEM": "BHEL",
+              "steamGeneratorOEM": "BHEL",
+              "fuelFabricator": "IGCAR/BARC (MOX fuel)",
+              "commissioningYear": 2026,
+              "status": "operating",
+              "note": "Sodium loading completed 2024. Criticality achieved 2025. Commercial power generation from 2026. World's second operating FBR after Russia's BN-800. Breeds more fuel than it consumes."
+            }
+          ],
+          "generationFY25BU": 0.8,
+          "cuf": null,
+          "totalUnitCount": 1,
+          "operatingSince": 2026
+        }
+      ]
+    }
+  ],
+
+  "upstreamSupplyChain": {
+    "uraniumMining": [
+      { "entity": "Uranium Corporation of India Ltd (UCIL)", "ownership": "central_psu", "location": "Jaduguda, Jharkhand", "note": "India's only uranium miner. Also mines at Tummalapalle (AP) and Mohuldih (JH). Domestic supply covers ~35% of requirements." }
+    ],
+    "fuelFabrication": [
+      { "entity": "Nuclear Fuel Complex (NFC)", "ownership": "central_psu", "location": "Hyderabad", "note": "Fabricates UO₂ fuel bundles for all PHWR reactors. Zirconium alloy cladding tubes also made here." }
+    ],
+    "heavyWater": [
+      { "entity": "Heavy Water Board (HWB)", "ownership": "central_psu", "locations": "Kota (RJ), Baroda (GJ), Manuguru (TS), Tuticorin (TN), Talcher (OD)", "note": "Produces heavy water (D₂O) — PHWR moderator and coolant. India is self-sufficient in heavy water." }
+    ],
+    "reactorComponents": [
+      { "entity": "L&T Heavy Engineering", "ownership": "private", "location": "Hazira, Surat", "note": "Fabricates reactor vessels, calandria, end shields for PHWR-700. Critical nuclear pressure vessel manufacturer." },
+      { "entity": "Godrej & Boyce", "ownership": "private", "location": "Mumbai", "note": "Steam generators for PHWR-700 units. Precision nuclear-grade manufacturing." },
+      { "entity": "MIDHANI (Mishra Dhatu Nigam)", "ownership": "central_psu", "location": "Hyderabad", "note": "Special alloys (zirconium, titanium, stainless steel) for reactor internals and PFBR vessel." },
+      { "entity": "WALCHANDNAGAR INDUSTRIES", "ownership": "private", "location": "Walchandnagar, MH", "note": "Reactor components, pressure vessels for PHWR fleet." }
+    ],
+    "turbineIsland": [
+      { "entity": "BHEL (Power Sector)", "ownership": "central_psu", "location": "Haridwar (turbines), Bhopal (generators)", "note": "Supplies steam turbines (220–800 MWe), generators and transformers for all domestic nuclear plants. Critical single-source dependency." }
+    ]
+  }
+}

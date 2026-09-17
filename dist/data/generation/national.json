@@ -1,0 +1,84 @@
+{
+  "lastUpdated": "2026-06-30",
+  "dataAsOf": "FY 2024-25 (Apr 2024 – Mar 2025)",
+  "dataSource": "Central Electricity Authority (cea.nic.in)",
+  "defaultPeriod": {
+    "year": 2025,
+    "type": "financial_year"
+  },
+  "totalGenerationBU": 1771.7,
+  "bySource": [
+    {
+      "source": "coal",
+      "category": "fossil",
+      "generationBU": 1189.7,
+      "percentageOfTotal": 67.2
+    },
+    {
+      "source": "lignite",
+      "category": "fossil",
+      "generationBU": 34.5,
+      "percentageOfTotal": 1.9
+    },
+    {
+      "source": "gas",
+      "category": "fossil",
+      "generationBU": 49.7,
+      "percentageOfTotal": 2.8
+    },
+    {
+      "source": "diesel",
+      "category": "fossil",
+      "generationBU": 0.1,
+      "percentageOfTotal": 0
+    },
+    {
+      "source": "solar",
+      "category": "non_fossil",
+      "generationBU": 140.4,
+      "percentageOfTotal": 7.9
+    },
+    {
+      "source": "wind",
+      "category": "non_fossil",
+      "generationBU": 87.9,
+      "percentageOfTotal": 5
+    },
+    {
+      "source": "small_hydro",
+      "category": "non_fossil",
+      "generationBU": 12.7,
+      "percentageOfTotal": 0.7
+    },
+    {
+      "source": "large_hydro",
+      "category": "non_fossil",
+      "generationBU": 158.3,
+      "percentageOfTotal": 8.9
+    },
+    {
+      "source": "biomass",
+      "category": "non_fossil",
+      "generationBU": 42.1,
+      "percentageOfTotal": 2.4
+    },
+    {
+      "source": "nuclear",
+      "category": "non_fossil",
+      "generationBU": 56.3,
+      "percentageOfTotal": 3.2
+    }
+  ],
+  "byCategory": [
+    {
+      "category": "fossil",
+      "generationBU": 1274,
+      "percentageOfTotal": 71.9
+    },
+    {
+      "category": "non_fossil",
+      "generationBU": 497.7,
+      "percentageOfTotal": 28.1
+    }
+  ]
+}

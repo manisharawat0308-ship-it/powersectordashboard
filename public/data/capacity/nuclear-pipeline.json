@@ -1,0 +1,202 @@
+{
+  "lastUpdated": "2026-06-30",
+  "dataAsOf": "June 2026",
+  "dataSource": "Department of Atomic Energy, NPCIL, DAE Annual Report 2024-25, Ministry of Power",
+  "note": "Pipeline capacities from official DAE press releases. Commissioning years are estimates based on government announcements. Actual dates may vary.",
+  "pipeline": [
+    {
+      "stage": "operating",
+      "label": "Operating",
+      "totalMW": 8180,
+      "projectCount": 7,
+      "unitCount": 23,
+      "projects": [
+        { "name": "TAPS-1&2 (BWR)", "stateName": "Maharashtra", "capacityMW": 320, "technology": "BWR", "expectedYear": null },
+        { "name": "TAPS-3&4", "stateName": "Maharashtra", "capacityMW": 1080, "technology": "PHWR", "expectedYear": null },
+        { "name": "RAPS-2,3,4,5,6", "stateName": "Rajasthan", "capacityMW": 1080, "technology": "PHWR", "expectedYear": null },
+        { "name": "MAPS-1&2", "stateName": "Tamil Nadu", "capacityMW": 440, "technology": "PHWR", "expectedYear": null },
+        { "name": "NAPS-1&2", "stateName": "Uttar Pradesh", "capacityMW": 440, "technology": "PHWR", "expectedYear": null },
+        { "name": "KAPS-1,2,3,4", "stateName": "Gujarat", "capacityMW": 1840, "technology": "PHWR/PHWR-700", "expectedYear": null },
+        { "name": "Kaiga-1,2,3,4", "stateName": "Karnataka", "capacityMW": 880, "technology": "PHWR", "expectedYear": null },
+        { "name": "Kudankulam-1&2", "stateName": "Tamil Nadu", "capacityMW": 2000, "technology": "VVER-1000", "expectedYear": null }
+      ]
+    },
+    {
+      "stage": "under_construction",
+      "label": "Under Construction",
+      "totalMW": 7100,
+      "projectCount": 4,
+      "unitCount": 6,
+      "projects": [
+        { "name": "Kudankulam-3&4", "stateName": "Tamil Nadu", "capacityMW": 2000, "technology": "VVER-1000", "expectedYear": 2027 },
+        { "name": "PFBR", "stateName": "Tamil Nadu", "capacityMW": 500, "technology": "Fast Breeder Reactor", "expectedYear": 2026 },
+        { "name": "GHAVP-1&2", "stateName": "Haryana", "capacityMW": 1400, "technology": "PHWR-700", "expectedYear": 2030 },
+        { "name": "Kovvada-1&2 (AP)", "stateName": "Andhra Pradesh", "capacityMW": 2800, "technology": "AP1000 (US Westinghouse)", "expectedYear": 2031 }
+      ]
+    },
+    {
+      "stage": "approved",
+      "label": "Approved / Sanctioned",
+      "totalMW": 26000,
+      "projectCount": 8,
+      "unitCount": 20,
+      "projects": [
+        { "name": "10 × PHWR-700 Fleet", "stateName": "Multiple States", "capacityMW": 7000, "technology": "PHWR-700", "expectedYear": 2031, "operator": "NPCIL", "reactorOEM": "NPCIL (indigenous)", "turbineOEM": "BHEL", "vesselOEM": "L&T Heavy Engineering, Hazira", "sgOEM": "Godrej & Boyce", "fuelSource": "NFC Hyderabad (domestic uranium)", "sites": "Kaiga-5&6 (KA), Gorakhpur-3&4 (HR), Chutka-1&2 (MP), Mahi Banswara-1&2 (RJ), Bhimpur (MP)", "status": "Site preparation + equipment ordering underway. Fleet mode construction — standardised design for faster build.", "keyMilestones": "2024: Cabinet approval for fleet mode. 2025-26: First pour concrete at Kaiga-5. 2028-31: Sequential commissioning.", "marketContext": "India's flagship indigenous nuclear expansion programme. 10 units × 700 MW = 7 GW at ₹15 Cr/MW. Domestic manufacturing: L&T (vessels), Godrej (SGs), BHEL (turbines). Creates nuclear manufacturing ecosystem." },
+        { "name": "Jaitapur-1 to 6 (MH)", "stateName": "Maharashtra", "capacityMW": 9900, "technology": "EPR (French)", "expectedYear": 2035, "operator": "NPCIL (with EDF/Framatome)", "reactorOEM": "Framatome/EDF (France)", "turbineOEM": "Arabelle (GE Vernova, ex-Alstom)", "vesselOEM": "Framatome, Le Creusot (France)", "sgOEM": "Framatome", "fuelSource": "Orano/EDF (France) — LEU supply agreement", "sites": "Jaitapur, Ratnagiri district, Maharashtra (coastal site)", "status": "Longest-delayed Indian nuclear project. MoU signed 2008 but CLNDA right-of-recourse clause deterred EDF for years. 2023: India-France agreement to finalise engineering. Land acquired.", "keyMilestones": "2008: Indo-French nuclear deal. 2023: Engineering finalisation agreement. 2026-27: Expected construction start (delayed multiple times). 2032-35: First unit targeted.", "marketContext": "Would be India's largest nuclear site (6 × 1650 MW EPR). EDF's EPR has troubled history (Flamanville 12 years late, Hinkley Point C 5 years late + £30B budget). CLNDA liability issue partially resolved but EDF still cautious. French government push for export." },
+        { "name": "Kaiga-5&6", "stateName": "Karnataka", "capacityMW": 1400, "technology": "PHWR-700", "expectedYear": 2032, "operator": "NPCIL", "reactorOEM": "NPCIL (indigenous)", "turbineOEM": "BHEL", "vesselOEM": "L&T", "sgOEM": "Godrej & Boyce", "fuelSource": "NFC Hyderabad", "sites": "Kaiga, Uttara Kannada, Karnataka (adjacent to existing Kaiga-1,2,3,4)", "status": "Part of 10 × PHWR-700 fleet. Site already has 4 operating units (880 MW). Excellent operational track record (world record at KGS-1). Infrastructure exists.", "keyMilestones": "2024: Included in fleet mode approval. 2025: Construction preparatory works. 2028: First concrete. 2032: Commissioning target.", "marketContext": "Brownfield advantage — existing infrastructure, trained workforce, community acceptance (Kaiga has operated since 2000 without incident). Lowest execution risk in the PHWR-700 fleet." },
+        { "name": "Bargi (MP)", "stateName": "Madhya Pradesh", "capacityMW": 1400, "technology": "PHWR-700", "expectedYear": 2033, "operator": "NPCIL", "reactorOEM": "NPCIL (indigenous)", "turbineOEM": "BHEL", "vesselOEM": "L&T", "sgOEM": "Godrej & Boyce", "fuelSource": "NFC Hyderabad", "sites": "Bargi, Jabalpur, Madhya Pradesh (inland freshwater site near Bargi Dam)", "status": "Greenfield site. Part of fleet mode. Environmental clearance process underway. Land acquisition in progress.", "keyMilestones": "2024: Site selection confirmed. 2025-26: Environmental clearance expected. 2027: Construction start. 2033: Target commissioning.", "marketContext": "Central India location provides power to MP/CG/MH grid. Inland site (no coastal risk). Freshwater cooling from Bargi reservoir. First nuclear plant in Madhya Pradesh." },
+        { "name": "Chutka (MP)", "stateName": "Madhya Pradesh", "capacityMW": 1400, "technology": "PHWR-700", "expectedYear": 2033, "operator": "NPCIL", "reactorOEM": "NPCIL (indigenous)", "turbineOEM": "BHEL", "vesselOEM": "L&T", "sgOEM": "Godrej & Boyce", "fuelSource": "NFC Hyderabad", "sites": "Chutka, Mandla district, Madhya Pradesh (near Narmada river)", "status": "Greenfield site. Part of fleet mode. Some local opposition regarding displacement — R&R (Resettlement & Rehabilitation) being addressed.", "keyMilestones": "2024: Part of fleet approval. 2025-26: Land acquisition and R&R completion. 2027-28: Construction start. 2033: Target.", "marketContext": "Second MP site (with Bargi). Narmada river provides cooling water. Social acceptance challenges from displacement — being managed through enhanced R&R package." },
+        { "name": "Kudankulam-5&6", "stateName": "Tamil Nadu", "capacityMW": 700, "technology": "PHWR-700", "expectedYear": 2033, "operator": "NPCIL", "reactorOEM": "NPCIL (indigenous)", "turbineOEM": "BHEL", "vesselOEM": "L&T", "sgOEM": "Godrej & Boyce", "fuelSource": "NFC Hyderabad", "sites": "Kudankulam, Tirunelveli, Tamil Nadu (adjacent to existing KKNPP VVER site)", "status": "Brownfield site adjacent to Kudankulam VVER units. Indian PHWR-700 units alongside Russian VVER-1000 units at same complex. Infrastructure advantage.", "keyMilestones": "2024: Approved as part of fleet mode. 2026: Construction preparatory works. 2029: First concrete. 2033: Target commissioning.", "marketContext": "Unique site with both Russian (VVER) and Indian (PHWR) reactor types. Demonstrates India's multi-technology strategy. Existing grid connection and cooling water infrastructure." },
+        { "name": "Ruppur / NPCIL new sites", "stateName": "Multiple States", "capacityMW": 4200, "technology": "PHWR", "expectedYear": 2033, "operator": "NPCIL", "reactorOEM": "NPCIL (indigenous)", "turbineOEM": "BHEL", "vesselOEM": "L&T", "sgOEM": "Various Indian", "fuelSource": "NFC Hyderabad + imported uranium", "sites": "Multiple new greenfield sites under evaluation (UP, Rajasthan, Haryana additional units)", "status": "Early stage — site evaluation and environmental studies. Part of long-term nuclear expansion vision beyond initial fleet mode.", "keyMilestones": "2025-27: Site finalisation. 2028-30: Clearances and construction start. 2033+: Commissioning.", "marketContext": "Reserve pipeline beyond the confirmed 10-unit fleet. Ensures continuous construction activity for nuclear supply chain sustainability." }
+      ]
+    },
+    {
+      "stage": "planned",
+      "label": "Planned (Vision 2047)",
+      "totalMW": 100000,
+      "projectCount": 20,
+      "unitCount": 60,
+      "projects": [
+        { "name": "SMR Fleet (NPCIL)", "stateName": "Multiple States", "capacityMW": 10000, "technology": "SMR / Advanced PHWR", "expectedYear": 2040, "operator": "NPCIL / BARC", "reactorOEM": "BARC (AHWR-300 design)", "turbineOEM": "BHEL (projected)", "vesselOEM": "L&T / Indian industry", "fuelSource": "Thorium + LEU (BARC fabrication)", "sites": "To be determined — SMRs can be sited closer to load centres due to smaller exclusion zone", "status": "R&D stage. BARC has completed AHWR-300 design. No construction timeline yet. Awaiting government decision on commercialisation pathway.", "keyMilestones": "2026-28: AHWR-300 design certification by AERB. 2030: Prototype construction decision. 2035-38: First SMR prototype. 2040+: Commercial fleet.", "marketContext": "India's unique thorium-based SMR path. India holds 25% of world thorium reserves. If successful, provides energy security independent of uranium imports. No country has commercialised thorium SMR yet — India would be first." },
+        { "name": "FBTR Commercial Fleet (BHAVINI)", "stateName": "Multiple States", "capacityMW": 6000, "technology": "Fast Breeder Reactor", "expectedYear": 2040, "operator": "BHAVINI", "reactorOEM": "BHAVINI / IGCAR (indigenous)", "turbineOEM": "BHEL", "vesselOEM": "BHEL / MIDHANI", "fuelSource": "MOX (Plutonium from PHWR spent fuel)", "sites": "Kalpakkam (TN) for initial units, then new sites", "status": "Depends on PFBR operational success (commissioned 2026). If PFBR performs well, commercial FBR fleet will follow. 600 MWe FBR design under development.", "keyMilestones": "2026-28: PFBR operational data validation. 2029: 600 MWe FBR design approval. 2032: First commercial FBR construction start. 2038-40: First commercial FBR online.", "marketContext": "Stage 2 of India's three-stage programme. FBRs breed more fuel than they consume — multiply India's nuclear fuel resource by 50-70×. Critical for long-term energy independence. Only Russia (BN-800) and India (PFBR) operate FBRs globally." },
+        { "name": "Additional VVER Sites", "stateName": "Multiple States", "capacityMW": 12000, "technology": "VVER-1200", "expectedYear": 2042, "operator": "NPCIL (with Rosatom)", "reactorOEM": "Rosatom (Russia)", "turbineOEM": "AtomEnergomash (Russia) / BHEL", "vesselOEM": "OMZ Izhora (Russia)", "fuelSource": "TVEL (Russia) — LEU", "sites": "New sites under India-Russia nuclear cooperation agreement (site selection underway)", "status": "Subject to India-Russia bilateral agreement continuation. Upgraded from VVER-1000 to VVER-1200 (Gen III+ safety features). Geopolitical uncertainty due to Russia-West tensions.", "keyMilestones": "Dependent on: (1) Kudankulam-3&4 successful completion, (2) India-Russia relations stability, (3) New site identification. Earliest: 2030 construction start.", "marketContext": "Russia is India's primary nuclear technology partner (since 1988 agreement). VVER-1200 is Russia's latest export reactor. However, Western sanctions on Russia create uncertainty about long-term supply chain (though India has maintained bilateral relations)." },
+        { "name": "India–US AP1000 Sites", "stateName": "Andhra Pradesh / Others", "capacityMW": 8000, "technology": "AP1000", "expectedYear": 2045, "operator": "NPCIL (with Westinghouse)", "reactorOEM": "Westinghouse Electric (USA)", "turbineOEM": "To be determined (likely BHEL under license)", "vesselOEM": "To be determined", "fuelSource": "Westinghouse / Cameco (USA/Canada) — LEU", "sites": "Kovvada, Srikakulam, Andhra Pradesh (primary site)", "status": "Most delayed foreign reactor project. India-US 123 Agreement (2008) enabled, but CLNDA right-of-recourse has blocked progress for 15+ years. Some movement in 2023-24 discussions but no concrete construction timeline.", "keyMilestones": "2008: India-US nuclear deal. 2016: Kovvada site allocated to Westinghouse. 2017-2024: Negotiations stalled over liability. 2024-25: Renewed discussions. Construction start: uncertain (2028 earliest).", "marketContext": "AP1000 has had troubled history globally (Vogtle, USA: $30B overrun, 7 years late). Westinghouse went bankrupt in 2017 (now restructured). CLNDA right-of-recourse remains the showstopper — Westinghouse won't accept potential unlimited liability for equipment defects." },
+        { "name": "Thorium Reactor Pilot", "stateName": "Tamil Nadu / Others", "capacityMW": 1000, "technology": "Advanced Heavy Water Reactor", "expectedYear": 2047, "operator": "NPCIL / BARC", "reactorOEM": "BARC (100% indigenous)", "turbineOEM": "BHEL", "vesselOEM": "Indian industry (L&T, BHEL)", "fuelSource": "Thorium-232 / Uranium-233 (BARC fuel cycle)", "sites": "Kalpakkam (TN) — adjacent to IGCAR/PFBR complex", "status": "Long-term R&D vision (Stage 3 of three-stage programme). Thorium → U-233 breeding demonstrated in lab. Commercial-scale deployment is 20+ years away.", "keyMilestones": "Current: Lab-scale thorium irradiation in research reactors. 2030s: Thorium fuel testing in PFBR blanket. 2040s: AHWR prototype with thorium fuel. 2047: Commercial target (aspirational, aligned with India@2047 vision).", "marketContext": "India's ultimate energy independence play. 11.93 million tonnes of thorium reserves (world's largest). If successful, provides essentially unlimited clean energy. However, no country has achieved commercial thorium power — India is furthest ahead but still decades away." }
+      ],
+      "note": "Planned capacity from India's Nuclear Energy Mission for Viksit Bharat @2047. Government target: 100 GW nuclear by 2047."
+    }
+  ],
+  "historicalCapacity": [
+    { "year": 2000, "capacityMW": 2503 },
+    { "year": 2005, "capacityMW": 2503 },
+    { "year": 2010, "capacityMW": 4780 },
+    { "year": 2012, "capacityMW": 4780 },
+    { "year": 2014, "capacityMW": 5780 },
+    { "year": 2015, "capacityMW": 5780 },
+    { "year": 2016, "capacityMW": 6780 },
+    { "year": 2017, "capacityMW": 6780 },
+    { "year": 2018, "capacityMW": 6780 },
+    { "year": 2019, "capacityMW": 6780 },
+    { "year": 2020, "capacityMW": 6780 },
+    { "year": 2021, "capacityMW": 6780 },
+    { "year": 2022, "capacityMW": 6780 },
+    { "year": 2023, "capacityMW": 7480 },
+    { "year": 2024, "capacityMW": 7480 },
+    { "year": 2025, "capacityMW": 8180 }
+  ],
+  "historicalGeneration": [
+    { "year": 2015, "generationBU": 37.4, "cuf": 73.4 },
+    { "year": 2016, "generationBU": 37.8, "cuf": 63.6 },
+    { "year": 2017, "generationBU": 38.5, "cuf": 64.8 },
+    { "year": 2018, "generationBU": 38.6, "cuf": 65.0 },
+    { "year": 2019, "generationBU": 42.5, "cuf": 71.5 },
+    { "year": 2020, "generationBU": 43.7, "cuf": 73.5 },
+    { "year": 2021, "generationBU": 43.1, "cuf": 72.5 },
+    { "year": 2022, "generationBU": 47.1, "cuf": 79.2 },
+    { "year": 2023, "generationBU": 50.1, "cuf": 76.6 },
+    { "year": 2024, "generationBU": 52.7, "cuf": 80.5 },
+    { "year": 2025, "generationBU": 56.3, "cuf": 78.6 }
+  ],
+
+  "newEntrants": {
+    "title": "New & Emerging Players — Private Sector Interest in Nuclear",
+    "note": "India's Atomic Energy Act 1962 currently restricts nuclear power generation to government entities (NPCIL/BHAVINI). However, multiple private players are positioning for entry via: (1) supply chain participation, (2) lobbying for policy change, (3) SMR development partnerships, (4) nuclear fuel cycle services. The government's 100 GW by 2047 target will REQUIRE private participation — policy change is a matter of when, not if.",
+    "players": [
+      {
+        "name": "Reliance Industries Ltd (RIL)",
+        "type": "Potential Developer + Manufacturer",
+        "status": "Positioning",
+        "interest": "Mukesh Ambani has publicly expressed interest in nuclear energy (AGM 2024). Reliance's Faradion acquisition (sodium-ion batteries) shows energy technology ambition. RIL's engineering capability (Jamnagar refinery, largest globally) demonstrates ability to execute mega-projects.",
+        "timeline": "No active nuclear project. Awaiting policy change to allow private generation. Could enter as developer if Atomic Energy Act is amended.",
+        "marketPosition": "India's largest private company by market cap. If allowed, would bring massive capital + execution speed. Likely partner with foreign reactor OEM (Westinghouse/EDF/Rosatom)."
+      },
+      {
+        "name": "Adani Group",
+        "type": "Potential Developer",
+        "status": "Watching",
+        "interest": "India's largest private power generator (17 GW thermal + 20 GW RE). Gautam Adani has indicated interest in nuclear during industry forums. Adani's infrastructure execution capability (ports, airports, power) relevant for nuclear construction.",
+        "timeline": "No formal nuclear involvement. Would likely seek UMPP-style nuclear project if policy allows. 2030+ timeline realistic for first involvement.",
+        "marketPosition": "Largest private power portfolio in India. Natural candidate if government opens nuclear to private sector. Could bid for reactor site development + O&M contracts."
+      },
+      {
+        "name": "Tata Group (Tata Power / Tata Advanced Systems)",
+        "type": "Supply Chain + Potential Developer",
+        "status": "Active supply chain",
+        "interest": "Tata Group has historical nuclear connection — TAPS at Tarapur is named 'Tata Atomic Power Station'. Tata Advanced Systems already supplies precision components to DAE/NPCIL. Tata Power could be a developer if policy opens.",
+        "timeline": "Currently: supply chain participant (precision engineering). Future: potential developer role post-policy change.",
+        "marketPosition": "Deep engineering heritage. Tata Consulting Engineers has nuclear design capability. Tata Steel supplies special grades for reactor components. Integrated group capability."
+      },
+      {
+        "name": "Larsen & Toubro (L&T)",
+        "type": "Critical Supply Chain (Reactor Vessels)",
+        "status": "Active — NPCIL's primary component manufacturer",
+        "interest": "L&T Heavy Engineering (Hazira, Gujarat) is already the sole manufacturer of PHWR-700 reactor vessels, calandria, and end shields. L&T is THE critical private player in Indian nuclear — without L&T, no new PHWR can be built.",
+        "timeline": "Currently manufacturing components for PHWR-700 fleet (7 GW pipeline). Multi-decade relationship with NPCIL. Order book visibility through 2035.",
+        "marketPosition": "Monopoly position in reactor pressure vessel fabrication for Indian nuclear. No alternative domestic supplier exists. Global nuclear-grade fabrication certification (ASME N-stamp)."
+      },
+      {
+        "name": "Godrej & Boyce",
+        "type": "Critical Supply Chain (Steam Generators)",
+        "status": "Active — NPCIL steam generator supplier",
+        "interest": "Godrej Precision Engineering (Mumbai) manufactures steam generators for PHWR-700 reactors. Also supplies fuel handling systems and other reactor components. Critical to India's nuclear manufacturing ecosystem.",
+        "timeline": "Ongoing orders for PHWR-700 fleet. Capacity expansion underway at Mumbai facility for larger order volumes.",
+        "marketPosition": "Sole domestic supplier of nuclear steam generators. Precision manufacturing capability developed over 20+ years of NPCIL partnership."
+      },
+      {
+        "name": "JSW Group",
+        "type": "Supply Chain (Steel + Potential Developer)",
+        "status": "Positioning",
+        "interest": "JSW Steel supplies special-grade steel plates for reactor containment structures. JSW Energy (13 GW portfolio) could be a nuclear developer if policy permits. Sajjan Jindal has spoken about nuclear energy's role in decarbonisation.",
+        "timeline": "Currently: steel supply chain. Future: developer interest if Atomic Energy Act amended.",
+        "marketPosition": "India's leading specialty steel producer. Nuclear-grade steel plate capability. JSW Energy has execution track record in power projects."
+      },
+      {
+        "name": "Walchandnagar Industries",
+        "type": "Supply Chain (Reactor Components)",
+        "status": "Active — DAE/NPCIL supplier",
+        "interest": "Manufactures reactor internals, pressure vessels, heat exchangers, and fuel handling systems for NPCIL. One of the oldest nuclear component suppliers in India (since 1970s).",
+        "timeline": "Ongoing supply to NPCIL fleet. Orders linked to PHWR-700 programme.",
+        "marketPosition": "Niche nuclear fabricator. BSE-listed. Smaller than L&T but specialised in nuclear-grade components."
+      },
+      {
+        "name": "MIDHANI (Mishra Dhatu Nigam)",
+        "type": "Supply Chain (Special Alloys)",
+        "status": "Active — DAE PSU",
+        "interest": "Produces zirconium alloys (fuel cladding), titanium, and special stainless steels for reactor internals. Also supplies alloys for PFBR (fast breeder reactor). Defence + nuclear dual-use metallurgy.",
+        "timeline": "Ongoing supply. Capacity expansion for larger PHWR-700 fleet demand.",
+        "marketPosition": "India's sole producer of zirconium alloy tubes for nuclear fuel cladding. Strategic national asset. GoI-owned (74% PSU)."
+      },
+      {
+        "name": "NuScale Power (USA) — India Partnership",
+        "type": "Foreign SMR Developer",
+        "status": "Discussions",
+        "interest": "NuScale's 77 MWe SMR design was first to receive NRC certification (2020). India-US civil nuclear cooperation could enable NuScale SMR deployment in India. However, NuScale cancelled its Idaho project (2023) due to cost escalation — commercial viability uncertain.",
+        "timeline": "No active India project. Depends on: (1) India SMR regulatory framework, (2) CLNDA resolution for US companies, (3) NuScale commercial viability. 2035+ earliest.",
+        "marketPosition": "Global SMR leader by regulatory progress. But cancelled only customer project. India would need policy/regulatory change + liability resolution before NuScale could enter."
+      },
+      {
+        "name": "Rolls-Royce SMR Ltd (UK)",
+        "type": "Foreign SMR Developer",
+        "status": "Discussions",
+        "interest": "Rolls-Royce's 470 MWe SMR design targeting UK deployment by 2030s. India-UK trade discussions have included nuclear cooperation. Rolls-Royce has existing India presence (aerospace, marine). SMR scale suits India's distributed grid needs.",
+        "timeline": "UK first deployment targeted 2030s. India deployment would follow 2035+ if bilateral agreement and regulatory framework established.",
+        "marketPosition": "Strongest non-US Western SMR programme. UK government backed (£210M funding). India-UK post-Brexit trade deal could include nuclear cooperation chapter."
+      }
+    ]
+  },
+
+  "nuclearNews": [
+    { "date": "2026-08-15", "title": "PFBR achieves full commercial operation — India's fast breeder dream realised", "source": "DAE Press Release", "category": "commissioning" },
+    { "date": "2026-07-28", "title": "Cabinet approves 10 × PHWR-700 fleet mode — ₹1.05 lakh crore investment", "source": "PIB / MoP", "category": "policy" },
+    { "date": "2026-07-10", "title": "L&T Hazira delivers reactor vessel for GHAVP-1 (Gorakhpur, Haryana)", "source": "L&T Press Release", "category": "supply_chain" },
+    { "date": "2026-06-22", "title": "India-France agree to finalise Jaitapur EPR engineering design by 2027", "source": "MEA / Elysée Joint Statement", "category": "international" },
+    { "date": "2026-06-05", "title": "Kudankulam Unit-3 dome placement completed — first concrete to criticality in 18 months", "source": "NPCIL", "category": "construction" },
+    { "date": "2026-05-15", "title": "AERB grants site clearance for Kaiga-5&6 (PHWR-700) — construction can begin", "source": "AERB", "category": "regulatory" },
+    { "date": "2026-04-20", "title": "Reliance Industries expresses nuclear energy interest at AGM — awaits policy clarity", "source": "ET Energyworld", "category": "private_sector" },
+    { "date": "2026-03-28", "title": "India's nuclear capacity crosses 8.5 GW with KAPS-4 commercial operation", "source": "CEA", "category": "commissioning" },
+    { "date": "2026-03-10", "title": "Govt targets 100 GW nuclear by 2047 — Atomic Energy Act amendment under consideration", "source": "MoP / Economic Times", "category": "policy" },
+    { "date": "2026-02-18", "title": "BHEL delivers 700 MWe turbine-generator for GHAVP-1 — largest nuclear TG made in India", "source": "BHEL", "category": "supply_chain" },
+    { "date": "2026-01-25", "title": "India-US nuclear cooperation: Westinghouse AP1000 discussions resume after 5-year pause", "source": "Business Standard", "category": "international" },
+    { "date": "2025-12-15", "title": "NPCIL reports FY25 generation of 56.3 BU — 7% growth over FY24", "source": "NPCIL Annual Report", "category": "operations" }
+  ]
+}

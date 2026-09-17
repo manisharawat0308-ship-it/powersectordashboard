@@ -1,0 +1,20 @@
+{
+  "lastUpdated": "2026-06-30",
+  "dataAsOf": "FY 2024-25",
+  "dataSource": "Central Electricity Authority (cea.nic.in)",
+  "period": { "year": 2025, "type": "financial_year" },
+  "plf": {
+    "coal": 64.2,
+    "lignite": 58.4,
+    "gas": 22.8,
+    "diesel": 1.2
+  },
+  "cuf": {
+    "solar": 18.2,
+    "wind": 21.5,
+    "small_hydro": 28.6,
+    "large_hydro": 38.4,
+    "biomass": 42.1,
+    "nuclear": 78.6
+  }
+}

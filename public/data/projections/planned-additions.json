@@ -1,0 +1,38 @@
+{
+  "lastUpdated": "2026-06-30",
+  "dataAsOf": "National Electricity Plan 2023 + CEA capacity addition reports",
+  "dataSource": "National Electricity Plan 2023, Ministry of Power (powermin.gov.in)",
+  "planned": [
+    { "year": 2026, "source": "solar", "additionGW": 25.0, "cumulativeCapacityGW": 115.6 },
+    { "year": 2026, "source": "wind", "additionGW": 5.0, "cumulativeCapacityGW": 52.7 },
+    { "year": 2026, "source": "coal", "additionGW": 3.0, "cumulativeCapacityGW": 214.5 },
+    { "year": 2026, "source": "nuclear", "additionGW": 1.5, "cumulativeCapacityGW": 9.7 },
+    { "year": 2027, "source": "solar", "additionGW": 30.0, "cumulativeCapacityGW": 145.6 },
+    { "year": 2027, "source": "wind", "additionGW": 8.0, "cumulativeCapacityGW": 60.7 },
+    { "year": 2027, "source": "coal", "additionGW": 2.5, "cumulativeCapacityGW": 217.0 },
+    { "year": 2027, "source": "nuclear", "additionGW": 1.0, "cumulativeCapacityGW": 10.7 },
+    { "year": 2028, "source": "solar", "additionGW": 35.0, "cumulativeCapacityGW": 180.6 },
+    { "year": 2028, "source": "wind", "additionGW": 10.0, "cumulativeCapacityGW": 70.7 },
+    { "year": 2028, "source": "coal", "additionGW": 2.0, "cumulativeCapacityGW": 219.0 },
+    { "year": 2028, "source": "large_hydro", "additionGW": 3.0, "cumulativeCapacityGW": 50.1 },
+    { "year": 2029, "source": "solar", "additionGW": 40.0, "cumulativeCapacityGW": 220.6 },
+    { "year": 2029, "source": "wind", "additionGW": 12.0, "cumulativeCapacityGW": 82.7 },
+    { "year": 2029, "source": "nuclear", "additionGW": 2.0, "cumulativeCapacityGW": 12.7 },
+    { "year": 2030, "source": "solar", "additionGW": 50.0, "cumulativeCapacityGW": 270.6 },
+    { "year": 2030, "source": "wind", "additionGW": 15.0, "cumulativeCapacityGW": 97.7 },
+    { "year": 2030, "source": "large_hydro", "additionGW": 5.0, "cumulativeCapacityGW": 55.1 },
+    { "year": 2030, "source": "nuclear", "additionGW": 3.0, "cumulativeCapacityGW": 15.7 }
+  ],
+  "totalPlannedCapacity": [
+    { "year": 2026, "supplyGW": 478.0 },
+    { "year": 2027, "supplyGW": 510.0 },
+    { "year": 2028, "supplyGW": 548.0 },
+    { "year": 2029, "supplyGW": 585.0 },
+    { "year": 2030, "supplyGW": 630.0 },
+    { "year": 2031, "supplyGW": 665.0 },
+    { "year": 2032, "supplyGW": 702.0 },
+    { "year": 2033, "supplyGW": 740.0 },
+    { "year": 2034, "supplyGW": 780.0 },
+    { "year": 2035, "supplyGW": 822.0 }
+  ]
+}

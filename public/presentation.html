@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>India Power Sector Story — ICICI Lombard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Mulish', sans-serif; background: #1a1a2e; color: #fff; overflow-x: hidden; }
+    .slide { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 60px 80px; position: relative; }
+    .slide::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #B02A30, #F99D27, #005B75); }
+
+    /* Backgrounds */
+    .bg-dark { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+    .bg-maroon { background: linear-gradient(135deg, #8B1A1F 0%, #B02A30 50%, #D4464C 100%); }
+    .bg-navy { background: linear-gradient(135deg, #003D50 0%, #005B75 50%, #007A9E 100%); }
+    .bg-cream { background: linear-gradient(135deg, #FFF8F0 0%, #FFFFFF 100%); color: #1a1a2e; }
+    .bg-gradient { background: linear-gradient(135deg, #B02A30 0%, #8B1A1F 30%, #003D50 70%, #005B75 100%); }
+
+    .brand-bar { position: absolute; bottom: 30px; left: 80px; right: 80px; display: flex; justify-content: space-between; align-items: center; opacity: 0.6; font-size: 10px; }
+    .slide-num { position: absolute; top: 30px; right: 80px; font-size: 12px; opacity: 0.5; font-weight: 700; }
+
+    h1 { font-size: 56px; font-weight: 900; line-height: 1.1; }
+    h2 { font-size: 42px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+    h3 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+    .subtitle { font-size: 18px; opacity: 0.8; margin-top: 12px; font-weight: 500; }
+    .stat-big { font-size: 72px; font-weight: 900; line-height: 1; }
+    .stat-med { font-size: 48px; font-weight: 900; }
+    .stat-label { font-size: 14px; font-weight: 600; opacity: 0.7; margin-top: 4px; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
+
+    .card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 30px; backdrop-filter: blur(10px); }
+    .card-light { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 30px; color: #1a1a2e; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+    .bar-container { display: flex; border-radius: 8px; overflow: hidden; height: 40px; margin: 8px 0; }
+    .bar-segment { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; }
+
+    .progress-bar { height: 10px; border-radius: 5px; background: rgba(255,255,255,0.15); overflow: hidden; margin-top: 8px; }
+    .progress-fill { height: 100%; border-radius: 5px; }
+
+    .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; margin: 3px; }
+
+    .timeline-dot { width: 16px; height: 16px; border-radius: 50%; border: 3px solid #F99D27; background: #1a1a2e; }
+
+    .highlight { color: #F99D27; }
+    .text-maroon { color: #B02A30; }
+    .text-navy { color: #005B75; }
+    .text-green { color: #4CAF50; }
+
+    .divider { width: 60px; height: 4px; background: #F99D27; border-radius: 2px; margin: 20px 0; }
+
+    @media print {
+      .slide { page-break-after: always; }
+    }
+    @page { size: A4 landscape; margin: 15mm; }
+  </style>
+</head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<div class="slide bg-gradient">
+  <span class="slide-num">01</span>
+  <div style="max-width: 700px;">
+    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 30px;">
+      <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 20px;">IL</div>
+      <span style="font-size: 12px; font-weight: 600; opacity: 0.7; text-transform: uppercase; letter-spacing: 2px;">ICICI Lombard Analytics</span>
+    </div>
+    <h1>India's Power Sector Story</h1>
+    <p class="subtitle">From 20 GW in 1975 to 450 GW in 2025 — A 50-year transformation of the world's 3rd largest electricity system</p>
+    <div class="divider"></div>
+    <p style="font-size: 13px; opacity: 0.6; margin-top: 20px;">Data: Central Electricity Authority • National Power Portal • Ministry of Power<br/>Last Updated: June 2026</p>
+  </div>
+  <div class="brand-bar"><span>ICICI Lombard General Insurance</span><span>Confidential</span></div>
+</div>
+
+<!-- SLIDE 2: The Big Picture -->
+<div class="slide bg-dark">
+  <span class="slide-num">02</span>
+  <h2>The Big Picture</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">India's power sector at a glance — June 2026</p>
+  <div class="grid-4">
+    <div class="card" style="text-align: center;">
+      <div class="stat-big highlight">450</div>
+      <div class="stat-label">GW Installed Capacity</div>
+    </div>
+    <div class="card" style="text-align: center;">
+      <div class="stat-big" style="color: #4CAF50;">1,752</div>
+      <div class="stat-label">BU Annual Generation</div>
+    </div>
+    <div class="card" style="text-align: center;">
+      <div class="stat-big" style="color: #F99D27;">36</div>
+      <div class="stat-label">States & UTs Covered</div>
+    </div>
+    <div class="card" style="text-align: center;">
+      <div class="stat-big" style="color: #B02A30;">22.5×</div>
+      <div class="stat-label">Growth Since 1975</div>
+    </div>
+  </div>
+  <div class="brand-bar"><span>ICICI Lombard General Insurance</span><span>Source: CEA, npp.gov.in</span></div>
+</div>
+
+<!-- SLIDE 3: Fossil vs Non-Fossil Split -->
+<div class="slide bg-dark">
+  <span class="slide-num">03</span>
+  <h2>Energy Mix — The Great Divide</h2>
+  <p class="subtitle" style="margin-bottom: 30px;">Installed capacity split between fossil and non-fossil sources</p>
+  <div class="bar-container" style="height: 60px; border-radius: 12px;">
+    <div class="bar-segment" style="width: 54.2%; background: #B02A30;">🔥 Fossil — 243.87 GW (54.2%)</div>
+    <div class="bar-segment" style="width: 45.8%; background: #005B75;">🌿 Non-Fossil — 206.42 GW (45.8%)</div>
+  </div>
+  <div class="grid-2" style="margin-top: 40px;">
+    <div class="card">
+      <h3 style="color: #B02A30;">🔥 Fossil Energy</h3>
+      <div class="stat-med">243.87 GW</div>
+      <div style="margin-top: 16px;">
+        <div style="display: flex; justify-content: space-between; margin: 8px 0;"><span>Coal</span><strong>211,540 MW (86.7%)</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 8px 0;"><span>Natural Gas</span><strong>24,900 MW (10.2%)</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 8px 0;"><span>Lignite</span><strong>6,740 MW (2.8%)</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 8px 0;"><span>Diesel</span><strong>690 MW (0.3%)</strong></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="color: #005B75;">🌿 Non-Fossil Energy</h3>
+      <div class="stat-med">206.42 GW</div>
+      <div style="margin-top: 16px;">
+        <div style="display: flex; justify-content: space-between; margin: 8px 0;"><span>Solar</span><strong>90,570 MW (43.9%)</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 8px 0;"><span>Wind</span><strong>47,650 MW (23.1%)</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 8px 0;"><span>Large Hydro</span><strong>47,050 MW (22.8%)</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 8px 0;"><span>Biomass</span><strong>10,750 MW (5.2%)</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 8px 0;"><span>Nuclear</span><strong>8,180 MW (4.0%)</strong></div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-bar"><span>ICICI Lombard General Insurance</span><span>Source: CEA, June 2026</span></div>
+</div>
+
+<!-- SLIDE 4: Growth Timeline -->
+<div class="slide bg-dark">
+  <span class="slide-num">04</span>
+  <h2>The Growth Story — 1975 to 2025</h2>
+  <p class="subtitle" style="margin-bottom: 30px;">India's installed capacity grew 22.5× in 50 years</p>
+  <div class="grid-3" style="margin-bottom: 30px;">
+    <div class="card" style="text-align: center;">
+      <div style="font-size: 14px; opacity: 0.6;">1975</div>
+      <div class="stat-med highlight">20 GW</div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 4.4%; background: #F99D27;"></div></div>
+    </div>
+    <div class="card" style="text-align: center;">
+      <div style="font-size: 14px; opacity: 0.6;">2000</div>
+      <div class="stat-med highlight">102 GW</div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 22.6%; background: #F99D27;"></div></div>
+    </div>
+    <div class="card" style="text-align: center;">
+      <div style="font-size: 14px; opacity: 0.6;">2025</div>
+      <div class="stat-med highlight">450 GW</div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 100%; background: #F99D27;"></div></div>
+    </div>
+  </div>
+  <div class="card" style="padding: 20px 30px;">
+    <h3 style="font-size: 16px; margin-bottom: 16px;">Key Milestones</h3>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+      <div class="tag" style="background: rgba(249,157,39,0.2); color: #F99D27;">1991 — Sector Liberalization</div>
+      <div class="tag" style="background: rgba(249,157,39,0.2); color: #F99D27;">2003 — Electricity Act</div>
+      <div class="tag" style="background: rgba(249,157,39,0.2); color: #F99D27;">2010 — National Solar Mission</div>
+      <div class="tag" style="background: rgba(249,157,39,0.2); color: #F99D27;">2015 — 175 GW RE Target (COP21)</div>
+      <div class="tag" style="background: rgba(249,157,39,0.2); color: #F99D27;">2020 — 100 GW Renewable Crossed</div>
+      <div class="tag" style="background: rgba(249,157,39,0.2); color: #F99D27;">2022 — 500 GW Non-Fossil Target</div>
+      <div class="tag" style="background: rgba(249,157,39,0.2); color: #F99D27;">2023 — 400 GW Total Crossed</div>
+    </div>
+  </div>
+  <div class="brand-bar"><span>ICICI Lombard General Insurance</span><span>Source: CEA Historical Data</span></div>
+</div>
+
+<!-- SLIDE 5: The Renewable Revolution -->
+<div class="slide bg-navy">
+  <span class="slide-num">05</span>
+  <h2>The Renewable Revolution</h2>
+  <p class="subtitle" style="margin-bottom: 30px;">Non-fossil share grew from 24% (2000) to 45.8% (2025)</p>
+  <div class="grid-2">
+    <div>
+      <h3>Non-Fossil Growth</h3>
+      <div style="margin-top: 20px;">
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; font-size: 13px;"><span>☀️ Solar</span><span style="font-weight: 800;">90.6 GW</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #F99D27, #FBBD6A);"></div></div>
+          <div style="font-size: 10px; opacity: 0.6; margin-top: 4px;">From ~0 GW in 2010 → 90.6 GW in 2025 • Fastest growing source</div>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; font-size: 13px;"><span>💨 Wind</span><span style="font-weight: 800;">47.7 GW</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 52.6%; background: linear-gradient(90deg, #005B75, #007A9E);"></div></div>
+          <div style="font-size: 10px; opacity: 0.6; margin-top: 4px;">Steady growth • Concentrated in TN, GJ, RJ, KA, MH</div>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; font-size: 13px;"><span>💧 Large Hydro</span><span style="font-weight: 800;">47.1 GW</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 52%; background: linear-gradient(90deg, #003D50, #005B75);"></div></div>
+          <div style="font-size: 10px; opacity: 0.6; margin-top: 4px;">Mature sector • Dominated by HP, UK, JK, Sikkim</div>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; font-size: 13px;"><span>⚛️ Nuclear</span><span style="font-weight: 800;">8.2 GW</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 9%; background: linear-gradient(90deg, #7B1FA2, #9C27B0);"></div></div>
+          <div style="font-size: 10px; opacity: 0.6; margin-top: 4px;">Highest load factor (78.6%) • Kudankulam, Tarapur, Kaiga</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>The Shift (% Non-Fossil in Total)</h3>
+      <div style="margin-top: 20px; space-y: 12px;">
+        <div style="margin-bottom: 12px;"><span style="font-size: 12px;">2000</span><div class="bar-container" style="height: 24px;"><div class="bar-segment" style="width: 76%; background: #B02A30;">76%</div><div class="bar-segment" style="width: 24%; background: #005B75;">24%</div></div></div>
+        <div style="margin-bottom: 12px;"><span style="font-size: 12px;">2010</span><div class="bar-container" style="height: 24px;"><div class="bar-segment" style="width: 75.8%; background: #B02A30;">76%</div><div class="bar-segment" style="width: 24.2%; background: #005B75;">24%</div></div></div>
+        <div style="margin-bottom: 12px;"><span style="font-size: 12px;">2015</span><div class="bar-container" style="height: 24px;"><div class="bar-segment" style="width: 74.1%; background: #B02A30;">74%</div><div class="bar-segment" style="width: 25.9%; background: #005B75;">26%</div></div></div>
+        <div style="margin-bottom: 12px;"><span style="font-size: 12px;">2020</span><div class="bar-container" style="height: 24px;"><div class="bar-segment" style="width: 63.4%; background: #B02A30;">63%</div><div class="bar-segment" style="width: 36.6%; background: #005B75;">37%</div></div></div>
+        <div style="margin-bottom: 12px;"><span style="font-size: 12px;">2025</span><div class="bar-container" style="height: 24px;"><div class="bar-segment" style="width: 54.2%; background: #B02A30;">54%</div><div class="bar-segment" style="width: 45.8%; background: #005B75;">46%</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-bar"><span>ICICI Lombard General Insurance</span><span>Source: CEA, MNRE</span></div>
+</div>
+
+<!-- SLIDE 6: The Load Factor Reality -->
+<div class="slide bg-cream">
+  <span class="slide-num">06</span>
+  <h2 style="color: #1a1a2e;">The Load Factor Reality</h2>
+  <p class="subtitle" style="color: #555; margin-bottom: 30px;">Why installed capacity ≠ actual generation</p>
+  <div class="grid-3">
+    <div class="card-light" style="border-top: 4px solid #B02A30;">
+      <h3 style="font-size: 18px; color: #B02A30;">🏭 Coal</h3>
+      <div style="margin-top: 12px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 12px; color: #666;">Capacity Share</span><span style="font-weight: 800;">47.0%</span></div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 12px; color: #666;">Generation Share</span><span style="font-weight: 800; color: #B02A30;">62.4%</span></div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 12px; color: #666;">PLF</span><span style="font-weight: 800; color: #F99D27;">64.2%</span></div>
+        <div class="tag" style="background: #E8F5E9; color: #2E7D32; margin-top: 12px;">↑ Over-generates by +15.4pp</div>
+      </div>
+    </div>
+    <div class="card-light" style="border-top: 4px solid #F99D27;">
+      <h3 style="font-size: 18px; color: #F99D27;">☀️ Solar</h3>
+      <div style="margin-top: 12px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 12px; color: #666;">Capacity Share</span><span style="font-weight: 800;">20.1%</span></div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 12px; color: #666;">Generation Share</span><span style="font-weight: 800; color: #B02A30;">8.1%</span></div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 12px; color: #666;">CUF</span><span style="font-weight: 800; color: #F99D27;">18.2%</span></div>
+        <div class="tag" style="background: #FFEBEE; color: #C62828; margin-top: 12px;">↓ Under-generates by -12.0pp</div>
+      </div>
+    </div>
+    <div class="card-light" style="border-top: 4px solid #7B1FA2;">
+      <h3 style="font-size: 18px; color: #7B1FA2;">⚛️ Nuclear</h3>
+      <div style="margin-top: 12px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 12px; color: #666;">Capacity Share</span><span style="font-weight: 800;">1.8%</span></div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 12px; color: #666;">Generation Share</span><span style="font-weight: 800; color: #B02A30;">2.9%</span></div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 12px; color: #666;">CUF</span><span style="font-weight: 800; color: #F99D27;">78.6%</span></div>
+        <div class="tag" style="background: #E8F5E9; color: #2E7D32; margin-top: 12px;">Highest load factor of all sources</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 30px; padding: 20px; background: #FFF3E0; border-radius: 12px; border: 1px solid #FFE0B2;">
+    <p style="font-size: 13px; color: #E65100; font-weight: 700;">💡 This is why India still depends on coal for baseload — renewables have high capacity but low utilization due to intermittency (sun/wind availability).</p>
+  </div>
+  <div class="brand-bar" style="color: #999;"><span>ICICI Lombard General Insurance</span><span>Source: CEA PLF/CUF Data</span></div>
+</div>
+
+<!-- SLIDE 7: Ownership Structure -->
+<div class="slide bg-dark">
+  <span class="slide-num">07</span>
+  <h2>Who Owns India's Power?</h2>
+  <p class="subtitle" style="margin-bottom: 30px;">Private sector dominates with 53.5% of installed capacity</p>
+  <div class="bar-container" style="height: 50px; border-radius: 12px; margin-bottom: 30px;">
+    <div class="bar-segment" style="width: 23%; background: #005B75;">Central PSU 23%</div>
+    <div class="bar-segment" style="width: 23.5%; background: #B02A30;">State PSU 23.5%</div>
+    <div class="bar-segment" style="width: 53.5%; background: #F99D27; color: #1a1a2e;">Private 53.5%</div>
+  </div>
+  <div class="grid-3">
+    <div class="card" style="border-left: 4px solid #005B75;">
+      <h3 style="color: #005B75; font-size: 18px;">Central PSU</h3>
+      <div class="stat-med" style="color: #005B75;">103.45 GW</div>
+      <div style="margin-top: 12px; font-size: 12px; opacity: 0.7;">
+        <div>• NTPC (72.3 GW) — largest single producer</div>
+        <div>• NHPC, NPCIL, NLC, SJVN</div>
+        <div>• 53% fossil / 47% non-fossil</div>
+      </div>
+    </div>
+    <div class="card" style="border-left: 4px solid #B02A30;">
+      <h3 style="color: #B02A30; font-size: 18px;">State PSU</h3>
+      <div class="stat-med" style="color: #B02A30;">105.82 GW</div>
+      <div style="margin-top: 12px; font-size: 12px; opacity: 0.7;">
+        <div>• MAHAGENCO, GSECL, TANGEDCO</div>
+        <div>• 13 major state gencos</div>
+        <div>• 68% fossil / 32% non-fossil</div>
+      </div>
+    </div>
+    <div class="card" style="border-left: 4px solid #F99D27;">
+      <h3 style="color: #F99D27; font-size: 18px;">Private Sector</h3>
+      <div class="stat-med" style="color: #F99D27;">241.02 GW</div>
+      <div style="margin-top: 12px; font-size: 12px; opacity: 0.7;">
+        <div>• Adani Green (20.4 GW) — largest RE</div>
+        <div>• Adani Power, Tata, ReNew, Greenko</div>
+        <div>• 48% fossil / 52% non-fossil</div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-bar"><span>ICICI Lombard General Insurance</span><span>Source: CEA, powermin.gov.in</span></div>
+</div>
+
+<!-- SLIDE 8: State-wise Dominance -->
+<div class="slide bg-dark">
+  <span class="slide-num">08</span>
+  <h2>State-wise Power Map</h2>
+  <p class="subtitle" style="margin-bottom: 30px;">Top states by installed capacity & their dominant energy source</p>
+  <div class="grid-2">
+    <div>
+      <h3 style="font-size: 16px; margin-bottom: 16px;">Top 10 States by Capacity</h3>
+      <div style="font-size: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><span style="font-weight: 900; width: 20px;">1</span><span style="flex: 1;">Maharashtra</span><span class="tag" style="background: #B02A30;">🏭 Coal</span><span style="font-weight: 800;">52.1 GW</span></div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><span style="font-weight: 900; width: 20px;">2</span><span style="flex: 1;">Gujarat</span><span class="tag" style="background: #B02A30;">🏭 Coal</span><span style="font-weight: 800;">46.8 GW</span></div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><span style="font-weight: 900; width: 20px;">3</span><span style="flex: 1;">Rajasthan</span><span class="tag" style="background: #F99D27; color: #1a1a2e;">☀️ Solar</span><span style="font-weight: 800;">41.5 GW</span></div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><span style="font-weight: 900; width: 20px;">4</span><span style="flex: 1;">Tamil Nadu</span><span class="tag" style="background: #005B75;">💨 Wind</span><span style="font-weight: 800;">38.9 GW</span></div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><span style="font-weight: 900; width: 20px;">5</span><span style="flex: 1;">Karnataka</span><span class="tag" style="background: #F99D27; color: #1a1a2e;">☀️ Solar</span><span style="font-weight: 800;">34.2 GW</span></div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><span style="font-weight: 900; width: 20px;">6</span><span style="flex: 1;">Uttar Pradesh</span><span class="tag" style="background: #B02A30;">🏭 Coal</span><span style="font-weight: 800;">32.6 GW</span></div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><span style="font-weight: 900; width: 20px;">7</span><span style="flex: 1;">Andhra Pradesh</span><span class="tag" style="background: #F99D27; color: #1a1a2e;">☀️ Solar</span><span style="font-weight: 800;">28.4 GW</span></div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><span style="font-weight: 900; width: 20px;">8</span><span style="flex: 1;">Madhya Pradesh</span><span class="tag" style="background: #B02A30;">🏭 Coal</span><span style="font-weight: 800;">26.8 GW</span></div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><span style="font-weight: 900; width: 20px;">9</span><span style="flex: 1;">Telangana</span><span class="tag" style="background: #B02A30;">🏭 Coal</span><span style="font-weight: 800;">20.5 GW</span></div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><span style="font-weight: 900; width: 20px;">10</span><span style="flex: 1;">West Bengal</span><span class="tag" style="background: #B02A30;">🏭 Coal</span><span style="font-weight: 800;">18.2 GW</span></div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size: 16px; margin-bottom: 16px;">Source Dominance by Region</h3>
+      <div class="card" style="margin-bottom: 12px;">
+        <div style="font-size: 13px; font-weight: 700; color: #B02A30;">🏭 Coal-Dominated States</div>
+        <div style="font-size: 11px; opacity: 0.7; margin-top: 6px;">MH, GJ, UP, MP, TS, WB, CG, OD, JH, HR, PB</div>
+        <div style="font-size: 11px; margin-top: 4px;">Combined: ~280 GW • India's industrial & thermal belt</div>
+      </div>
+      <div class="card" style="margin-bottom: 12px;">
+        <div style="font-size: 13px; font-weight: 700; color: #005B75;">💧 Hydro-Dominated States</div>
+        <div style="font-size: 11px; opacity: 0.7; margin-top: 6px;">HP, UK, JK, SK, AR, MZ, ML, NL</div>
+        <div style="font-size: 11px; margin-top: 4px;">Himalayan belt • Run-of-river & storage projects</div>
+      </div>
+      <div class="card" style="margin-bottom: 12px;">
+        <div style="font-size: 13px; font-weight: 700; color: #F99D27;">☀️ Solar-Dominant States</div>
+        <div style="font-size: 11px; opacity: 0.7; margin-top: 6px;">RJ, KA, AP (emerging)</div>
+        <div style="font-size: 11px; margin-top: 4px;">High irradiance zones • Bhadla, Pavagada mega parks</div>
+      </div>
+      <div class="card">
+        <div style="font-size: 13px; font-weight: 700; color: #007A9E;">💨 Wind-Dominant States</div>
+        <div style="font-size: 11px; opacity: 0.7; margin-top: 6px;">TN (largest wind state)</div>
+        <div style="font-size: 11px; margin-top: 4px;">Muppandal, coastal corridors • High wind speeds</div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-bar"><span>ICICI Lombard General Insurance</span><span>Source: CEA State-wise Data</span></div>
+</div>
+
+<!-- SLIDE 9: Future Projections -->
+<div class="slide bg-maroon">
+  <span class="slide-num">09</span>
+  <h2>Future Outlook — 2026 to 2035</h2>
+  <p class="subtitle" style="margin-bottom: 30px;">India targets 500 GW non-fossil by 2030 • Massive solar & wind additions planned</p>
+  <div class="grid-2" style="margin-bottom: 30px;">
+    <div class="card">
+      <h3 style="font-size: 18px;">Projected Demand</h3>
+      <div style="margin-top: 16px; font-size: 13px;">
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;"><span>2026</span><strong>466 GW</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;"><span>2028</span><strong>506 GW</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;"><span>2030</span><strong style="color: #F99D27;">550 GW</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;"><span>2032</span><strong>600 GW</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;"><span>2035</span><strong style="color: #F99D27;">688 GW</strong></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="font-size: 18px;">Planned Supply</h3>
+      <div style="margin-top: 16px; font-size: 13px;">
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;"><span>2026</span><strong>478 GW ✓</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;"><span>2028</span><strong>548 GW ✓</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;"><span>2030</span><strong style="color: #4CAF50;">630 GW ✓</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;"><span>2032</span><strong>702 GW ✓</strong></div>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;"><span>2035</span><strong style="color: #4CAF50;">822 GW ✓</strong></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h3 style="font-size: 16px; margin-bottom: 12px;">Planned Capacity Additions (2026–2030)</h3>
+    <div class="bar-container" style="height: 40px;">
+      <div class="bar-segment" style="width: 55%; background: #F99D27; color: #1a1a2e;">☀️ Solar +180 GW</div>
+      <div class="bar-segment" style="width: 22%; background: #005B75;">💨 Wind +50 GW</div>
+      <div class="bar-segment" style="width: 10%; background: #B02A30;">🏭 Coal +10 GW</div>
+      <div class="bar-segment" style="width: 8%; background: #003D50;">💧 Hydro +8 GW</div>
+      <div class="bar-segment" style="width: 5%; background: #7B1FA2;">⚛️ Nuclear +8 GW</div>
+    </div>
+  </div>
+  <div class="brand-bar"><span>ICICI Lombard General Insurance</span><span>Source: NEP 2023, CEA</span></div>
+</div>
+
+<!-- SLIDE 10: Summary & Outlook -->
+<div class="slide bg-gradient">
+  <span class="slide-num">10</span>
+  <h2>Key Takeaways</h2>
+  <div class="divider"></div>
+  <div style="margin-top: 30px; font-size: 16px; line-height: 2.2;">
+    <div>✅ India's power capacity grew <strong>22.5×</strong> from 20 GW (1975) to 450 GW (2025)</div>
+    <div>✅ Non-fossil share nearly doubled from <strong>24% to 45.8%</strong> in 25 years</div>
+    <div>✅ Solar is the <strong>fastest growing source</strong> — 0 to 90.6 GW in 15 years</div>
+    <div>✅ Coal still generates <strong>62% of electricity</strong> due to higher load factors (64% PLF vs 18% CUF for solar)</div>
+    <div>✅ Private sector owns <strong>53.5%</strong> of capacity — led by Adani, Tata, ReNew</div>
+    <div>✅ India plans to add <strong>~250 GW</strong> by 2030 — primarily solar & wind</div>
+    <div>✅ Supply is projected to <strong>exceed demand</strong> through 2035 with current plans</div>
+  </div>
+  <div style="margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+    <p style="font-size: 14px; font-weight: 700;">🎯 India is on track for its 500 GW non-fossil target by 2030 — a fundamental transformation of its energy landscape.</p>
+  </div>
+  <div class="brand-bar"><span>ICICI Lombard General Insurance</span><span>Thank You</span></div>
+</div>
+
+</body>
+</html>

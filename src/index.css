@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 17.5px;
+  }
+  body {
+    font-family: 'Mulish', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .icici-gradient {
+    background: linear-gradient(135deg, #B02A30 0%, #8B1A1F 50%, #005B75 100%);
+  }
+  .icici-gradient-light {
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFFFFF 100%);
+  }
+  .icici-card {
+    @apply bg-white rounded-xl shadow-icici border border-gray-100 transition-all duration-200 hover:shadow-icici-lg;
+  }
+  /* Tooltip-safe containers: allow vertical overflow for tooltips */
+  .tooltip-safe {
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+  .icici-btn {
+    @apply px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200;
+  }
+  .icici-btn-primary {
+    @apply icici-btn bg-icici-maroon text-white hover:bg-icici-maroon-dark;
+  }
+  .icici-btn-secondary {
+    @apply icici-btn bg-icici-navy text-white hover:bg-icici-navy-dark;
+  }
+  .icici-btn-outline {
+    @apply icici-btn border-2 border-icici-maroon text-icici-maroon hover:bg-icici-maroon hover:text-white;
+  }
+  .chart-toggle-btn {
+    @apply px-3 py-1.5 text-xs font-semibold rounded-lg transition-all duration-200;
+  }
+  .chart-toggle-active {
+    @apply chart-toggle-btn bg-icici-maroon text-white shadow-sm;
+  }
+  .chart-toggle-inactive {
+    @apply chart-toggle-btn bg-white text-gray-600 border border-gray-200 hover:border-icici-maroon hover:text-icici-maroon;
+  }
+}

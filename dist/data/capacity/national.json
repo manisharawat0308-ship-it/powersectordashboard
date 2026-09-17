@@ -1,0 +1,28 @@
+{
+  "lastUpdated": "2026-06-30",
+  "dataAsOf": "March 2025 (FY24-25)",
+  "dataSource": "Central Electricity Authority (cea.nic.in)",
+  "note": "Base data as of 31 March 2025. For latest figures (Jun 2026): Solar 162 GW, Wind 57.4 GW, Total RE 288.6 GW — see MNRE Physical Progress.",
+  "totalCapacityGW": 450.29,
+  "byCategory": [
+    { "category": "fossil", "capacityGW": 243.87, "percentageShare": 54.2 },
+    { "category": "non_fossil", "capacityGW": 206.42, "percentageShare": 45.8 }
+  ],
+  "bySource": [
+    { "source": "coal", "capacityMW": 211540, "category": "fossil" },
+    { "source": "lignite", "capacityMW": 6740, "category": "fossil" },
+    { "source": "gas", "capacityMW": 24900, "category": "fossil" },
+    { "source": "diesel", "capacityMW": 690, "category": "fossil" },
+    { "source": "solar", "capacityMW": 88070, "category": "non_fossil" },
+    { "source": "wind", "capacityMW": 46650, "category": "non_fossil" },
+    { "source": "small_hydro", "capacityMW": 5050, "category": "non_fossil" },
+    { "source": "large_hydro", "capacityMW": 47050, "category": "non_fossil" },
+    { "source": "biomass", "capacityMW": 11420, "category": "non_fossil" },
+    { "source": "nuclear", "capacityMW": 8180, "category": "non_fossil" }
+  ],
+  "byOwnership": [
+    { "ownership": "central_psu", "capacityGW": 103.45, "percentage": 23.0 },
+    { "ownership": "state_psu", "capacityGW": 105.82, "percentage": 23.5 },
+    { "ownership": "private", "capacityGW": 241.02, "percentage": 53.5 }
+  ]
+}

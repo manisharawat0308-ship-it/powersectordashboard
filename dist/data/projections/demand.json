@@ -1,0 +1,18 @@
+{
+  "lastUpdated": "2026-06-30",
+  "dataAsOf": "National Electricity Plan 2023 (projections for 2026–2032). 2033–2035 extrapolated at ~5% CAGR.",
+  "dataSource": "National Electricity Plan 2023, CEA (cea.nic.in)",
+  "lastHistoricalYear": 2025,
+  "projections": [
+    { "year": 2026, "demandGW": 466.0, "isProjected": true },
+    { "year": 2027, "demandGW": 485.0, "isProjected": true },
+    { "year": 2028, "demandGW": 506.0, "isProjected": true },
+    { "year": 2029, "demandGW": 528.0, "isProjected": true },
+    { "year": 2030, "demandGW": 550.0, "isProjected": true },
+    { "year": 2031, "demandGW": 574.0, "isProjected": true },
+    { "year": 2032, "demandGW": 600.0, "isProjected": true },
+    { "year": 2033, "demandGW": 628.0, "isProjected": true },
+    { "year": 2034, "demandGW": 657.0, "isProjected": true },
+    { "year": 2035, "demandGW": 688.0, "isProjected": true }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "lastUpdated": "2026-06-30",
+  "dataAsOf": "June 2026",
+  "dataSource": "Nuclear Power Corporation of India Limited (NPCIL), Department of Atomic Energy, CEA",
+  "note": "Capacity data from NPCIL annual reports. Pipeline data from DAE press releases and Ministry of Power. Generation data from CEA.",
+  "totalOperatingMW": 8180,
+  "totalUnderConstructionMW": 7000,
+  "totalApprovedMW": 26000,
+  "totalPlannedMW": 25000,
+  "generationFY2025BU": 56.3,
+  "cuf": 78.6,
+  "plants": [
+    {
+      "plantId": "TAPS",
+      "plantName": "Tarapur Atomic Power Station",
+      "shortName": "TAPS",
+      "state": "MH",
+      "stateName": "Maharashtra",
+      "location": "Tarapur, Palghar",
+      "coordinates": [72.65, 19.83],
+      "operator": "NPCIL",
+      "technology": "BWR / PHWR",
+      "status": "operating",
+      "units": [
+        { "unit": "TAPS-1", "technology": "BWR", "capacityMW": 160, "commissioningYear": 1969, "status": "operating" },
+        { "unit": "TAPS-2", "technology": "BWR", "capacityMW": 160, "commissioningYear": 1969, "status": "operating" },
+        { "unit": "TAPS-3", "technology": "PHWR", "capacityMW": 540, "commissioningYear": 2006, "status": "operating" },
+        { "unit": "TAPS-4", "technology": "PHWR", "capacityMW": 540, "commissioningYear": 2005, "status": "operating" }
+      ],
+      "totalCapacityMW": 1400,
+      "operatingSince": 1969,
+      "generationFY2025BU": 9.8,
+      "cuf": 80.0
+    },
+    {
+      "plantId": "RAPS",
+      "plantName": "Rajasthan Atomic Power Station",
+      "shortName": "RAPS",
+      "state": "RJ",
+      "stateName": "Rajasthan",
+      "location": "Rawatbhata, Chittorgarh",
+      "coordinates": [75.58, 24.92],
+      "operator": "NPCIL",
+      "technology": "PHWR",
+      "status": "operating",
+      "units": [
+        { "unit": "RAPS-1", "technology": "PHWR", "capacityMW": 100, "commissioningYear": 1973, "status": "shutdown" },
+        { "unit": "RAPS-2", "technology": "PHWR", "capacityMW": 200, "commissioningYear": 1981, "status": "operating" },
+        { "unit": "RAPS-3", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 2000, "status": "operating" },
+        { "unit": "RAPS-4", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 2000, "status": "operating" },
+        { "unit": "RAPS-5", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 2010, "status": "operating" },
+        { "unit": "RAPS-6", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 2010, "status": "operating" }
+      ],
+      "totalCapacityMW": 1080,
+      "operatingSince": 1973,
+      "generationFY2025BU": 7.8,
+      "cuf": 82.3
+    },
+    {
+      "plantId": "MAPS",
+      "plantName": "Madras Atomic Power Station",
+      "shortName": "MAPS",
+      "state": "TN",
+      "stateName": "Tamil Nadu",
+      "location": "Kalpakkam, Chennai",
+      "coordinates": [80.17, 12.55],
+      "operator": "NPCIL",
+      "technology": "PHWR",
+      "status": "operating",
+      "units": [
+        { "unit": "MAPS-1", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 1984, "status": "operating" },
+        { "unit": "MAPS-2", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 1986, "status": "operating" }
+      ],
+      "totalCapacityMW": 440,
+      "operatingSince": 1984,
+      "generationFY2025BU": 3.4,
+      "cuf": 88.3
+    },
+    {
+      "plantId": "NAPS",
+      "plantName": "Narora Atomic Power Station",
+      "shortName": "NAPS",
+      "state": "UP",
+      "stateName": "Uttar Pradesh",
+      "location": "Narora, Bulandshahr",
+      "coordinates": [78.40, 28.18],
+      "operator": "NPCIL",
+      "technology": "PHWR",
+      "status": "operating",
+      "units": [
+        { "unit": "NAPS-1", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 1991, "status": "operating" },
+        { "unit": "NAPS-2", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 1992, "status": "operating" }
+      ],
+      "totalCapacityMW": 440,
+      "operatingSince": 1991,
+      "generationFY2025BU": 3.2,
+      "cuf": 83.2
+    },
+    {
+      "plantId": "KAPS",
+      "plantName": "Kakrapar Atomic Power Station",
+      "shortName": "KAPS",
+      "state": "GJ",
+      "stateName": "Gujarat",
+      "location": "Kakrapar, Surat",
+      "coordinates": [73.50, 21.23],
+      "operator": "NPCIL",
+      "technology": "PHWR",
+      "status": "operating",
+      "units": [
+        { "unit": "KAPS-1", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 1993, "status": "operating" },
+        { "unit": "KAPS-2", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 1995, "status": "operating" },
+        { "unit": "KAPS-3", "technology": "PHWR-700", "capacityMW": 700, "commissioningYear": 2023, "status": "operating" },
+        { "unit": "KAPS-4", "technology": "PHWR-700", "capacityMW": 700, "commissioningYear": 2024, "status": "operating" }
+      ],
+      "totalCapacityMW": 1840,
+      "operatingSince": 1993,
+      "generationFY2025BU": 12.4,
+      "cuf": 77.0
+    },
+    {
+      "plantId": "KAIGA",
+      "plantName": "Kaiga Generating Station",
+      "shortName": "KAIGA",
+      "state": "KA",
+      "stateName": "Karnataka",
+      "location": "Kaiga, Uttara Kannada",
+      "coordinates": [74.55, 14.87],
+      "operator": "NPCIL",
+      "technology": "PHWR",
+      "status": "operating",
+      "units": [
+        { "unit": "KAIGA-1", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 2000, "status": "operating" },
+        { "unit": "KAIGA-2", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 2000, "status": "operating" },
+        { "unit": "KAIGA-3", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 2007, "status": "operating" },
+        { "unit": "KAIGA-4", "technology": "PHWR", "capacityMW": 220, "commissioningYear": 2011, "status": "operating" }
+      ],
+      "totalCapacityMW": 880,
+      "operatingSince": 2000,
+      "generationFY2025BU": 7.0,
+      "cuf": 90.9
+    },
+    {
+      "plantId": "KUDANKULAM",
+      "plantName": "Kudankulam Nuclear Power Plant",
+      "shortName": "KKNPP",
+      "state": "TN",
+      "stateName": "Tamil Nadu",
+      "location": "Kudankulam, Tirunelveli",
+      "coordinates": [77.71, 8.17],
+      "operator": "NPCIL",
+      "technology": "VVER (Russian PWR)",
+      "status": "operating",
+      "units": [
+        { "unit": "KKNPP-1", "technology": "VVER-1000", "capacityMW": 1000, "commissioningYear": 2013, "status": "operating" },
+        { "unit": "KKNPP-2", "technology": "VVER-1000", "capacityMW": 1000, "commissioningYear": 2016, "status": "operating" },
+        { "unit": "KKNPP-3", "technology": "VVER-1000", "capacityMW": 1000, "commissioningYear": null, "status": "under_construction" },
+        { "unit": "KKNPP-4", "technology": "VVER-1000", "capacityMW": 1000, "commissioningYear": null, "status": "under_construction" }
+      ],
+      "totalCapacityMW": 2000,
+      "operatingSince": 2013,
+      "generationFY2025BU": 13.5,
+      "cuf": 77.3
+    },
+    {
+      "plantId": "PFBR",
+      "plantName": "Prototype Fast Breeder Reactor",
+      "shortName": "PFBR",
+      "state": "TN",
+      "stateName": "Tamil Nadu",
+      "location": "Kalpakkam, Chennai",
+      "coordinates": [80.17, 12.57],
+      "operator": "BHAVINI",
+      "technology": "FBR (Sodium-cooled)",
+      "status": "under_construction",
+      "units": [
+        { "unit": "PFBR-1", "technology": "Fast Breeder", "capacityMW": 500, "commissioningYear": 2026, "status": "under_construction" }
+      ],
+      "totalCapacityMW": 500,
+      "operatingSince": null,
+      "generationFY2025BU": 0,
+      "cuf": null,
+      "note": "Commissioning expected 2026. Sodium loading completed. Final testing underway."
+    },
+    {
+      "plantId": "GORAKHPUR",
+      "plantName": "Gorakhpur Haryana Anu Vidyut Pariyojana",
+      "shortName": "GHAVP",
+      "state": "HR",
+      "stateName": "Haryana",
+      "location": "Fatehabad, Haryana",
+      "coordinates": [75.45, 29.51],
+      "operator": "NPCIL",
+      "technology": "PHWR",
+      "status": "under_construction",
+      "units": [
+        { "unit": "GHAVP-1", "technology": "PHWR", "capacityMW": 700, "commissioningYear": null, "status": "under_construction" },
+        { "unit": "GHAVP-2", "technology": "PHWR", "capacityMW": 700, "commissioningYear": null, "status": "under_construction" }
+      ],
+      "totalCapacityMW": 1400,
+      "operatingSince": null,
+      "generationFY2025BU": 0,
+      "cuf": null,
+      "note": "Construction restarted. Project was stalled. Expected commissioning 2028-2030."
+    }
+  ],
+  "stateCapacity": [
+    { "stateCode": "MH", "stateName": "Maharashtra", "operatingMW": 1400, "underConstructionMW": 0, "approvedMW": 0, "plantCount": 1, "unitCount": 4 },
+    { "stateCode": "TN", "stateName": "Tamil Nadu", "operatingMW": 2440, "underConstructionMW": 2500, "approvedMW": 0, "plantCount": 3, "unitCount": 5 },
+    { "stateCode": "RJ", "stateName": "Rajasthan", "operatingMW": 1080, "underConstructionMW": 0, "approvedMW": 4200, "plantCount": 1, "unitCount": 5 },
+    { "stateCode": "GJ", "stateName": "Gujarat", "operatingMW": 1840, "underConstructionMW": 0, "approvedMW": 2800, "plantCount": 1, "unitCount": 4 },
+    { "stateCode": "KA", "stateName": "Karnataka", "operatingMW": 880, "underConstructionMW": 0, "approvedMW": 4200, "plantCount": 1, "unitCount": 4 },
+    { "stateCode": "UP", "stateName": "Uttar Pradesh", "operatingMW": 440, "underConstructionMW": 0, "approvedMW": 4200, "plantCount": 1, "unitCount": 2 },
+    { "stateCode": "HR", "stateName": "Haryana", "operatingMW": 0, "underConstructionMW": 1400, "approvedMW": 0, "plantCount": 1, "unitCount": 2 },
+    { "stateCode": "AP", "stateName": "Andhra Pradesh", "operatingMW": 0, "underConstructionMW": 2800, "approvedMW": 4800, "plantCount": 1, "unitCount": 2 }
+  ]
+}

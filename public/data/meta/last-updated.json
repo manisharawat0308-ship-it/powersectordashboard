@@ -1,0 +1,11 @@
+{
+  "capacity": { "date": "2026-06-30", "asOf": "31 March 2025 (FY24-25)", "source": "CEA" },
+  "generation": { "date": "2026-06-30", "asOf": "FY 2024-25 (Apr 2024 – Mar 2025)", "source": "CEA" },
+  "projections": { "date": "2026-06-30", "asOf": "NEP 2023 (projections to 2032; 2033-35 extrapolated)", "source": "CEA/MoP" },
+  "geography": { "date": "2026-06-30", "asOf": "31 March 2025", "source": "CEA State-wise reports" },
+  "marketPlayers": { "date": "2026-07-08", "asOf": "FY25-26 corporate filings (company-specific dates)", "source": "BSE/NSE/Annual Reports" },
+  "nationalRE": { "date": "2026-07-08", "asOf": "30 June 2026", "source": "MNRE Physical Progress" },
+  "news": { "date": "2026-07-22", "asOf": "Real-time (as published)", "source": "Multiple" },
+  "globalLastUpdated": "2026-07-22",
+  "note": "Base installed capacity data (450.29 GW) reflects FY24-25 year-end. MNRE's latest (Jun 2026) shows total RE at 288.6 GW (incl Large Hydro) implying total ~530 GW. Market Players RE data uses MNRE Jun 2026 numbers."
+}

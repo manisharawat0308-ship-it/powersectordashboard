@@ -1,0 +1,55 @@
+{
+  "lastUpdated": "2026-06-30",
+  "dataSource": "Central Electricity Authority (cea.nic.in)",
+  "ownershipBySource": {
+    "central_psu": {
+      "totalCapacityGW": 103.45,
+      "fossil": { "capacityGW": 55.20, "percentage": 53.4 },
+      "non_fossil": { "capacityGW": 48.25, "percentage": 46.6 },
+      "bySource": {
+        "coal": { "capacityMW": 42800, "percentage": 41.4 },
+        "gas": { "capacityMW": 7100, "percentage": 6.9 },
+        "lignite": { "capacityMW": 3700, "percentage": 3.6 },
+        "diesel": { "capacityMW": 100, "percentage": 0.1 },
+        "nuclear": { "capacityMW": 8180, "percentage": 7.9 },
+        "large_hydro": { "capacityMW": 21200, "percentage": 20.5 },
+        "solar": { "capacityMW": 12500, "percentage": 12.1 },
+        "wind": { "capacityMW": 2100, "percentage": 2.0 },
+        "small_hydro": { "capacityMW": 1800, "percentage": 1.7 },
+        "biomass": { "capacityMW": 1520, "percentage": 1.5 }
+      }
+    },
+    "state_psu": {
+      "totalCapacityGW": 105.82,
+      "fossil": { "capacityGW": 72.40, "percentage": 68.4 },
+      "non_fossil": { "capacityGW": 33.42, "percentage": 31.6 },
+      "bySource": {
+        "coal": { "capacityMW": 62500, "percentage": 59.1 },
+        "gas": { "capacityMW": 5800, "percentage": 5.5 },
+        "lignite": { "capacityMW": 2540, "percentage": 2.4 },
+        "diesel": { "capacityMW": 290, "percentage": 0.3 },
+        "large_hydro": { "capacityMW": 18200, "percentage": 17.2 },
+        "solar": { "capacityMW": 8400, "percentage": 7.9 },
+        "wind": { "capacityMW": 3200, "percentage": 3.0 },
+        "small_hydro": { "capacityMW": 2100, "percentage": 2.0 },
+        "biomass": { "capacityMW": 2520, "percentage": 2.4 }
+      }
+    },
+    "private": {
+      "totalCapacityGW": 241.02,
+      "fossil": { "capacityGW": 116.27, "percentage": 48.2 },
+      "non_fossil": { "capacityGW": 124.75, "percentage": 51.8 },
+      "bySource": {
+        "coal": { "capacityMW": 106240, "percentage": 44.1 },
+        "gas": { "capacityMW": 12000, "percentage": 5.0 },
+        "lignite": { "capacityMW": 500, "percentage": 0.2 },
+        "diesel": { "capacityMW": 300, "percentage": 0.1 },
+        "solar": { "capacityMW": 69670, "percentage": 28.9 },
+        "wind": { "capacityMW": 42350, "percentage": 17.6 },
+        "large_hydro": { "capacityMW": 7650, "percentage": 3.2 },
+        "small_hydro": { "capacityMW": 1150, "percentage": 0.5 },
+        "biomass": { "capacityMW": 6710, "percentage": 2.8 }
+      }
+    }
+  }
+}

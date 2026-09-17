@@ -1,0 +1,16 @@
+{
+  "fossil": {
+    "coal": { "label": "Coal", "color": "#D32F2F", "hue": 0 },
+    "lignite": { "label": "Lignite", "color": "#E64A19", "hue": 14 },
+    "gas": { "label": "Natural Gas", "color": "#F57C00", "hue": 30 },
+    "diesel": { "label": "Diesel", "color": "#FBC02D", "hue": 48 }
+  },
+  "non_fossil": {
+    "solar": { "label": "Solar", "color": "#66BB6A", "hue": 122 },
+    "wind": { "label": "Wind", "color": "#43A047", "hue": 130 },
+    "small_hydro": { "label": "Small Hydro", "color": "#00897B", "hue": 174 },
+    "large_hydro": { "label": "Large Hydro", "color": "#0288D1", "hue": 199 },
+    "biomass": { "label": "Biomass", "color": "#558B2F", "hue": 92 },
+    "nuclear": { "label": "Nuclear", "color": "#5C6BC0", "hue": 234 }
+  }
+}

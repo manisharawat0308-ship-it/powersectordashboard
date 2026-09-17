@@ -1,0 +1,1227 @@
+{
+  "lastUpdated": "2026-07-01",
+  "dataAsOf": "FY 2025-26 (plant data as per CEA, MoP, company annual reports)",
+  "dataSource": "CEA installed capacity reports, NTPC/Adani/Tata Power/Vedanta annual reports, MoP press releases",
+  "note": "Unit configurations (e.g. 4×660 MW) reflect actual turbine-generator sets at each plant. Equipment manufacturer data from CEA/BHEL/company filings. Capacity figures rounded to nearest MW.",
+
+  "equipmentManufacturers": {
+    "turbineGeneratorOEMs": [
+      { "id": "BHEL", "name": "Bharat Heavy Electricals Ltd", "country": "India", "headquarters": "New Delhi", "note": "Dominant domestic OEM; manufactures 210/250/500/660/800 MW steam turbines, generators, boilers under license from GE/Siemens/Alstom. ~70% of India's thermal fleet." },
+      { "id": "GE", "name": "GE Power (Baker Hughes)", "country": "USA", "headquarters": "Schenectady, NY", "note": "Supplies 660/800 MW supercritical turbines. BHEL manufactures under GE license for 660 MW units." },
+      { "id": "SIEMENS", "name": "Siemens Energy", "country": "Germany", "headquarters": "Munich", "note": "660/800 MW supercritical sets. BHEL-Siemens joint supply for several NTPC projects." },
+      { "id": "ALSTOM", "name": "Alstom (now GE Vernova)", "country": "France", "headquarters": "Paris", "note": "500/660 MW turbines. Supplied turbines to Tata Power, Adani Power units." },
+      { "id": "DOOSAN", "name": "Doosan Heavy Industries", "country": "South Korea", "headquarters": "Changwon", "note": "660/870 MW supercritical turbines for private developers. Significant presence in Adani/Sterlite fleet." },
+      { "id": "HARBIN", "name": "Harbin Electric (HEC)", "country": "China", "headquarters": "Harbin", "note": "600/660 MW turbines. Used in some private sector projects pre-2020." },
+      { "id": "TOSHIBA", "name": "Toshiba Energy Systems", "country": "Japan", "headquarters": "Tokyo", "note": "Supplied generators for select NTPC and private developer units." },
+      { "id": "L_T_MHI", "name": "L&T-MHI Turbine Generators", "country": "India/Japan", "headquarters": "Hazira, Gujarat", "note": "Joint venture: Larsen & Toubro + Mitsubishi Hitachi Power. Manufactures 660/800 MW steam turbine generators in India." }
+    ],
+    "boilerOEMs": [
+      { "id": "BHEL_B", "name": "BHEL (Boiler Division)", "country": "India", "headquarters": "Trichy", "note": "Manufactures pulverised coal boilers for 210/250/500/660/800 MW units. ~65% market share." },
+      { "id": "CETHAR", "name": "Cethar Limited", "country": "India", "headquarters": "Trichy", "note": "CFBC and AFBC boilers for smaller 30–300 MW units. Listed on BSE." },
+      { "id": "THERMAX", "name": "Thermax Ltd", "country": "India", "headquarters": "Pune", "note": "Boilers for smaller industrial and sub-100 MW units." },
+      { "id": "DONGFANG", "name": "Dongfang Electric (DEC)", "country": "China", "headquarters": "Chengdu", "note": "Supercritical boilers for 660 MW units in some private sector projects." },
+      { "id": "MITSUI", "name": "Mitsui Babcock / Hitachi Zosen", "country": "Japan", "headquarters": "Tokyo", "note": "High-pressure boilers for select older NTPC units." }
+    ]
+  },
+
+  "thermalOperators": [
+    {
+      "rank": 1,
+      "name": "NTPC Limited",
+      "shortName": "NTPC",
+      "ownership": "central_psu",
+      "listed": "BSE/NSE (NTPC)",
+      "totalThermalMW": 56823,
+      "totalCapacityMW": 76108,
+      "headquarters": "New Delhi",
+      "source": "NTPC Annual Report FY2025-26; CEA installed capacity Mar 2026",
+      "notes": "India's largest power utility. ~25% of India's total installed capacity. Operates 23 coal/gas stations.",
+      "plants": [
+        {
+          "plantName": "Vindhyachal Super Thermal Power Station",
+          "state": "MP",
+          "fuel": "coal",
+          "totalCapacityMW": 4760,
+          "unitConfig": "5×210 MW + 2×500 MW + 2×500 MW + 1×500 MW",
+          "units": [
+            { "config": "5×210 MW", "totalMW": 1050, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1987–1999" },
+            { "config": "6×500 MW", "totalMW": 3000, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2006–2012" },
+            { "config": "2×500 MW", "totalMW": 710, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2014–2016" }
+          ],
+          "plf": 72.4,
+          "status": "operating"
+        },
+        {
+          "plantName": "Korba Super Thermal Power Station",
+          "state": "CG",
+          "fuel": "coal",
+          "totalCapacityMW": 2600,
+          "unitConfig": "3×200 MW + 4×500 MW",
+          "units": [
+            { "config": "3×200 MW", "totalMW": 600, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1983–1988" },
+            { "config": "4×500 MW", "totalMW": 2000, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2004–2010" }
+          ],
+          "plf": 68.2,
+          "status": "operating"
+        },
+        {
+          "plantName": "Ramagundam Super Thermal Power Station",
+          "state": "TS",
+          "fuel": "coal",
+          "totalCapacityMW": 2600,
+          "unitConfig": "3×200 MW + 4×500 MW",
+          "units": [
+            { "config": "3×200 MW", "totalMW": 600, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1983–1988" },
+            { "config": "4×500 MW", "totalMW": 2000, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2005–2010" }
+          ],
+          "plf": 71.8,
+          "status": "operating"
+        },
+        {
+          "plantName": "Sipat Super Thermal Power Station",
+          "state": "CG",
+          "fuel": "coal",
+          "totalCapacityMW": 2980,
+          "unitConfig": "2×660 MW + 3×500 MW",
+          "units": [
+            { "config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2012–2013", "note": "India's first supercritical units" },
+            { "config": "3×500 MW", "totalMW": 1500, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2006–2009" }
+          ],
+          "plf": 69.5,
+          "status": "operating"
+        },
+        {
+          "plantName": "Dadri Natural Gas Power Station",
+          "state": "UP",
+          "fuel": "gas",
+          "totalCapacityMW": 829,
+          "unitConfig": "4×130 MW (gas turbines) + 2×160 MW (steam)",
+          "units": [
+            { "config": "4×130 MW", "totalMW": 520, "technology": "Gas Turbine (Combined Cycle)", "turbineOEM": "GE", "boilerOEM": null, "commissioningPeriod": "1992–1997" },
+            { "config": "2×160 MW", "totalMW": 320, "technology": "Steam (CCGT)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1993–1998" }
+          ],
+          "plf": 18.4,
+          "status": "operating",
+          "note": "Low PLF due to gas shortage"
+        },
+        {
+          "plantName": "Kahalgaon Super Thermal Power Station",
+          "state": "BR",
+          "fuel": "coal",
+          "totalCapacityMW": 2340,
+          "unitConfig": "4×210 MW + 3×500 MW",
+          "units": [
+            { "config": "4×210 MW", "totalMW": 840, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1994–2003" },
+            { "config": "3×500 MW", "totalMW": 1500, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2007–2010" }
+          ],
+          "plf": 63.1,
+          "status": "operating"
+        },
+        {
+          "plantName": "NTPC Kudgi Super Thermal Power Station",
+          "state": "KA",
+          "fuel": "coal",
+          "totalCapacityMW": 2400,
+          "unitConfig": "3×800 MW",
+          "units": [
+            { "config": "3×800 MW", "totalMW": 2400, "technology": "Supercritical (800 MW)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2017–2020", "note": "BHEL 800 MW supercritical — largest domestic units. BHEL-GE collaboration." }
+          ],
+          "plf": 74.2,
+          "status": "operating"
+        },
+        {
+          "plantName": "Lata Tapovan / NTPC Meja",
+          "state": "UP",
+          "fuel": "coal",
+          "totalCapacityMW": 1320,
+          "unitConfig": "2×660 MW",
+          "units": [
+            { "config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2021–2022" }
+          ],
+          "plf": 78.3,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "Adani Power Limited",
+      "shortName": "Adani Power",
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "totalThermalMW": 17000,
+      "totalCapacityMW": 17550,
+      "headquarters": "Ahmedabad",
+      "source": "Adani Power Annual Report FY2025-26; BSE filings",
+      "notes": "India's largest private thermal power producer. Fleet of supercritical and ultra-supercritical plants.",
+      "plants": [
+        {
+          "plantName": "Mundra Thermal Power Station",
+          "state": "GJ",
+          "fuel": "coal",
+          "totalCapacityMW": 4620,
+          "unitConfig": "5×330 MW + 5×660 MW",
+          "units": [
+            { "config": "5×330 MW", "totalMW": 1650, "technology": "Subcritical", "turbineOEM": "DOOSAN", "boilerOEM": "DONGFANG", "commissioningPeriod": "2009–2011", "note": "Imported coal (Indonesia). Coastal location — cyclone/flood exposed." },
+            { "config": "5×660 MW", "totalMW": 2970, "technology": "Supercritical", "turbineOEM": "DOOSAN", "boilerOEM": "DONGFANG", "commissioningPeriod": "2012–2013" }
+          ],
+          "plf": 58.2,
+          "status": "operating"
+        },
+        {
+          "plantName": "Tiroda Thermal Power Station",
+          "state": "MH",
+          "fuel": "coal",
+          "totalCapacityMW": 3300,
+          "unitConfig": "5×660 MW",
+          "units": [
+            { "config": "5×660 MW", "totalMW": 3300, "technology": "Supercritical", "turbineOEM": "DOOSAN", "boilerOEM": "DONGFANG", "commissioningPeriod": "2012–2015" }
+          ],
+          "plf": 72.8,
+          "status": "operating"
+        },
+        {
+          "plantName": "Kawai Thermal Power Station",
+          "state": "RJ",
+          "fuel": "coal",
+          "totalCapacityMW": 1320,
+          "unitConfig": "2×660 MW",
+          "units": [
+            { "config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "DOOSAN", "boilerOEM": "DONGFANG", "commissioningPeriod": "2013–2014" }
+          ],
+          "plf": 66.4,
+          "status": "operating"
+        },
+        {
+          "plantName": "Udupi Power Corporation",
+          "state": "KA",
+          "fuel": "coal",
+          "totalCapacityMW": 1200,
+          "unitConfig": "2×600 MW",
+          "units": [
+            { "config": "2×600 MW", "totalMW": 1200, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2010–2011" }
+          ],
+          "plf": 68.9,
+          "status": "operating"
+        },
+        {
+          "plantName": "Mahan Energen (formerly Essar)",
+          "state": "MP",
+          "fuel": "coal",
+          "totalCapacityMW": 1200,
+          "unitConfig": "2×600 MW",
+          "units": [
+            { "config": "2×600 MW", "totalMW": 1200, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2013–2014" }
+          ],
+          "plf": 61.2,
+          "status": "operating"
+        },
+        {
+          "plantName": "Raipur Energen (formerly Lanco)",
+          "state": "CG",
+          "fuel": "coal",
+          "totalCapacityMW": 1320,
+          "unitConfig": "2×660 MW",
+          "units": [
+            { "config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "DOOSAN", "boilerOEM": "DONGFANG", "commissioningPeriod": "2013–2015" }
+          ],
+          "plf": 64.7,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Tata Power Company Limited",
+      "shortName": "Tata Power",
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "totalThermalMW": 6400,
+      "totalCapacityMW": 14800,
+      "headquarters": "Mumbai",
+      "source": "Tata Power Annual Report FY2025-26",
+      "notes": "Oldest private power utility in India. Iconic Trombay plant in Mumbai. Also operates Coastal Gujarat.",
+      "plants": [
+        {
+          "plantName": "Trombay Thermal Power Station",
+          "state": "MH",
+          "fuel": "coal/gas",
+          "totalCapacityMW": 1580,
+          "unitConfig": "1×500 MW (coal) + 2×250 MW (coal) + 2×180 MW (gas)",
+          "units": [
+            { "config": "1×500 MW", "totalMW": 500, "technology": "Subcritical (coal)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1984" },
+            { "config": "2×250 MW", "totalMW": 500, "technology": "Subcritical (coal)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1990–1995" },
+            { "config": "2×180 MW", "totalMW": 360, "technology": "Gas Turbine (CCGT)", "turbineOEM": "GE", "boilerOEM": null, "commissioningPeriod": "2001–2004" }
+          ],
+          "plf": 55.6,
+          "status": "operating",
+          "note": "Supplies power to Mumbai. Aging fleet — partial decommissioning expected."
+        },
+        {
+          "plantName": "Mundra Ultra Mega Power Plant (UMPP)",
+          "state": "GJ",
+          "fuel": "coal",
+          "totalCapacityMW": 4150,
+          "unitConfig": "5×830 MW",
+          "units": [
+            { "config": "5×830 MW", "totalMW": 4150, "technology": "Supercritical (imported coal)", "turbineOEM": "DOOSAN", "boilerOEM": "DONGFANG", "commissioningPeriod": "2012–2013", "note": "Largest supercritical units in India at time of commissioning. Coastal — exposed to cyclone & flood." }
+          ],
+          "plf": 60.4,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Vedanta / TSPL (Talwandi Sabo)",
+      "shortName": "Vedanta / TSPL",
+      "ownership": "private",
+      "listed": "BSE/NSE (Vedanta Ltd)",
+      "totalThermalMW": 3480,
+      "totalCapacityMW": 3480,
+      "headquarters": "Mumbai",
+      "source": "Vedanta Annual Report FY25; Punjab Energy Sector data",
+      "notes": "Talwandi Sabo Power (TSPL) in Punjab + Jharsuguda plant in Odisha. Both supercritical.",
+      "plants": [
+        {
+          "plantName": "Talwandi Sabo Power Plant",
+          "state": "PB",
+          "fuel": "coal",
+          "totalCapacityMW": 1980,
+          "unitConfig": "3×660 MW",
+          "units": [
+            { "config": "3×660 MW", "totalMW": 1980, "technology": "Supercritical", "turbineOEM": "DOOSAN", "boilerOEM": "BHEL_B", "commissioningPeriod": "2016–2017" }
+          ],
+          "plf": 68.3,
+          "status": "operating"
+        },
+        {
+          "plantName": "Vedanta Jharsuguda Power Plant",
+          "state": "OD",
+          "fuel": "coal",
+          "totalCapacityMW": 1500,
+          "unitConfig": "5×300 MW",
+          "units": [
+            { "config": "5×300 MW", "totalMW": 1500, "technology": "Subcritical (captive)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2009–2015", "note": "Captive plant for aluminium smelter. April 2025 explosion — 25 fatalities." }
+          ],
+          "plf": 52.1,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "JSW Energy (Thermal Fleet)",
+      "shortName": "JSW Energy",
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "totalThermalMW": 7380,
+      "totalCapacityMW": 13200,
+      "headquarters": "Mumbai",
+      "source": "JSW Energy Annual Report FY2025-26",
+      "notes": "Thermal fleet includes Vijayanagar (Karnataka) and Ratnagiri (Maharashtra). Transitioning to RE.",
+      "plants": [
+        {
+          "plantName": "Vijayanagar Thermal Power Plant",
+          "state": "KA",
+          "fuel": "coal",
+          "totalCapacityMW": 1600,
+          "unitConfig": "4×260 MW + 2×300 MW",
+          "units": [
+            { "config": "4×260 MW", "totalMW": 1040, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2000–2008" },
+            { "config": "2×300 MW", "totalMW": 600, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2009–2011" }
+          ],
+          "plf": 71.4,
+          "status": "operating"
+        },
+        {
+          "plantName": "Ratnagiri Gas & Power (RGPPL)",
+          "state": "MH",
+          "fuel": "gas",
+          "totalCapacityMW": 1967,
+          "unitConfig": "6×300 MW (CCGT)",
+          "units": [
+            { "config": "6×300 MW", "totalMW": 1967, "technology": "Combined Cycle Gas Turbine", "turbineOEM": "GE", "boilerOEM": "BHEL_B", "commissioningPeriod": "2011–2015", "note": "Very low PLF due to domestic gas shortage." }
+          ],
+          "plf": 11.2,
+          "status": "operating"
+        },
+        {
+          "plantName": "Karcham Wangtoo (Acquired)",
+          "state": "HP",
+          "fuel": "hydro",
+          "totalCapacityMW": 1091,
+          "unitConfig": "4×250 MW + 1×91 MW",
+          "units": [
+            { "config": "4×250 MW + 1×91 MW", "totalMW": 1091, "technology": "Run-of-river Hydro", "turbineOEM": "ALSTOM", "boilerOEM": null, "commissioningPeriod": "2011–2012" }
+          ],
+          "plf": 44.8,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "Sembcorp Energy India (Thermal)",
+      "shortName": "Sembcorp",
+      "ownership": "private",
+      "listed": "Unlisted India (Sembcorp Singapore, SGX)",
+      "totalThermalMW": 2640,
+      "totalCapacityMW": 2640,
+      "headquarters": "Singapore / Hyderabad",
+      "source": "Sembcorp Industries Annual Report 2025",
+      "notes": "TPCIL (Thermal Powertech Corporation India) — 2×660 MW supercritical at Krishnapatnam, AP.",
+      "plants": [
+        {
+          "plantName": "Krishnapatnam Power Project",
+          "state": "AP",
+          "fuel": "coal",
+          "totalCapacityMW": 2640,
+          "unitConfig": "4×660 MW",
+          "units": [
+            { "config": "4×660 MW", "totalMW": 2640, "technology": "Supercritical", "turbineOEM": "DOOSAN", "boilerOEM": "BHEL_B", "commissioningPeriod": "2015–2018", "note": "Coastal Andhra Pradesh — cyclone exposed. Imported coal from Indonesia/Australia." }
+          ],
+          "plf": 66.8,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "CESC Limited",
+      "shortName": "CESC",
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "totalThermalMW": 2615,
+      "totalCapacityMW": 2615,
+      "headquarters": "Kolkata",
+      "source": "CESC Annual Report FY25-26",
+      "notes": "Distribution utility for Kolkata. Owns and operates coal plants supplying Kolkata.",
+      "plants": [
+        {
+          "plantName": "Budge Budge Generating Station",
+          "state": "WB",
+          "fuel": "coal",
+          "totalCapacityMW": 750,
+          "unitConfig": "3×250 MW",
+          "units": [
+            { "config": "3×250 MW", "totalMW": 750, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1997–2003" }
+          ],
+          "plf": 70.2,
+          "status": "operating"
+        },
+        {
+          "plantName": "Haldia Generating Station",
+          "state": "WB",
+          "fuel": "coal",
+          "totalCapacityMW": 600,
+          "unitConfig": "2×300 MW",
+          "units": [
+            { "config": "2×300 MW", "totalMW": 600, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2010–2013" }
+          ],
+          "plf": 67.8,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "Damodar Valley Corporation (DVC)",
+      "shortName": "DVC",
+      "ownership": "central_psu",
+      "listed": "Unlisted (GoI + WB + JH)",
+      "totalThermalMW": 7020,
+      "totalCapacityMW": 7020,
+      "headquarters": "Kolkata",
+      "source": "DVC Annual Report FY25; CEA data",
+      "notes": "Joint venture between Govt of India, West Bengal and Jharkhand. Coal basket region.",
+      "plants": [
+        {
+          "plantName": "Raghunathpur Thermal Power Station",
+          "state": "WB",
+          "fuel": "coal",
+          "totalCapacityMW": 2400,
+          "unitConfig": "4×600 MW",
+          "units": [
+            { "config": "4×600 MW", "totalMW": 2400, "technology": "Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2019–2023" }
+          ],
+          "plf": 72.1,
+          "status": "operating"
+        },
+        {
+          "plantName": "Mejia Thermal Power Station",
+          "state": "WB",
+          "fuel": "coal",
+          "totalCapacityMW": 2340,
+          "unitConfig": "4×210 MW + 2×500 MW",
+          "units": [
+            { "config": "4×210 MW", "totalMW": 840, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1996–2000" },
+            { "config": "2×500 MW", "totalMW": 1000, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2009–2011" }
+          ],
+          "plf": 64.5,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "MAHAGENCO (Maharashtra State Power Generation Co.)",
+      "shortName": "MAHAGENCO",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoM)",
+      "totalThermalMW": 12642,
+      "totalCapacityMW": 13908,
+      "headquarters": "Nagpur",
+      "source": "MAHAGENCO Annual Report FY25; CEA",
+      "notes": "Maharashtra's state genco. Largest state-owned thermal utility. Coal fleet across 7 stations. Also has hydro and solar.",
+      "plants": [
+        { "plantName": "Chandrapur Super Thermal Power Station", "state": "MH", "fuel": "coal", "totalCapacityMW": 2920, "unitConfig": "2×210 MW + 5×500 MW", "units": [{"config": "2×210 MW", "totalMW": 420, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1986–1989"}, {"config": "5×500 MW", "totalMW": 2500, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2005–2012"}], "plf": 66.8, "status": "operating" },
+        { "plantName": "Koradi Thermal Power Station", "state": "MH", "fuel": "coal", "totalCapacityMW": 2400, "unitConfig": "4×210 MW + 2×660 MW", "units": [{"config": "4×210 MW", "totalMW": 840, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1988–2001"}, {"config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2017–2020"}], "plf": 62.4, "status": "operating" },
+        { "plantName": "Khaperkheda Thermal Power Station", "state": "MH", "fuel": "coal", "totalCapacityMW": 1340, "unitConfig": "4×210 MW + 1×500 MW", "units": [{"config": "4×210 MW + 1×500 MW", "totalMW": 1340, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1990–2007"}], "plf": 64.2, "status": "operating" },
+        { "plantName": "Bhusawal Thermal Power Station", "state": "MH", "fuel": "coal", "totalCapacityMW": 1210, "unitConfig": "2×210 MW + 1×500 MW + 1×250 MW", "units": [{"config": "2×210 MW + 1×500 MW + 1×250 MW", "totalMW": 1210, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1982–2010"}], "plf": 58.6, "status": "operating" },
+        { "plantName": "Parli Thermal Power Station", "state": "MH", "fuel": "coal", "totalCapacityMW": 1170, "unitConfig": "3×250 MW + 1×250 MW", "units": [{"config": "3×250 MW + 1×250 MW", "totalMW": 1170, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1995–2009", "note": "Partially retired due to environmental compliance issues."}], "plf": 42.8, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "TANGEDCO (Tamil Nadu Generation & Distribution Corp.)",
+      "shortName": "TANGEDCO",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoTN)",
+      "totalThermalMW": 4670,
+      "totalCapacityMW": 4670,
+      "headquarters": "Chennai",
+      "source": "TANGEDCO website; CEA installed capacity data",
+      "notes": "Tamil Nadu's state genco. Fleet of older subcritical coal plants. Tuticorin is the flagship.",
+      "plants": [
+        { "plantName": "Tuticorin Thermal Power Station", "state": "TN", "fuel": "coal", "totalCapacityMW": 1050, "unitConfig": "5×210 MW", "units": [{"config": "5×210 MW", "totalMW": 1050, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1979–1990", "note": "Coastal plant — cyclone exposed. Oldest TANGEDCO thermal."}], "plf": 48.2, "status": "operating" },
+        { "plantName": "North Chennai Thermal Power Station", "state": "TN", "fuel": "coal", "totalCapacityMW": 1830, "unitConfig": "2×600 MW + 1×600 MW", "units": [{"config": "3×600 MW + 1×30 MW", "totalMW": 1830, "technology": "Subcritical/Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2014–2019"}], "plf": 68.4, "status": "operating" },
+        { "plantName": "Mettur Thermal Power Station", "state": "TN", "fuel": "coal", "totalCapacityMW": 1440, "unitConfig": "4×210 MW + 2×600 MW", "units": [{"config": "4×210 MW + 2×600 MW", "totalMW": 1440, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1987–2016"}], "plf": 55.1, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 11,
+      "name": "APGENCO (Andhra Pradesh Power Generation Corp.)",
+      "shortName": "APGENCO",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoAP)",
+      "totalThermalMW": 4810,
+      "totalCapacityMW": 4810,
+      "headquarters": "Hyderabad",
+      "source": "APGENCO; CEA",
+      "notes": "Andhra Pradesh state genco. Dr. Narla Tata Rao TPS (Vijayawada) is the flagship.",
+      "plants": [
+        { "plantName": "Dr. NTTPS Vijayawada (Sri Damodaram)", "state": "AP", "fuel": "coal", "totalCapacityMW": 2610, "unitConfig": "5×210 MW + 2×500 MW + 1×600 MW", "units": [{"config": "5×210 MW", "totalMW": 1050, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1979–1993"}, {"config": "2×500 MW + 1×600 MW", "totalMW": 1560, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2004–2013"}], "plf": 60.2, "status": "operating" },
+        { "plantName": "Rayalaseema TPS", "state": "AP", "fuel": "coal", "totalCapacityMW": 1650, "unitConfig": "5×210 MW + 1×600 MW", "units": [{"config": "5×210 MW + 1×600 MW", "totalMW": 1650, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1994–2016"}], "plf": 56.8, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 12,
+      "name": "TSGENCO (Telangana State Power Generation Corp.)",
+      "shortName": "TSGENCO",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoTS)",
+      "totalThermalMW": 4382,
+      "totalCapacityMW": 4382,
+      "headquarters": "Hyderabad",
+      "source": "TSGENCO; CEA",
+      "notes": "Telangana state genco (carved from APGENCO 2014). Operates Kothagudem, Ramagundam-B, Bhadradri.",
+      "plants": [
+        { "plantName": "Kothagudem Thermal Power Station", "state": "TS", "fuel": "coal", "totalCapacityMW": 1720, "unitConfig": "4×120 MW + 4×250 MW", "units": [{"config": "4×120 MW + 4×250 MW", "totalMW": 1480, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1966–2004", "note": "Oldest state genco plant in operation."}], "plf": 44.5, "status": "operating" },
+        { "plantName": "Bhadradri Thermal Power Plant", "state": "TS", "fuel": "coal", "totalCapacityMW": 1080, "unitConfig": "5×270 MW (initially), commissioned as 2×270 MW", "units": [{"config": "4×270 MW", "totalMW": 1080, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2020–2024"}], "plf": 70.1, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 13,
+      "name": "GSECL (Gujarat State Electricity Corporation Ltd)",
+      "shortName": "GSECL",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoGJ)",
+      "totalThermalMW": 6400,
+      "totalCapacityMW": 7100,
+      "headquarters": "Vadodara",
+      "source": "GSECL; CEA",
+      "notes": "Gujarat state genco. Wanakbori, Ukai, Gandhinagar, Dhuvaran stations. Mix of coal, gas, lignite.",
+      "plants": [
+        { "plantName": "Wanakbori Thermal Power Station", "state": "GJ", "fuel": "coal", "totalCapacityMW": 1470, "unitConfig": "7×210 MW", "units": [{"config": "7×210 MW", "totalMW": 1470, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1982–1994"}], "plf": 52.8, "status": "operating" },
+        { "plantName": "GSECL Sikka Thermal Power Station", "state": "GJ", "fuel": "coal", "totalCapacityMW": 1200, "unitConfig": "2×250 MW + 2×250 MW (expansion)", "units": [{"config": "4×250 MW", "totalMW": 1000, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2008–2014"}], "plf": 60.5, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 14,
+      "name": "RRVUNL (Rajasthan Rajya Vidyut Utpadan Nigam Ltd)",
+      "shortName": "RRVUNL",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoRJ)",
+      "totalThermalMW": 5380,
+      "totalCapacityMW": 5630,
+      "headquarters": "Jaipur",
+      "source": "RRVUNL; CEA",
+      "notes": "Rajasthan state genco. Suratgarh and Kota stations. Also operates lignite plants at Barsingsar.",
+      "plants": [
+        { "plantName": "Suratgarh Super Thermal Power Station", "state": "RJ", "fuel": "coal", "totalCapacityMW": 2820, "unitConfig": "6×250 MW + 2×660 MW", "units": [{"config": "6×250 MW", "totalMW": 1500, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1998–2009"}, {"config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2017–2020"}], "plf": 67.2, "status": "operating" },
+        { "plantName": "Kota Super Thermal Power Station", "state": "RJ", "fuel": "coal", "totalCapacityMW": 1240, "unitConfig": "2×110 MW + 3×210 MW + 1×195 MW", "units": [{"config": "2×110 MW + 3×210 MW + 1×195 MW", "totalMW": 1240, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1983–2003"}], "plf": 54.8, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 15,
+      "name": "UPRVUNL (UP Rajya Vidyut Utpadan Nigam Ltd)",
+      "shortName": "UPRVUNL",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoUP)",
+      "totalThermalMW": 5605,
+      "totalCapacityMW": 5605,
+      "headquarters": "Lucknow",
+      "source": "UPRVUNL; CEA",
+      "notes": "Uttar Pradesh state genco. Obra, Anpara, Parichha, Harduaganj stations.",
+      "plants": [
+        { "plantName": "Anpara Thermal Power Station", "state": "UP", "fuel": "coal", "totalCapacityMW": 2630, "unitConfig": "3×210 MW + 2×500 MW + 1×500 MW", "units": [{"config": "3×210 MW", "totalMW": 630, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1986–1990"}, {"config": "3×500 MW", "totalMW": 1500, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2007–2014"}], "plf": 58.4, "status": "operating" },
+        { "plantName": "Obra Thermal Power Station", "state": "UP", "fuel": "coal", "totalCapacityMW": 1550, "unitConfig": "5×200 MW + 1×660 MW (new)", "units": [{"config": "5×200 MW", "totalMW": 1000, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1970–1983", "note": "One of India's oldest thermal stations."}], "plf": 38.6, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 16,
+      "name": "WBPDCL (West Bengal Power Development Corp. Ltd)",
+      "shortName": "WBPDCL",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoWB)",
+      "totalThermalMW": 4150,
+      "totalCapacityMW": 4150,
+      "headquarters": "Kolkata",
+      "source": "WBPDCL; CEA",
+      "notes": "West Bengal state genco. Bakreswar and Sagardighi stations are the largest.",
+      "plants": [
+        { "plantName": "Bakreswar Thermal Power Station", "state": "WB", "fuel": "coal", "totalCapacityMW": 1050, "unitConfig": "5×210 MW", "units": [{"config": "5×210 MW", "totalMW": 1050, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1999–2008"}], "plf": 64.8, "status": "operating" },
+        { "plantName": "Sagardighi Thermal Power Station", "state": "WB", "fuel": "coal", "totalCapacityMW": 1600, "unitConfig": "2×300 MW + 2×500 MW", "units": [{"config": "2×300 MW + 2×500 MW", "totalMW": 1600, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2006–2015"}], "plf": 66.2, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 17,
+      "name": "MPPGCL (MP Power Generating Company Ltd)",
+      "shortName": "MPPGCL",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoMP)",
+      "totalThermalMW": 4285,
+      "totalCapacityMW": 4285,
+      "headquarters": "Jabalpur",
+      "source": "MPPGCL; CEA",
+      "notes": "Madhya Pradesh state genco. Sanjay Gandhi TPS (Birsinghpur) and Satpura are key stations.",
+      "plants": [
+        { "plantName": "Sanjay Gandhi Thermal Power Station", "state": "MP", "fuel": "coal", "totalCapacityMW": 1340, "unitConfig": "5×210 MW + 1×500 MW", "units": [{"config": "5×210 MW + 1×500 MW", "totalMW": 1550, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1995–2009"}], "plf": 62.7, "status": "operating" },
+        { "plantName": "Amarkantak Thermal Power Station", "state": "MP", "fuel": "coal", "totalCapacityMW": 900, "unitConfig": "2×210 MW + 1×210 MW + 1×210 MW", "units": [{"config": "4×210 MW", "totalMW": 840, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1986–1998"}], "plf": 55.4, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 18,
+      "name": "CSPGCL (Chhattisgarh State Power Generation Co.)",
+      "shortName": "CSPGCL",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoCG)",
+      "totalThermalMW": 3440,
+      "totalCapacityMW": 3440,
+      "headquarters": "Raipur",
+      "source": "CSPGCL; CEA",
+      "notes": "Chhattisgarh state genco. Coal-rich state. Hasdeo Bango, Korba-East stations.",
+      "plants": [
+        { "plantName": "Korba-East Thermal Power Station", "state": "CG", "fuel": "coal", "totalCapacityMW": 1200, "unitConfig": "4×250 MW + additions", "units": [{"config": "4×250 MW", "totalMW": 1000, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2001–2009"}], "plf": 68.2, "status": "operating" },
+        { "plantName": "Dr. Shyama Prasad Mukherjee TPS (Bilaspur)", "state": "CG", "fuel": "coal", "totalCapacityMW": 1320, "unitConfig": "2×660 MW", "units": [{"config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2020–2022"}], "plf": 72.1, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 19,
+      "name": "Jindal Steel & Power Ltd (JPL — Power Division)",
+      "shortName": "JSPL",
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "totalThermalMW": 3400,
+      "totalCapacityMW": 3400,
+      "headquarters": "New Delhi",
+      "source": "JSPL Annual Report FY25; CEA",
+      "notes": "Captive + merchant power from coal plants near steel operations. Tamnar (CG) is the largest.",
+      "plants": [
+        { "plantName": "Tamnar Thermal Power Station", "state": "CG", "fuel": "coal", "totalCapacityMW": 2400, "unitConfig": "4×600 MW", "units": [{"config": "4×600 MW", "totalMW": 2400, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2009–2014"}], "plf": 64.5, "status": "operating" },
+        { "plantName": "Angul Power Plant", "state": "OD", "fuel": "coal", "totalCapacityMW": 1000, "unitConfig": "4×250 MW (captive)", "units": [{"config": "4×250 MW", "totalMW": 1000, "technology": "Subcritical (captive)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2012–2015"}], "plf": 58.2, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 20,
+      "name": "Torrent Power Limited",
+      "shortName": "Torrent",
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "totalThermalMW": 2730,
+      "totalCapacityMW": 4200,
+      "headquarters": "Ahmedabad",
+      "source": "Torrent Power Annual Report FY25-26",
+      "notes": "Integrated utility (generation + distribution in Ahmedabad/Surat/Bhiwandi). Gas + coal fleet.",
+      "plants": [
+        { "plantName": "SUGEN CCGT (Combined Cycle)", "state": "GJ", "fuel": "gas", "totalCapacityMW": 1147, "unitConfig": "2×370 MW (GT) + 2×200 MW (ST)", "units": [{"config": "2×370 MW GT + 2×200 MW ST", "totalMW": 1147, "technology": "Combined Cycle Gas Turbine", "turbineOEM": "GE", "boilerOEM": null, "commissioningPeriod": "2007–2012"}], "plf": 24.8, "status": "operating", "note": "Low PLF due to domestic gas shortage." },
+        { "plantName": "AMGEN Sabarmati", "state": "GJ", "fuel": "gas", "totalCapacityMW": 1200, "unitConfig": "Various GT+ST", "units": [{"config": "Various GT+ST", "totalMW": 1200, "technology": "CCGT", "turbineOEM": "GE", "boilerOEM": null, "commissioningPeriod": "1998–2009"}], "plf": 18.2, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 21,
+      "name": "NLC India Limited",
+      "shortName": "NLC",
+      "ownership": "central_psu",
+      "listed": "BSE/NSE",
+      "totalThermalMW": 5458,
+      "totalCapacityMW": 6491,
+      "headquarters": "Neyveli, Tamil Nadu",
+      "source": "NLC India Annual Report FY25; CEA",
+      "notes": "Lignite mining + power. Oldest lignite-based power utility. Also expanding into solar. Neyveli complex is India's lignite capital.",
+      "plants": [
+        { "plantName": "Neyveli TPS-II Expansion", "state": "TN", "fuel": "coal", "totalCapacityMW": 2100, "unitConfig": "3×500 MW + 2×300 MW (lignite)", "units": [{"config": "3×500 MW (lignite)", "totalMW": 1500, "technology": "Subcritical (lignite-fired)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2010–2014"}, {"config": "2×300 MW", "totalMW": 600, "technology": "Subcritical (lignite)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2001–2006"}], "plf": 58.1, "status": "operating" },
+        { "plantName": "Barsingsar Lignite Power Plant", "state": "RJ", "fuel": "coal", "totalCapacityMW": 500, "unitConfig": "2×250 MW (lignite)", "units": [{"config": "2×250 MW (lignite)", "totalMW": 500, "technology": "Subcritical (lignite)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2012–2014"}], "plf": 56.4, "status": "operating" },
+        { "plantName": "NLC Talabira TPS", "state": "OD", "fuel": "coal", "totalCapacityMW": 2400, "unitConfig": "4×600 MW", "units": [{"config": "4×600 MW", "totalMW": 2400, "technology": "Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2023–2026"}], "plf": 74.2, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 22,
+      "name": "Reliance Power Limited",
+      "shortName": "Reliance Power",
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "totalThermalMW": 5760,
+      "totalCapacityMW": 5760,
+      "headquarters": "Mumbai",
+      "source": "Reliance Power Annual Report FY25; BSE filings",
+      "notes": "Anil Ambani group. Sasan UMPP is the flagship — India's largest private coal plant. Also Krishnapatnam and Rosa.",
+      "plants": [
+        { "plantName": "Sasan Ultra Mega Power Project", "state": "MP", "fuel": "coal", "totalCapacityMW": 3960, "unitConfig": "6×660 MW", "units": [{"config": "6×660 MW", "totalMW": 3960, "technology": "Supercritical", "turbineOEM": "DOOSAN", "boilerOEM": "DONGFANG", "commissioningPeriod": "2013–2015", "note": "India's largest single-location coal plant. Captive coal mine (low fuel cost). Sasan won on lowest tariff — ₹1.19/kWh."}], "plf": 82.4, "status": "operating" },
+        { "plantName": "Rosa Thermal Power Plant", "state": "UP", "fuel": "coal", "totalCapacityMW": 1200, "unitConfig": "4×300 MW", "units": [{"config": "4×300 MW", "totalMW": 1200, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2009–2012"}], "plf": 55.6, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 23,
+      "name": "PSPCL (Punjab State Power Corp. Ltd)",
+      "shortName": "PSPCL",
+      "ownership": "state_psu",
+      "listed": "Unlisted (GoPB)",
+      "totalThermalMW": 3520,
+      "totalCapacityMW": 3520,
+      "headquarters": "Patiala",
+      "source": "PSPCL; CEA",
+      "notes": "Punjab's combined genco+discom. Ropar and Lehra Mohabbat stations.",
+      "plants": [
+        { "plantName": "Guru Gobind Singh Super TPS (Ropar)", "state": "PB", "fuel": "coal", "totalCapacityMW": 1260, "unitConfig": "6×210 MW", "units": [{"config": "6×210 MW", "totalMW": 1260, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1984–1998"}], "plf": 52.4, "status": "operating" },
+        { "plantName": "Guru Hargobind TPS (Lehra Mohabbat)", "state": "PB", "fuel": "coal", "totalCapacityMW": 920, "unitConfig": "4×210 MW + 1×95 MW", "units": [{"config": "4×210 MW + 1×95 MW", "totalMW": 920, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "1995–2008"}], "plf": 48.6, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 24,
+      "name": "MB Power (Madhya Pradesh) Ltd",
+      "shortName": "MB Power",
+      "ownership": "private",
+      "listed": "Unlisted (Mitsui & Co. Japan + consortium)",
+      "totalThermalMW": 1320,
+      "totalCapacityMW": 1320,
+      "headquarters": "Anuppur, Madhya Pradesh",
+      "source": "CEA installed capacity; Industry data",
+      "notes": "Japanese-consortium owned supercritical plant at Anuppur (MP). Mitsui & Co. is majority stakeholder. Supplies power to MP DISCOMs under long-term PPA.",
+      "plants": [
+        { "plantName": "Anuppur Thermal Power Station", "state": "MP", "fuel": "coal", "totalCapacityMW": 1320, "unitConfig": "2×660 MW", "units": [{"config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2016–2017"}], "plf": 72.6, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 25,
+      "name": "Lalitpur Power Generation Company Ltd",
+      "shortName": "Lalitpur Power",
+      "ownership": "private",
+      "listed": "Unlisted (Bajaj Group — Bajaj Energy subsidiary)",
+      "totalThermalMW": 1980,
+      "totalCapacityMW": 1980,
+      "headquarters": "Lalitpur, Uttar Pradesh",
+      "source": "Bajaj Energy filings; CEA data",
+      "notes": "Bajaj Group's power generation arm. Supercritical plant at Lalitpur (UP). Long-term PPA with UP DISCOMs.",
+      "plants": [
+        { "plantName": "Lalitpur Super Thermal Power Station", "state": "UP", "fuel": "coal", "totalCapacityMW": 1980, "unitConfig": "3×660 MW", "units": [{"config": "3×660 MW", "totalMW": 1980, "technology": "Supercritical", "turbineOEM": "DOOSAN", "boilerOEM": "DONGFANG", "commissioningPeriod": "2017–2020"}], "plf": 68.4, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 26,
+      "name": "Jindal India Power Ltd (JIPL, formerly Jindal India Thermal Power Ltd)",
+      "shortName": "JIPL",
+      "ownership": "private",
+      "listed": "Unlisted (Jindal Group)",
+      "totalThermalMW": 1200,
+      "totalCapacityMW": 1200,
+      "headquarters": "Derang, Angul District, Odisha",
+      "source": "Jindal India Power Ltd (company website); CEA",
+      "notes": "Coal-based thermal plant at Derang Village, Angul, Odisha. 1,200 MW (2×600 MW) operating since 2015. BTG package by BHEL; coal from Talcher/MCL; water from Brahmani River (upstream of Samal Barrage). Proposed Angul-II expansion: 1,320 MW (2×660 MW).",
+      "plants": [
+        { "plantName": "Derang Thermal Power Plant (Angul-I)", "state": "OD", "fuel": "coal", "totalCapacityMW": 1200, "unitConfig": "2×600 MW", "units": [{"config": "2×600 MW", "totalMW": 1200, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2015", "note": "Coal from Talcher coalfields / Mahanadi Coalfields Ltd (MCL); water from Brahmani River upstream of Samal Barrage."}], "status": "operating" }
+      ]
+    },
+    {
+      "rank": 27,
+      "name": "DB Power Ltd (Diligent Power)",
+      "shortName": "DB Power",
+      "ownership": "private",
+      "listed": "Unlisted (Diligent Group — formerly Moser Baer)",
+      "totalThermalMW": 1320,
+      "totalCapacityMW": 1320,
+      "headquarters": "Janjgir-Champa, Chhattisgarh",
+      "source": "CEA; Industry data",
+      "notes": "Supercritical plant in Chhattisgarh. Formerly associated with Moser Baer group, now under Diligent Group management after restructuring.",
+      "plants": [
+        { "plantName": "Janjgir-Champa Power Station", "state": "CG", "fuel": "coal", "totalCapacityMW": 1320, "unitConfig": "2×660 MW", "units": [{"config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2017–2019"}], "plf": 65.2, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 28,
+      "name": "SKS Power Generation (Chhattisgarh) Ltd",
+      "shortName": "SKS Power",
+      "ownership": "private",
+      "listed": "Unlisted",
+      "totalThermalMW": 600,
+      "totalCapacityMW": 600,
+      "headquarters": "Raipur, Chhattisgarh",
+      "source": "CEA; Industry reports",
+      "notes": "Medium-sized thermal IPP in coal-rich Chhattisgarh.",
+      "plants": [
+        { "plantName": "SKS Thermal Power Station", "state": "CG", "fuel": "coal", "totalCapacityMW": 600, "unitConfig": "2×300 MW", "units": [{"config": "2×300 MW", "totalMW": 600, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2012–2014"}], "plf": 58.4, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 29,
+      "name": "RattanIndia Power Ltd",
+      "shortName": "RattanIndia",
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "totalThermalMW": 2700,
+      "totalCapacityMW": 2700,
+      "headquarters": "New Delhi",
+      "source": "RattanIndia Power BSE filings; CEA",
+      "notes": "Formerly Indiabulls Power. Two large supercritical plants — Amravati (MH) and Nasik (MH). Debt-stressed but operational.",
+      "plants": [
+        { "plantName": "Amravati Thermal Power Station", "state": "MH", "fuel": "coal", "totalCapacityMW": 1350, "unitConfig": "5×270 MW", "units": [{"config": "5×270 MW", "totalMW": 1350, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2013–2015"}], "plf": 54.8, "status": "operating" },
+        { "plantName": "Nasik Thermal Power Station", "state": "MH", "fuel": "coal", "totalCapacityMW": 1350, "unitConfig": "5×270 MW", "units": [{"config": "5×270 MW", "totalMW": 1350, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2014–2016"}], "plf": 52.1, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 30,
+      "name": "Coastal Energen Pvt Ltd (formerly IL&FS Tamil Nadu Power)",
+      "shortName": "Coastal Energen",
+      "ownership": "private",
+      "listed": "Unlisted (acquired post-IL&FS crisis)",
+      "totalThermalMW": 1200,
+      "totalCapacityMW": 1200,
+      "headquarters": "Tuticorin, Tamil Nadu",
+      "source": "CEA; Industry data",
+      "notes": "Coastal imported-coal plant at Tuticorin, TN. Originally IL&FS project, acquired by new investors after IL&FS collapse (2018). Coastal location = cyclone exposed.",
+      "plants": [
+        { "plantName": "Cuddalore/Tuticorin Power Plant", "state": "TN", "fuel": "coal", "totalCapacityMW": 1200, "unitConfig": "2×600 MW", "units": [{"config": "2×600 MW", "totalMW": 1200, "technology": "Subcritical (imported coal)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2013–2015", "note": "Imported coal from Indonesia. Coastal — cyclone & flood exposed."}], "plf": 56.8, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 31,
+      "name": "GMR Energy Ltd (Thermal Division)",
+      "shortName": "GMR Energy",
+      "ownership": "private",
+      "listed": "BSE/NSE (GMR Infra/GMR Airports parent)",
+      "totalThermalMW": 2200,
+      "totalCapacityMW": 2200,
+      "headquarters": "Hyderabad",
+      "source": "GMR Infra filings; CEA",
+      "notes": "GMR Group's power division. Plants in AP and CG. Partially divesting thermal to focus on airports/urban infra. EMCO Warora plant sold to Adani.",
+      "plants": [
+        { "plantName": "GMR Kamalanga Energy (Odisha)", "state": "OD", "fuel": "coal", "totalCapacityMW": 1050, "unitConfig": "3×350 MW", "units": [{"config": "3×350 MW", "totalMW": 1050, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2013–2016"}], "plf": 62.4, "status": "operating" },
+        { "plantName": "GMR Warora (Maharashtra)", "state": "MH", "fuel": "coal", "totalCapacityMW": 600, "unitConfig": "2×300 MW", "units": [{"config": "2×300 MW", "totalMW": 600, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2009–2011"}], "plf": 55.2, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 32,
+      "name": "Lanco Amarkantak Power Ltd (now under NCLT)",
+      "shortName": "Lanco",
+      "ownership": "private",
+      "listed": "Unlisted (under resolution / NCLT)",
+      "totalThermalMW": 1320,
+      "totalCapacityMW": 1320,
+      "headquarters": "Korba, Chhattisgarh",
+      "source": "NCLT proceedings; CEA",
+      "notes": "Former Lanco Group asset. Under NCLT resolution (debt-stressed). 2×660 MW supercritical at Korba (CG). May be acquired by Adani/other. Currently operational under interim management.",
+      "plants": [
+        { "plantName": "Lanco Korba Power Station", "state": "CG", "fuel": "coal", "totalCapacityMW": 1320, "unitConfig": "2×660 MW", "units": [{"config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "DOOSAN", "boilerOEM": "DONGFANG", "commissioningPeriod": "2014–2016", "note": "Under NCLT resolution. May change ownership."}], "plf": 60.4, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 33,
+      "name": "Essar Power (Mahan / Salaya)",
+      "shortName": "Essar Power",
+      "ownership": "private",
+      "listed": "Unlisted (Essar Group — partially divested to Adani)",
+      "totalThermalMW": 1200,
+      "totalCapacityMW": 1200,
+      "headquarters": "Mumbai",
+      "source": "Essar Group; CEA; Adani acquisition data",
+      "notes": "Essar Group's power plants — Mahan (MP) sold to Adani, Salaya (Gujarat) under Essar. Partially divested portfolio.",
+      "plants": [
+        { "plantName": "Salaya Power Plant", "state": "GJ", "fuel": "coal", "totalCapacityMW": 1200, "unitConfig": "2×600 MW", "units": [{"config": "2×600 MW", "totalMW": 1200, "technology": "Subcritical (imported coal)", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2012–2014", "note": "Coastal Gujarat — imported coal. Cyclone exposed."}], "plf": 48.6, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 34,
+      "name": "Bajaj Energy Ltd (Meja Urja Nigam JV)",
+      "shortName": "Bajaj Energy",
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "totalThermalMW": 2430,
+      "totalCapacityMW": 2430,
+      "headquarters": "Noida, UP",
+      "source": "Bajaj Energy IPO documents; BSE filings",
+      "notes": "Bajaj Group listed power entity. Portfolio includes Lalitpur (3×660 MW via subsidiary) and Meja STPS JV with NTPC. Supplies power to UP grid.",
+      "plants": [
+        { "plantName": "Meja Urja Nigam (JV with NTPC)", "state": "UP", "fuel": "coal", "totalCapacityMW": 1320, "unitConfig": "2×660 MW (JV share)", "units": [{"config": "2×660 MW", "totalMW": 1320, "technology": "Supercritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2018–2020", "note": "50:50 JV with NTPC. NTPC operates."}], "plf": 72.8, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 35,
+      "name": "KSK Energy Ventures (under NCLT)",
+      "shortName": "KSK Energy",
+      "ownership": "private",
+      "listed": "BSE (suspended trading)",
+      "totalThermalMW": 1800,
+      "totalCapacityMW": 1800,
+      "headquarters": "Hyderabad",
+      "source": "NCLT proceedings; CEA data",
+      "notes": "KSK Mahanadi Power project (CG). One of India's largest stressed thermal assets. Under NCLT resolution. 1800 MW operational but ownership under dispute.",
+      "plants": [
+        { "plantName": "KSK Mahanadi Power (Akaltara, CG)", "state": "CG", "fuel": "coal", "totalCapacityMW": 1800, "unitConfig": "6×300 MW", "units": [{"config": "6×300 MW", "totalMW": 1800, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2013–2017", "note": "Under NCLT resolution. Operational but stressed asset."}], "plf": 45.6, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 36,
+      "name": "Athena Chhattisgarh Power Ltd",
+      "shortName": "Athena Power",
+      "ownership": "private",
+      "listed": "Unlisted",
+      "totalThermalMW": 1200,
+      "totalCapacityMW": 1200,
+      "headquarters": "Raipur, Chhattisgarh",
+      "source": "CEA; Industry reports",
+      "notes": "1200 MW plant in Chhattisgarh. One of several medium-sized private IPPs in coal-rich CG corridor.",
+      "plants": [
+        { "plantName": "Athena Thermal Power Station", "state": "CG", "fuel": "coal", "totalCapacityMW": 1200, "unitConfig": "2×600 MW", "units": [{"config": "2×600 MW", "totalMW": 1200, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2015–2017"}], "plf": 58.2, "status": "operating" }
+      ]
+    },
+    {
+      "rank": 37,
+      "name": "IL&FS Energy (various plants — under resolution)",
+      "shortName": "IL&FS Energy",
+      "ownership": "private",
+      "listed": "Unlisted (IL&FS Group — under govt resolution)",
+      "totalThermalMW": 1200,
+      "totalCapacityMW": 1200,
+      "headquarters": "Mumbai",
+      "source": "IL&FS resolution; CEA",
+      "notes": "Multiple thermal projects under IL&FS group resolution. Some sold (Coastal Energen to new owners), others pending. IL&FS collapse (2018) was India's largest corporate distress event.",
+      "plants": [
+        { "plantName": "IL&FS Tamil Nadu (now Coastal Energen)", "state": "TN", "fuel": "coal", "totalCapacityMW": 600, "unitConfig": "2×300 MW", "units": [{"config": "2×300 MW", "totalMW": 600, "technology": "Subcritical", "turbineOEM": "BHEL", "boilerOEM": "BHEL_B", "commissioningPeriod": "2012–2014"}], "plf": 52.4, "status": "operating" }
+      ]
+    }
+  ],
+
+  "hydroOperators": [
+    {
+      "rank": 1,
+      "name": "NHPC Limited",
+      "shortName": "NHPC",
+      "ownership": "central_psu",
+      "listed": "BSE/NSE",
+      "totalHydroMW": 7071,
+      "headquarters": "Faridabad",
+      "source": "NHPC Annual Report FY2025-26; CEA",
+      "notes": "India's largest hydro power utility. Operates 25 hydroelectric projects. Expansion into solar.",
+      "plants": [
+        {
+          "plantName": "Salal Hydroelectric Project",
+          "state": "JK",
+          "river": "Chenab",
+          "totalCapacityMW": 690,
+          "unitConfig": "6×115 MW",
+          "units": [{ "config": "6×115 MW", "totalMW": 690, "technology": "Run-of-river", "turbineOEM": "BHEL", "commissioningPeriod": "1987–1995" }],
+          "type": "run_of_river",
+          "cuf": 38.2,
+          "status": "operating"
+        },
+        {
+          "plantName": "Uri Hydroelectric Project",
+          "state": "JK",
+          "river": "Jhelum",
+          "totalCapacityMW": 480,
+          "unitConfig": "4×120 MW",
+          "units": [{ "config": "4×120 MW", "totalMW": 480, "technology": "Run-of-river", "turbineOEM": "BHEL", "commissioningPeriod": "1997" }],
+          "type": "run_of_river",
+          "cuf": 35.8,
+          "status": "operating"
+        },
+        {
+          "plantName": "Dulhasti Hydroelectric Project",
+          "state": "JK",
+          "river": "Marusudar",
+          "totalCapacityMW": 390,
+          "unitConfig": "3×130 MW",
+          "units": [{ "config": "3×130 MW", "totalMW": 390, "technology": "Run-of-river", "turbineOEM": "ALSTOM", "commissioningPeriod": "2007" }],
+          "type": "run_of_river",
+          "cuf": 39.4,
+          "status": "operating"
+        },
+        {
+          "plantName": "Kishanganga Hydroelectric Project",
+          "state": "JK",
+          "river": "Kishanganga",
+          "totalCapacityMW": 330,
+          "unitConfig": "3×110 MW",
+          "units": [{ "config": "3×110 MW", "totalMW": 330, "technology": "Run-of-river", "turbineOEM": "BHEL", "commissioningPeriod": "2018" }],
+          "type": "run_of_river",
+          "cuf": 36.1,
+          "status": "operating"
+        },
+        {
+          "plantName": "Subansiri Lower Hydroelectric Project",
+          "state": "AS/AR",
+          "river": "Subansiri",
+          "totalCapacityMW": 2000,
+          "unitConfig": "8×250 MW",
+          "units": [{ "config": "8×250 MW", "totalMW": 2000, "technology": "Gravity Dam, Run-of-river", "turbineOEM": "BHEL", "commissioningPeriod": "2023–2024", "note": "Long-delayed project. Francis turbines by BHEL." }],
+          "type": "run_of_river",
+          "cuf": 41.2,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "SJVN Limited",
+      "shortName": "SJVN",
+      "ownership": "central_psu",
+      "listed": "BSE/NSE",
+      "totalHydroMW": 2016,
+      "headquarters": "Shimla",
+      "source": "SJVN Annual Report FY2025-26",
+      "notes": "Operates Nathpa Jhakri — largest hydro station in India. Expanding into solar, wind, thermal.",
+      "plants": [
+        {
+          "plantName": "Nathpa Jhakri Hydro Power Station",
+          "state": "HP",
+          "river": "Satluj",
+          "totalCapacityMW": 1500,
+          "unitConfig": "6×250 MW",
+          "units": [{ "config": "6×250 MW", "totalMW": 1500, "technology": "Underground Powerhouse, Run-of-river", "turbineOEM": "BHEL", "commissioningPeriod": "2003–2004", "note": "BHEL supplied Francis turbines. 27.5 km long headrace tunnel." }],
+          "type": "run_of_river",
+          "cuf": 42.1,
+          "status": "operating"
+        },
+        {
+          "plantName": "Rampur Hydro Power Station",
+          "state": "HP",
+          "river": "Satluj",
+          "totalCapacityMW": 412,
+          "unitConfig": "6×68.67 MW",
+          "units": [{ "config": "6×68.67 MW", "totalMW": 412, "technology": "Run-of-river", "turbineOEM": "BHEL", "commissioningPeriod": "2013–2015" }],
+          "type": "run_of_river",
+          "cuf": 40.8,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "NTPC Hydro / NTPC Renewable",
+      "shortName": "NTPC Hydro",
+      "ownership": "central_psu",
+      "listed": "BSE/NSE (NTPC)",
+      "totalHydroMW": 4017,
+      "headquarters": "New Delhi",
+      "source": "NTPC Annual Report FY2025-26",
+      "notes": "NTPC operates Koldam (HP), Tapovan Vishnugad (UK) and Singrauli Small Hydro.",
+      "plants": [
+        {
+          "plantName": "Koldam Hydroelectric Project",
+          "state": "HP",
+          "river": "Beas",
+          "totalCapacityMW": 800,
+          "unitConfig": "4×200 MW",
+          "units": [{ "config": "4×200 MW", "totalMW": 800, "technology": "Gravity Dam", "turbineOEM": "BHEL", "commissioningPeriod": "2014–2015" }],
+          "type": "storage",
+          "cuf": 34.6,
+          "status": "operating"
+        },
+        {
+          "plantName": "Tapovan Vishnugad Hydro Project",
+          "state": "UK",
+          "river": "Dhauliganga",
+          "totalCapacityMW": 520,
+          "unitConfig": "4×130 MW",
+          "units": [{ "config": "4×130 MW", "totalMW": 520, "technology": "Run-of-river", "turbineOEM": "ALSTOM", "commissioningPeriod": "2021", "note": "Damaged by 2021 Chamoli disaster. Restored 2023." }],
+          "type": "run_of_river",
+          "cuf": 33.8,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "THDC India Limited",
+      "shortName": "THDC",
+      "ownership": "central_psu",
+      "listed": "Unlisted (NTPC-GoI JV)",
+      "totalHydroMW": 2073,
+      "headquarters": "Rishikesh",
+      "source": "THDC Annual Report FY25",
+      "notes": "Tehri Dam complex is India's tallest dam. Pumped storage project also under THDC.",
+      "plants": [
+        {
+          "plantName": "Tehri Hydropower Complex",
+          "state": "UK",
+          "river": "Bhagirathi",
+          "totalCapacityMW": 1000,
+          "unitConfig": "4×250 MW",
+          "units": [{ "config": "4×250 MW", "totalMW": 1000, "technology": "Storage Dam, Francis turbines", "turbineOEM": "TOSHIBA", "commissioningPeriod": "2006–2007", "note": "Toshiba (Japan) supplied Francis turbines. India's tallest dam at 261 m." }],
+          "type": "storage",
+          "cuf": 36.5,
+          "status": "operating"
+        },
+        {
+          "plantName": "Koteshwar Hydroelectric Project",
+          "state": "UK",
+          "river": "Bhagirathi",
+          "totalCapacityMW": 400,
+          "unitConfig": "4×100 MW",
+          "units": [{ "config": "4×100 MW", "totalMW": 400, "technology": "Run-of-river", "turbineOEM": "BHEL", "commissioningPeriod": "2011–2012" }],
+          "type": "run_of_river",
+          "cuf": 38.1,
+          "status": "operating"
+        },
+        {
+          "plantName": "Tehri Pumped Storage Plant",
+          "state": "UK",
+          "river": "Bhagirathi",
+          "totalCapacityMW": 1000,
+          "unitConfig": "4×250 MW",
+          "units": [{ "config": "4×250 MW", "totalMW": 1000, "technology": "Pumped Storage", "turbineOEM": "ANDRITZ", "commissioningPeriod": "2024–2025", "note": "Andritz (Austria) reversible pump-turbines. Largest pumped storage project in India. Key for grid balancing." }],
+          "type": "pumped_storage",
+          "cuf": null,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "Greenko Group (Hydro & PHES)",
+      "shortName": "Greenko",
+      "ownership": "private",
+      "listed": "Unlisted (GIC/ADIA backed)",
+      "totalHydroMW": 2800,
+      "headquarters": "Hyderabad",
+      "source": "Greenko company disclosures; Industry reports",
+      "notes": "India's largest pumped hydro storage developer. QC Solar + hydro integrated RTC projects.",
+      "plants": [
+        {
+          "plantName": "Pinnapuram Pumped Storage Project",
+          "state": "AP",
+          "river": "Banakacherla",
+          "totalCapacityMW": 1200,
+          "unitConfig": "6×200 MW",
+          "units": [{ "config": "6×200 MW", "totalMW": 1200, "technology": "Pumped Storage (reversible)", "turbineOEM": "ANDRITZ", "commissioningPeriod": "2025–2026", "note": "Andritz reversible pump-turbines. Integrated with 5.2 GWh storage for 24×7 green power." }],
+          "type": "pumped_storage",
+          "cuf": null,
+          "status": "under_construction"
+        },
+        {
+          "plantName": "Saravati / Other Run-of-River Plants",
+          "state": "KA",
+          "river": "Sharavati",
+          "totalCapacityMW": 1600,
+          "unitConfig": "Multiple units",
+          "units": [{ "config": "Various 50–200 MW", "totalMW": 1600, "technology": "Run-of-river", "turbineOEM": "BHEL", "commissioningPeriod": "Various" }],
+          "type": "run_of_river",
+          "cuf": 37.4,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "Kerala State Electricity Board (KSEB)",
+      "shortName": "KSEB",
+      "ownership": "state_psu",
+      "listed": "Unlisted",
+      "totalHydroMW": 1877,
+      "headquarters": "Thiruvananthapuram",
+      "source": "KSEB Annual Report FY25",
+      "notes": "Kerala's hydro network — 55 hydroelectric projects feeding the state grid.",
+      "plants": [
+        {
+          "plantName": "Idukki Hydroelectric Project",
+          "state": "KL",
+          "river": "Periyar",
+          "totalCapacityMW": 780,
+          "unitConfig": "6×130 MW",
+          "units": [{ "config": "6×130 MW", "totalMW": 780, "technology": "Arch Dam, Storage", "turbineOEM": "BHEL", "commissioningPeriod": "1975–1986", "note": "Highest arch dam in Asia at commissioning. Francis turbines supplied by BHEL." }],
+          "type": "storage",
+          "cuf": 30.2,
+          "status": "operating"
+        },
+        {
+          "plantName": "Sabarigiri Hydroelectric Project",
+          "state": "KL",
+          "river": "Pampa",
+          "totalCapacityMW": 300,
+          "unitConfig": "4×75 MW",
+          "units": [{ "config": "4×75 MW", "totalMW": 300, "technology": "Storage Dam", "turbineOEM": "BHEL", "commissioningPeriod": "1966–1975" }],
+          "type": "storage",
+          "cuf": 32.1,
+          "status": "operating"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "BBMB (Bhakra Beas Management Board)",
+      "shortName": "BBMB",
+      "ownership": "central_psu",
+      "listed": "Unlisted (GoI + Punjab + Haryana + HP + Rajasthan)",
+      "totalHydroMW": 2934,
+      "headquarters": "Chandigarh",
+      "source": "BBMB Annual Report FY25; CEA",
+      "notes": "Manages Bhakra-Nangal complex — India's oldest major hydroelectric system.",
+      "plants": [
+        {
+          "plantName": "Bhakra Left Bank Power House",
+          "state": "HP",
+          "river": "Satluj",
+          "totalCapacityMW": 540,
+          "unitConfig": "5×108 MW",
+          "units": [{ "config": "5×108 MW", "totalMW": 540, "technology": "Gravity Dam, Francis turbines", "turbineOEM": "BHEL", "commissioningPeriod": "1963–1966", "note": "BHEL retrofitted original GE turbines in 1990s–2000s." }],
+          "type": "storage",
+          "cuf": 28.4,
+          "status": "operating"
+        },
+        {
+          "plantName": "Bhakra Right Bank Power House",
+          "state": "HP",
+          "river": "Satluj",
+          "totalCapacityMW": 660,
+          "unitConfig": "5×132 MW",
+          "units": [{ "config": "5×132 MW", "totalMW": 660, "technology": "Gravity Dam, Francis turbines", "turbineOEM": "BHEL", "commissioningPeriod": "1963–1966" }],
+          "type": "storage",
+          "cuf": 29.1,
+          "status": "operating"
+        },
+        {
+          "plantName": "Dehar Power House",
+          "state": "HP",
+          "river": "Beas",
+          "totalCapacityMW": 990,
+          "unitConfig": "6×165 MW",
+          "units": [{ "config": "6×165 MW", "totalMW": 990, "technology": "Run-of-river", "turbineOEM": "BHEL", "commissioningPeriod": "1977–1979" }],
+          "type": "run_of_river",
+          "cuf": 35.6,
+          "status": "operating"
+        }
+      ]
+    }
+  ]
+}

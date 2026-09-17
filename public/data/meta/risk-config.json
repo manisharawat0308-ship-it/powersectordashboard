@@ -1,0 +1,70 @@
+{
+  "lastUpdated": "2026-06-30",
+  "version": "1.0",
+  "note": "Risk thresholds and weights derived from publicly available CEA, MNRE, and industry reports. Scores are indicative only and not a substitute for professional risk assessment.",
+  "alertThresholds": {
+    "peakDemandToSupplyRatio": 0.90,
+    "plfDeclineWarningPP": 3,
+    "plfDeclineCriticalPP": 6,
+    "concentrationWarningPct": 50,
+    "concentrationCriticalPct": 65,
+    "generationDeclineWarningPct": 5,
+    "generationDeclineCriticalPct": 10,
+    "underConstructionToOperatingRatio": 0.50,
+    "singleStateShareWarningPct": 20,
+    "singleStateShareCriticalPct": 30
+  },
+  "riskWeights": {
+    "operational": 0.25,
+    "supply": 0.25,
+    "project": 0.15,
+    "geographic": 0.15,
+    "market": 0.10,
+    "climate": 0.10
+  },
+  "riskLevels": {
+    "low": { "max": 30, "label": "Low", "color": "#4CAF50" },
+    "moderate": { "max": 55, "label": "Moderate", "color": "#F99D27" },
+    "high": { "max": 75, "label": "High", "color": "#E65100" },
+    "critical": { "max": 100, "label": "Critical", "color": "#B02A30" }
+  },
+  "methodology": {
+    "overview": "Risk scores are computed from actual data inputs where available. Each category is scored 0–100 based on normalized indicators. The overall score is a weighted average. Categories with insufficient data are excluded from scoring and flagged as data-unavailable.",
+    "operational": "Based on PLF/CUF values relative to historical benchmarks and technology-specific norms. Lower PLF = higher operational risk for thermal. For renewables, CUF volatility and forced outage data would improve this score (currently unavailable).",
+    "supply": "Based on capacity concentration (HHI-style index), demand-supply balance where data available, and dependency on single technology.",
+    "project": "Based on under-construction capacity relative to operating base, project concentration, and commissioning pipeline.",
+    "geographic": "Based on state concentration (HHI) of installed capacity and generation.",
+    "market": "Limited data available. Would require power price data and DISCOM payment data. Currently flagged as data-limited.",
+    "climate": "Based on geographic exposure of plants to known climate hazard zones. Currently using state-level proxy data. Detailed site-level climate data not available.",
+    "normalization": "All sub-indicators are normalized to 0–100 scale before weighting. A score of 0 = no risk, 100 = maximum risk within the observable range.",
+    "dataGaps": [
+      "Forced outage rates not available in public CEA data",
+      "Power price / tariff data not comprehensively available across all states",
+      "DISCOM payment data not integrated",
+      "Site-level climate hazard assessments not available",
+      "Monthly PLF trend data limited to FY2024-25 annual averages"
+    ]
+  },
+  "sourceSpecificRiskContext": {
+    "nuclear": {
+      "keyRisks": ["Concentration of operating capacity", "Long construction lead times", "Regulatory approvals", "Fuel supply (uranium import dependency)", "Single operator concentration (NPCIL ~95%)"],
+      "mitigatingFactors": ["High PLF/CUF (78%+ historically)", "Strong safety regulatory framework (AERB)", "Government-backed operator", "Baseload reliability"],
+      "dataAvailability": "Moderate — NPCIL publishes annual generation and capacity data. Plant-level outage data limited."
+    },
+    "solar": {
+      "keyRisks": ["Hailstorm physical damage (Rajasthan, MP, UP)", "Cyclone exposure (AP, GJ, TN coastal)", "Single-state concentration", "Grid curtailment risk", "DISCOM payment delays"],
+      "mitigatingFactors": ["Rapidly growing capacity diversifies portfolio", "Declining cost curve", "Strong policy support"],
+      "dataAvailability": "Moderate — generation and capacity from CEA/MNRE. Physical risk data requires external datasets."
+    },
+    "coal": {
+      "keyRisks": ["Boiler/turbine fme (high frequency)", "Flood/cyclone exposure at coastal plants", "Regulatory risk (emission norms)", "Fuel supply disruption", "PLF decline from RE competition"],
+      "mitigatingFactors": ["Baseload technology", "Large installed base provides resilience", "NTPC strong operational standards"],
+      "dataAvailability": "Good — CEA PLF data available. Outage data partially available from industry reports."
+    },
+    "wind": {
+      "keyRisks": ["Cyclone damage (Gujarat, Tamil Nadu coastal)", "Lightning (high frequency)", "Gearbox serial defects", "Grid curtailment", "Crane availability for repairs"],
+      "mitigatingFactors": ["Geographic diversification across wind corridors", "Technology improving (larger rotors, higher CUF)"],
+      "dataAvailability": "Moderate — generation and capacity available. Component failure rates require insurer/OEM data."
+    }
+  }
+}

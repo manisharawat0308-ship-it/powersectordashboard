@@ -1,0 +1,10 @@
+[
+  { "year": 1975, "title": "5th Five Year Plan", "description": "India's installed capacity reached 20 GW; focus on rural electrification began" },
+  { "year": 1991, "title": "Electricity Sector Reforms", "description": "Liberalization opened the power sector to private participation" },
+  { "year": 2003, "title": "Electricity Act 2003", "description": "Comprehensive legislation restructuring India's power sector, enabling competition" },
+  { "year": 2010, "title": "National Solar Mission Launch", "description": "Jawaharlal Nehru National Solar Mission launched targeting 20 GW solar by 2022" },
+  { "year": 2015, "title": "175 GW RE Target Announced", "description": "India committed to 175 GW renewable energy capacity by 2022 at Paris COP21" },
+  { "year": 2020, "title": "100 GW RE Milestone", "description": "India crossed 100 GW installed renewable energy capacity (excluding large hydro)" },
+  { "year": 2022, "title": "500 GW Non-Fossil Target", "description": "India announced target of 500 GW non-fossil fuel capacity by 2030" },
+  { "year": 2023, "title": "400 GW Total Capacity", "description": "India's total installed capacity crossed 400 GW landmark" }
+]

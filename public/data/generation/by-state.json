@@ -1,0 +1,18 @@
+[
+  { "stateCode": "MH", "stateName": "Maharashtra", "generationBU": 165.2 },
+  { "stateCode": "GJ", "stateName": "Gujarat", "generationBU": 148.5 },
+  { "stateCode": "RJ", "stateName": "Rajasthan", "generationBU": 112.3 },
+  { "stateCode": "TN", "stateName": "Tamil Nadu", "generationBU": 108.7 },
+  { "stateCode": "KA", "stateName": "Karnataka", "generationBU": 92.4 },
+  { "stateCode": "UP", "stateName": "Uttar Pradesh", "generationBU": 98.1 },
+  { "stateCode": "AP", "stateName": "Andhra Pradesh", "generationBU": 78.9 },
+  { "stateCode": "MP", "stateName": "Madhya Pradesh", "generationBU": 82.5 },
+  { "stateCode": "TS", "stateName": "Telangana", "generationBU": 68.2 },
+  { "stateCode": "WB", "stateName": "West Bengal", "generationBU": 58.4 },
+  { "stateCode": "CG", "stateName": "Chhattisgarh", "generationBU": 62.1 },
+  { "stateCode": "HR", "stateName": "Haryana", "generationBU": 42.6 },
+  { "stateCode": "PB", "stateName": "Punjab", "generationBU": 38.9 },
+  { "stateCode": "OD", "stateName": "Odisha", "generationBU": 45.8 },
+  { "stateCode": "JH", "stateName": "Jharkhand", "generationBU": 32.4 },
+  { "stateCode": "HP", "stateName": "Himachal Pradesh", "generationBU": 34.8 }
+]

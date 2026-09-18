@@ -6,7 +6,7 @@ import { getSourceColor } from '@/utils/colors';
 import { formatSourceLabel } from '@/utils/formatting';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell,
-  LineChart, Line, Legend, PieChart, Pie,
+  LineChart, Line, Legend,
 } from 'recharts';
 
 const NUCLEAR_COLOR = '#7B1FA2';

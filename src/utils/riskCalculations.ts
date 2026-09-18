@@ -435,7 +435,7 @@ export function generateRiskAlerts(
 
   // High operational risk
   const ops = categories.find((c) => c.category === 'operational');
-  if (ops?.score !== null && ops.score !== undefined && ops.score >= 60) {
+  if (ops && ops.score !== null && ops.score !== undefined && ops.score >= 60) {
     alerts.push({
       id: 'alert-ops-high',
       severity: ops.score >= 75 ? 'critical' : 'warning',

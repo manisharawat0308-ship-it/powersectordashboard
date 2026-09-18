@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useMarketPlayers, MarketPlayer } from '@/hooks/useMarketPlayers';
 import { useThermalPlayers, ThermalOperator, HydroOperator, ThermalPlant } from '@/hooks/useThermalPlayers';
-import { useNuclearPlayers, NuclearOperator, NuclearOperatorPlant } from '@/hooks/useNuclearPlayers';
-import { useOEMData, OEMProfile, TurbineModel } from '@/hooks/useOEMData';
+import { useNuclearPlayers, NuclearOperator, NuclearUnit } from '@/hooks/useNuclearPlayers';
+import { useOEMData, OEMProfile } from '@/hooks/useOEMData';
 import { ManufacturingDashboard } from '@/components/sections/ManufacturingDashboard';
 import { useSectorFilter } from '@/hooks/useSectorFilter';
 import { formatMW } from '@/utils/formatting';
@@ -742,7 +742,7 @@ function NuclearTab({ operators, supplyChain }: {
 
                   {isExpanded && (
                     <div className="border-t border-gray-100 p-3 bg-purple-50/50 space-y-2">
-                      {plant.units.map((unit) => (
+                      {plant.units.map((unit: NuclearUnit) => (
                         <div key={unit.unit} className="p-2 rounded-lg bg-white border border-purple-100 text-[11px]">
                           <div className="flex items-center justify-between">
                             <span className="font-black text-gray-800">{unit.unit}</span>
@@ -818,7 +818,6 @@ function RenewableTab({ data, selectedCompany, setSelectedCompany, filterType, s
     );
   }
 
-  const maxCapacity = data.companies[0]?.totalRECapacityMW || 1;
   const filteredCompanies = (filterType === 'all'
     ? data.companies
     : data.companies.filter((c: MarketPlayer) => {

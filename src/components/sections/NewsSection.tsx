@@ -12,7 +12,7 @@ interface NewsArticle {
   summary: string;
   source: string;
   url: string | null;
-  category: 'business_win' | 'accident' | 'industry';
+  category: 'business_win' | 'accident' | 'industry' | 'commissioning' | 'tender' | 'policy';
   energySource: string;
   region: string;
   state: string | null;

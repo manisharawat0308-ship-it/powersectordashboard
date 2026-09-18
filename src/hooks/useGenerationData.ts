@@ -3,6 +3,7 @@ import { fetchJson } from '@/lib/queryClient';
 
 interface NationalGenerationData {
   lastUpdated: string;
+  dataAsOf?: string;
   dataSource: string;
   defaultPeriod: { year: number; type: string };
   totalGenerationBU: number;
@@ -12,6 +13,7 @@ interface NationalGenerationData {
 
 interface PLFCUFData {
   lastUpdated: string;
+  dataAsOf?: string;
   dataSource: string;
   period: { year: number; type: string };
   plf: Record<string, number>;

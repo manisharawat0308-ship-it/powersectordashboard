@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { useSectorFilter } from '@/hooks/useSectorFilter';
 import { useFilterStore } from '@/store/filterStore';
-import { lookupImpactKnowledge, hasKnowledge, KnowledgeEntry } from '@/utils/impactKnowledge';
+import { lookupImpactKnowledge, KnowledgeEntry } from '@/utils/impactKnowledge';
 import { ManufacturingDashboard } from '@/components/sections/ManufacturingDashboard';
 
 type RiskSource = 'coal' | 'wind' | 'solar' | 'nuclear' | 'hydro' | 'manufacturing';
+
+// Power sources that use the tabular risk data below. Manufacturing is handled
+// by a separate component (ManufacturingDashboard) and never indexes these
+// records, so its key is intentionally excluded to avoid requiring empty data.
+type PowerRiskSource = Exclude<RiskSource, 'manufacturing'>;
 
 export function RiskAnalysis() {
   const { sectorView } = useSectorFilter();
@@ -131,10 +136,10 @@ export function RiskAnalysis() {
       ) : (
         <>
           {activeTab === 'insurable' && <InsurableRisks source={activeSource} />}
-          {activeTab === 'framework' && <RiskFramework source={activeSource} />}
-          {activeTab === 'emerging-tech' && <EmergingTechRisks source={activeSource} />}
-          {activeTab === 'non-insurable' && <NonInsurableRisks source={activeSource} />}
-          {activeTab === 'best-practices' && <BestPractices source={activeSource} />}
+          {activeTab === 'framework' && <RiskFramework source={activeSource as PowerRiskSource} />}
+          {activeTab === 'emerging-tech' && <EmergingTechRisks source={activeSource as PowerRiskSource} />}
+          {activeTab === 'non-insurable' && <NonInsurableRisks source={activeSource as PowerRiskSource} />}
+          {activeTab === 'best-practices' && <BestPractices source={activeSource as PowerRiskSource} />}
         </>
       )}
     </div>
@@ -445,11 +450,11 @@ function HydroInsurableRisks() {
   );
 }
 
-function RiskFramework({ source }: { source: RiskSource }) {
+function RiskFramework({ source }: { source: PowerRiskSource }) {
   const sourceLabel = source === 'coal' ? 'Coal/Thermal' : source === 'wind' ? 'Wind' : source === 'nuclear' ? 'Nuclear' : source === 'hydro' ? 'Hydro' : 'Solar';
 
   // Probability-Impact Matrix Data per source
-  const riskMatrix: Record<RiskSource, { risk: string; prob: string; impact: string; score: string; emv: string; strategy: string; strategyUrl: string; strategyTooltip: string; owner: string; trigger: string }[]> = {
+  const riskMatrix: Record<PowerRiskSource, { risk: string; prob: string; impact: string; score: string; emv: string; strategy: string; strategyUrl: string; strategyTooltip: string; owner: string; trigger: string }[]> = {
     coal: [
       { risk: 'Boiler Tube Failure', prob: 'High (70%)', impact: 'High', score: '9/9', emv: '₹84 Cr', strategy: 'Mitigate', strategyUrl: 'https://www.power-eng.com/coal/boiler-tube-failure-root-cause-analysis/', strategyTooltip: 'Regular ultrasonic tube thickness mapping + condition-based replacement of eroded sections before failure occurs. Reduces tube burst frequency by 60%.', owner: 'Plant Head', trigger: 'Tube wall thickness < 3mm' },
       { risk: 'Turbine Blade Failure', prob: 'Low (15%)', impact: 'Critical', score: '5/9', emv: '₹52 Cr', strategy: 'Transfer (Insurance)', strategyUrl: 'https://www.fmglobal.com/research-and-resources/research-and-testing/research-technical-reports', strategyTooltip: 'Transfer residual risk to insurer via Machinery Breakdown + BI cover. Ensure sum insured covers full rotor replacement cost + 18 months lost revenue.', owner: 'CRO', trigger: 'Vibration exceeds 4mm/s' },
@@ -493,7 +498,7 @@ function RiskFramework({ source }: { source: RiskSource }) {
   };
 
   // Case studies per source
-  const caseStudies: Record<RiskSource, { title: string; location: string; date: string; loss: string; rootCause: string; impact: string; lessons: string[]; benchmark: string }> = {
+  const caseStudies: Record<PowerRiskSource, { title: string; location: string; date: string; loss: string; rootCause: string; impact: string; lessons: string[]; benchmark: string }> = {
     coal: {
       title: 'NTPC Unchahar Unit-6 Boiler Explosion',
       location: 'Unchahar, Uttar Pradesh',
@@ -1075,8 +1080,8 @@ function SolarInsurableRisks() {
   );
 }
 
-function ClaimsLearnings({ source }: { source: RiskSource }) {
-  const learnings: Record<RiskSource, { title: string; learning: string; action: string; source: string }[]> = {
+function ClaimsLearnings({ source }: { source: PowerRiskSource }) {
+  const learnings: Record<PowerRiskSource, { title: string; learning: string; action: string; source: string }[]> = {
     coal: [
       { title: 'BI exceeds MD in 70% of turbine claims', learning: 'Business Interruption loss (revenue loss during repair) is typically 2–3× the Material Damage cost for turbine failures due to 12–18 month replacement lead times.', action: 'Ensure BI indemnity period covers at least 24 months. Pre-agree expediting costs clause.', source: 'FM Global Power Generation Loss Report 2025' },
       { title: 'Boiler tube failures are predictable', learning: 'NTPC data shows 85% of tube failures occur in units > 15 years old at locations with known erosion patterns. Condition monitoring reduces frequency by 60%.', action: 'Mandate annual ultrasonic tube thickness survey. Flag zones with < 3.5mm wall thickness.', source: 'NTPC O&M Best Practices Manual; BHEL Technical Advisory' },
@@ -1134,8 +1139,8 @@ function ClaimsLearnings({ source }: { source: RiskSource }) {
   );
 }
 
-function AdditionalCaseStudies({ source }: { source: RiskSource }) {
-  const cases: Record<RiskSource, { title: string; date: string; loss: string; summary: string; keyLearning: string; url: string | null }[]> = {
+function AdditionalCaseStudies({ source }: { source: PowerRiskSource }) {
+  const cases: Record<PowerRiskSource, { title: string; date: string; loss: string; summary: string; keyLearning: string; url: string | null }[]> = {
     coal: [
       { title: 'Vedanta Singhitarai Boiler Blast — Chhattisgarh', date: 'April 2025', loss: '25 fatalities, ₹200+ Cr', summary: 'Boiler pressure fluctuation due to maintenance negligence caused catastrophic explosion. FIR filed against company chairman. Industrial safety overhaul mandated across all Vedanta plants.', keyLearning: 'Maintenance audit compliance must be a pre-condition for cover. Lack of CBM systems = increased moral hazard.', url: 'https://www.business-standard.com/india-news/industrial-accidents-claimed-196-lives-in-17-months-chhattisgarh-govt-126071700126_1.html' },
       { title: 'NTPC Unchahar Boiler Explosion — Uttar Pradesh', date: 'November 2017', loss: '38 fatalities, ₹300+ Cr (MD + BI)', summary: 'Flue gas and steam escaped from a duct at 20m elevation due to boiler tube rupture. 38 killed, 100+ injured. Safety norms violated — boiler operations went wrong during pressure buildup.', keyLearning: 'Post-overhaul startup is highest-risk period. Pre-agreed OEM supervision for boiler work. BI indemnity must cover 12+ months.', url: 'https://indianexpress.com/article/india/ntpc-blast-raebareli-uttar-pradesh-early-probe-show-safety-norms-violated-boiler-ops-went-wrong-4920144/' },
@@ -1196,9 +1201,9 @@ function AdditionalCaseStudies({ source }: { source: RiskSource }) {
   );
 }
 
-function EmergingTechRisks({ source }: { source: RiskSource }) {
+function EmergingTechRisks({ source }: { source: PowerRiskSource }) {
   // Source-specific emerging technologies — each source gets UNIQUE content
-  const sourceTechData: Record<RiskSource, { title: string; icon: string; color: string; purpose: string; useCases: string; risks: string[]; insurance: string[]; indianContext: string }[]> = {
+  const sourceTechData: Record<PowerRiskSource, { title: string; icon: string; color: string; purpose: string; useCases: string; risks: string[]; insurance: string[]; indianContext: string }[]> = {
     coal: [
       { title: 'Carbon Capture, Utilisation & Storage (CCUS)', icon: '🏭', color: '#4B5563', purpose: 'Capturing CO₂ emissions from coal flue gas and storing underground or converting to industrial products (urea, building materials).', useCases: 'Extending the operational life of thermal assets while meeting India\'s 2070 net-zero target. NTPC piloting at Vindhyachal (20 TPD) and planning 500 TPD at Talcher. IOC demonstrating CO₂-to-methanol.', risks: ['CO₂ leakage from geological storage sites — long-term liability (30–100 years)', 'Capex ₹3,000–5,000 Cr per 500 MW unit — uncertain economic returns without carbon pricing', 'Technology scale-up risk — global CCUS track record is mixed (Petra Nova, USA shut down 2020)', 'Regulatory framework for CO₂ storage not yet established in India'], insurance: ['Environmental impairment liability for CO₂ leakage (new product needed)', 'Construction All Risk for CCUS retrofit (specialised engineering)', 'Business Interruption during CCUS integration outage (4–8 months)', 'Key gap: No standard policy wording globally for 100-year geological storage liability'], indianContext: 'NTPC is India\'s CCUS pioneer. The MoP targets 50 MTPA capture by 2050. Without carbon pricing, economics depend on government mandate. Insurance market has no established product — bespoke development needed.' },
       { title: 'Supercritical / Ultra-Supercritical / AUSC Technology', icon: '🔥', color: '#B02A30', purpose: 'Higher steam temperatures (600–700°C) and pressures (>300 bar) increase thermal efficiency from 36% (subcritical) to 43–46% (AUSC), reducing coal consumption and emissions per MWh.', useCases: 'India\'s 800 MW fleet (NTPC Kudgi, Darlipali, Patratu) uses supercritical (565°C). AUSC at 700°C planned under IGCAR-BHEL-NTPC collaboration — demonstrator targeted by 2030.', risks: ['High-temperature creep failure of nickel-alloy components — limited long-term operational data', 'Weld cracking at supercritical/USC temperatures — observed in early 660 MW units', 'Material costs 3× higher for AUSC (inconel, nimonic alloys)', 'Single-source risk: only BHEL/L&T-MHI can manufacture these in India'], insurance: ['Machinery Breakdown cover needs higher sum insured for premium materials (3× conventional)', 'Extended lead times for replacement components (nickel alloys: 24–30 months)', 'New technology endorsement needed for first-of-kind AUSC units (no actuarial base)', 'Opportunity: higher efficiency = lower fuel cost = better financial viability for BI recovery'], indianContext: 'India has 47 supercritical units (660/800 MW) operational. AUSC is still R&D — IGCAR/BHEL developing Indian alloys. The transition from subcritical to supercritical reduced coal consumption 15% per MWh. AUSC would reduce a further 10%.' },
@@ -1236,7 +1241,7 @@ function EmergingTechRisks({ source }: { source: RiskSource }) {
     { challenge: 'Partial Commencement', description: 'Phased commissioning leads to overlapping construction and operational risks.', solution: 'DSPP: Track commissioning phases in real-time, ensuring insurance policies are aligned with dynamic project status. Drone Solutions for rapid surveillance.' },
   ];
 
-  const insuranceProducts: Record<RiskSource, { mdCover: string[]; biCover: string[]; keyProducts: string[]; industrySpecific: string[] }> = {
+  const insuranceProducts: Record<PowerRiskSource, { mdCover: string[]; biCover: string[]; keyProducts: string[]; industrySpecific: string[] }> = {
     coal: {
       mdCover: ['Obsolete Part/equipment clause', 'OEM Clause', 'Waiver of Under Insurance', 'Margin Clause', 'Capital Additions', 'Destruction of Sound Property clause', 'Additional Custom Duty', 'Immediate Repair clause', 'Minor Works', 'Expediting expenses (Air & Express Freight)', 'Accidental Damage', 'Serial Loss clause'],
       biCover: ['Customer Premises Extension', 'Additional Increased Cost of Working', 'Prevention of Access', 'Contingent BI'],
@@ -1357,8 +1362,8 @@ function EmergingTechRisks({ source }: { source: RiskSource }) {
   );
 }
 
-function NonInsurableRisks({ source }: { source: RiskSource }) {
-  const risks: Record<RiskSource, { title: string; items: string[] }[]> = {
+function NonInsurableRisks({ source }: { source: PowerRiskSource }) {
+  const risks: Record<PowerRiskSource, { title: string; items: string[] }[]> = {
     coal: [
       { title: 'Regulatory & Policy', items: ['Coal allocation cancellation / auction loss', 'Emission norms tightening (FGD mandate delays)', 'Carbon tax / carbon border adjustment', 'Plant retirement orders by Govt/CERC'] },
       { title: 'Fuel Supply', items: ['Coal India supply shortfall / rake shortage', 'Imported coal price volatility', 'Port congestion / logistics disruption', 'Coal quality deterioration (high ash)'] },
@@ -1414,8 +1419,8 @@ function NonInsurableRisks({ source }: { source: RiskSource }) {
   );
 }
 
-function BestPractices({ source }: { source: RiskSource }) {
-  const practices: Record<RiskSource, { category: string; indian: string[]; international: string[] }[]> = {
+function BestPractices({ source }: { source: PowerRiskSource }) {
+  const practices: Record<PowerRiskSource, { category: string; indian: string[]; international: string[] }[]> = {
     coal: [
       {
         category: 'Risk Engineering & Loss Prevention',

@@ -24,12 +24,6 @@ const DIRECTION_COLORS: Record<string, string> = {
   stable:   'text-gray-600',
 };
 
-const MAGNITUDE_BORDER: Record<string, string> = {
-  major:    'border-l-icici-maroon',
-  moderate: 'border-l-amber-400',
-  minor:    'border-l-gray-300',
-};
-
 function InsightCard({ insight }: { insight: Insight }) {
   const borderColor =
     insight.magnitude === 'major'   ? '#B02A30' :

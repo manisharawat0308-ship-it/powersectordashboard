@@ -5,8 +5,7 @@ import { getSourceColor } from '@/utils/colors';
 import { formatSourceLabel } from '@/utils/formatting';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, Cell, RadarChart, Radar,
-  PolarGrid, PolarAngleAxis, PolarRadiusAxis, Legend,
+  ResponsiveContainer, Cell,
 } from 'recharts';
 
 interface SourceRow {
@@ -66,21 +65,6 @@ export function PowerSourceComparison() {
       </div>
     );
   }
-
-  // Radar data: normalise each metric 0-100 for radar chart
-  const maxCap = Math.max(...rows.map((r) => r.capacityGW));
-  const maxGen = Math.max(...rows.map((r) => r.generationBU));
-  const maxLF  = 100;
-
-  // Only show top 6 sources to keep radar readable
-  const radarRows = rows.slice(0, 6);
-  const radarData = [
-    { metric: 'Capacity Share',   ...Object.fromEntries(radarRows.map((r) => [r.source, r.capShare])) },
-    { metric: 'Generation Share', ...Object.fromEntries(radarRows.map((r) => [r.source, r.genShare])) },
-    { metric: 'Load Factor',      ...Object.fromEntries(radarRows.map((r) => [r.source, r.loadFactor ?? 0])) },
-    { metric: 'Capacity (GW)',    ...Object.fromEntries(radarRows.map((r) => [r.source, (r.capacityGW / maxCap) * 100])) },
-    { metric: 'Generation (BU)',  ...Object.fromEntries(radarRows.map((r) => [r.source, (r.generationBU / maxGen) * 100])) },
-  ];
 
   return (
     <div className="space-y-5">

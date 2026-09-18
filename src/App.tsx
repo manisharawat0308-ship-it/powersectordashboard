@@ -13,22 +13,18 @@ import { GenerationSection } from '@/components/sections/GenerationSection';
 import { OwnershipSection } from '@/components/sections/OwnershipSection';
 import { TimelineSection } from '@/components/sections/TimelineSection';
 import { RiskAnalysis } from '@/components/sections/RiskAnalysis';
-import { RiskIntelligence } from '@/components/sections/RiskIntelligence';
 import { NuclearSection } from '@/components/sections/NuclearSection';
-import { PowerSourceComparison } from '@/components/sections/PowerSourceComparison';
 import { DataMethodology } from '@/components/sections/DataMethodology';
 import { BESSDeepDive } from '@/components/sections/BESSDeepDive';
 import { SiteMap } from '@/components/sections/SiteMap';
 import { DownloadsLibrary } from '@/components/sections/DownloadsLibrary';
 import { MarketPlayersSection } from '@/components/sections/MarketPlayersSection';
 import { NewsSection } from '@/components/sections/NewsSection';
-import { DownloadsSection } from '@/components/sections/DownloadsSection';
 import { GeographySection } from '@/components/sections/GeographySection';
 import { QuizSection } from '@/components/sections/QuizSection';
 
 function DashboardContent() {
   const activeSection = useFilterStore((s) => s.activeSection);
-  const role = useAuthStore((s) => s.role);
 
   // Scroll back to the top whenever the user switches to a different section
   useEffect(() => {

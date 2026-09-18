@@ -1,1 +1,15 @@
+# Dependencies
 node_modules/
+
+# Build output (Render rebuilds this from source)
+dist/
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# Local logs (e.g. news refresh scheduler output)
+scripts/*.log
+
+# Editor / OS
+.DS_Store
+Thumbs.db

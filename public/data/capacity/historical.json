@@ -19,5 +19,6 @@
   { "year": 2022, "totalCapacityGW": 399.47, "byCategory": [{"category": "fossil", "capacityGW": 237.40, "percentageShare": 59.4}, {"category": "non_fossil", "capacityGW": 162.07, "percentageShare": 40.6}] },
   { "year": 2023, "totalCapacityGW": 421.75, "byCategory": [{"category": "fossil", "capacityGW": 240.20, "percentageShare": 56.9}, {"category": "non_fossil", "capacityGW": 181.55, "percentageShare": 43.1}] },
   { "year": 2024, "totalCapacityGW": 436.88, "byCategory": [{"category": "fossil", "capacityGW": 242.10, "percentageShare": 55.4}, {"category": "non_fossil", "capacityGW": 194.78, "percentageShare": 44.6}] },
-  { "year": 2025, "totalCapacityGW": 450.29, "byCategory": [{"category": "fossil", "capacityGW": 243.87, "percentageShare": 54.2}, {"category": "non_fossil", "capacityGW": 206.42, "percentageShare": 45.8}] }
+  { "year": 2025, "totalCapacityGW": 450.29, "byCategory": [{"category": "fossil", "capacityGW": 243.87, "percentageShare": 54.2}, {"category": "non_fossil", "capacityGW": 206.42, "percentageShare": 45.8}] },
+  { "year": 2026, "totalCapacityGW": 558.90, "byCategory": [{"category": "fossil", "capacityGW": 250.87, "percentageShare": 44.89}, {"category": "non_fossil", "capacityGW": 308.03, "percentageShare": 55.11}] }
 ]

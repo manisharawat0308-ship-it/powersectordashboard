@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { useCapacityData } from '@/hooks/useCapacityData';
 import { useGenerationData, usePLFCUFData } from '@/hooks/useGenerationData';
 import { useRiskData } from '@/hooks/useRiskData';
@@ -60,6 +62,7 @@ export function IndustryOverview() {
   const { overall: riskOverall } = useRiskData();
   const powerSource              = useFilterStore((s) => s.powerSource);
   const { sectorView, getSectorLabel, isSourceInView } = useSectorFilter();
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   if (isLoading || !data) {
     return <div className="animate-pulse h-96 bg-gray-200 rounded-xl" />;
@@ -73,6 +76,16 @@ export function IndustryOverview() {
     return true;
   });
   const filteredTotalGW = filteredSources.reduce((sum, s) => sum + s.capacityMW, 0) / 1000;
+
+  // Installed-capacity pie data (mirrors the Generation page donut)
+  const capacityPieData = [...filteredSources]
+    .sort((a, b) => b.capacityMW - a.capacityMW)
+    .map((s) => ({
+      name: formatSourceLabel(s.source),
+      value: s.capacityMW / 1000, // GW
+      source: s.source,
+      pct: filteredTotalGW > 0 ? ((s.capacityMW / 1000 / filteredTotalGW) * 100).toFixed(1) : '0',
+    }));
 
   const fossilGW      = data.byCategory.find(c => c.category === 'fossil')?.capacityGW ?? 0;
   const nonFossilGW   = data.byCategory.find(c => c.category === 'non_fossil')?.capacityGW ?? 0;
@@ -174,6 +187,76 @@ export function IndustryOverview() {
         {data.note && <span className="text-[10px] text-blue-600 italic w-full mt-0.5">💡 {data.note}</span>}
       </div>
 
+      {/* Installed Capacity — Donut + Source Breakdown side by side */}
+      <div className="grid grid-cols-1 laptop:grid-cols-2 gap-5">
+        {/* Left: Donut Chart — mirrors the Generation page */}
+        <div className="icici-card p-5">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-xs font-bold text-gray-700">Installed Capacity Share</h3>
+            <span className="text-[11px] text-gray-400">{formatGW(filteredTotalGW)} GW total</span>
+          </div>
+          <ResponsiveContainer width="100%" height={320}>
+            <PieChart>
+              <Pie
+                data={capacityPieData}
+                dataKey="value"
+                nameKey="name"
+                cx="45%" cy="50%"
+                innerRadius={55} outerRadius={110}
+                paddingAngle={3}
+                animationBegin={0}
+                animationDuration={1400}
+                animationEasing="ease-out"
+                label={false}
+                onMouseEnter={(_, index) => setActiveIndex(index)}
+                onMouseLeave={() => setActiveIndex(null)}
+              >
+                {capacityPieData.map((entry, index) => (
+                  <Cell
+                    key={entry.source}
+                    fill={getSourceColor(entry.source as any)}
+                    stroke="#fff"
+                    strokeWidth={activeIndex === index ? 3 : 2}
+                    opacity={activeIndex === null || activeIndex === index ? 1 : 0.6}
+                    style={{ transform: activeIndex === index ? 'scale(1.05)' : 'scale(1)', transformOrigin: 'center', transition: 'all 0.3s ease' }}
+                  />
+                ))}
+              </Pie>
+              <Tooltip formatter={(value: number, name: string) => [`${formatGW(value)} GW`, name]} contentStyle={{ borderRadius: '10px', fontFamily: 'Mulish', fontSize: '12px' }} />
+              <Legend
+                layout="vertical"
+                align="right"
+                verticalAlign="middle"
+                wrapperStyle={{ fontSize: '11px', fontFamily: 'Mulish', fontWeight: 600, lineHeight: '22px', paddingLeft: '8px' }}
+                formatter={(value: string) => {
+                  const item = capacityPieData.find(p => p.name === value);
+                  return `${value} — ${item?.pct || 0}%`;
+                }}
+              />
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Right: Source Breakdown — detailed list */}
+        <div className="icici-card p-5">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-xs font-bold text-gray-700">Source-wise Capacity</h3>
+            <span className="text-[11px] text-gray-400">{data.dataSource}</span>
+          </div>
+          <div className="grid grid-cols-2 gap-2">
+            {capacityPieData.map(s => (
+              <div key={s.source} className="flex items-center gap-2 p-2 rounded-lg bg-gray-50 border border-gray-100">
+                <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: getSourceColor(s.source as any) }} />
+                <div className="flex-1 min-w-0">
+                  <div className="text-[11px] font-bold text-gray-700 truncate">{s.name}</div>
+                  <div className="text-[10px] text-gray-400">{s.value.toFixed(1)} GW · {s.pct}%</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Extended KPI Grid */}
       <div className="grid grid-cols-2 tablet:grid-cols-4 laptop:grid-cols-5 gap-3">
         <KPICard
@@ -269,28 +352,6 @@ export function IndustryOverview() {
 
       {/* What Changed */}
       <WhatChanged />
-
-      {/* Source Breakdown — compact horizontal */}
-      <div className="icici-card p-4">
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="text-xs font-bold text-gray-700">Source-wise Capacity</h3>
-          <span className="text-[11px] text-gray-400">{data.dataSource}</span>
-        </div>
-        <div className="grid grid-cols-2 laptop:grid-cols-5 gap-2">
-          {filteredSources.sort((a, b) => b.capacityMW - a.capacityMW).slice(0, 10).map(s => {
-            const pct = filteredTotalGW > 0 ? (s.capacityMW / (filteredTotalGW * 1000)) * 100 : 0;
-            return (
-              <div key={s.source} className="flex items-center gap-2 p-2 rounded-lg bg-gray-50 border border-gray-100">
-                <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: getSourceColor(s.source as any) }} />
-                <div className="flex-1 min-w-0">
-                  <div className="text-[11px] font-bold text-gray-700 truncate">{formatSourceLabel(s.source)}</div>
-                  <div className="text-[10px] text-gray-400">{(s.capacityMW / 1000).toFixed(1)} GW · {pct.toFixed(1)}%</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
 
       {/* Sector Story */}
       <SectorStory />

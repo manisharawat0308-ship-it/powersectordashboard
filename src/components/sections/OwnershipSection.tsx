@@ -30,6 +30,8 @@ export function OwnershipSection() {
     ownership: item.ownership,
   }));
 
+  const totalInstalledGW = installedData.reduce((sum: number, i: any) => sum + i.value, 0);
+
   const generationByOwnership: Record<string, { bu: number; gw: number; pct: number }> = {
     central_psu: { bu: 420.5, gw: 48.0, pct: 24.0 },
     state_psu: { bu: 438.2, gw: 50.0, pct: 25.0 },
@@ -77,8 +79,8 @@ export function OwnershipSection() {
             <p className="text-[14px] text-gray-500">Who owns India's power generation capacity? Click any card to explore.</p>
           </div>
           <div className="text-right">
-            <div className="text-2xl font-black text-gray-900">450.29 <span className="text-sm text-gray-500">GW</span></div>
-            <div className="text-[14px] text-gray-400">Total Installed • FY24-25</div>
+            <div className="text-2xl font-black text-gray-900">{totalInstalledGW.toFixed(1)} <span className="text-sm text-gray-500">GW</span></div>
+            <div className="text-[14px] text-gray-400">Total Installed • as on 30 Sep 2026</div>
           </div>
         </div>
       </div>

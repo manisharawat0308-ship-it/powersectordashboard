@@ -1,28 +1,28 @@
 {
-  "lastUpdated": "2026-06-30",
-  "dataAsOf": "March 2025 (FY24-25)",
+  "lastUpdated": "2026-09-30",
+  "dataAsOf": "30 September 2026",
   "dataSource": "Central Electricity Authority (cea.nic.in)",
-  "note": "⚠️ BASE DATA: 31 March 2025 (CEA official). LATEST AVAILABLE (Jun 2026, MNRE): Solar 162 GW, Wind 57.4 GW, Total RE 288.6 GW, Total Non-Fossil 300+ GW. Dashboard shows official CEA March 2025 snapshot — refer to MNRE for most recent figures.",
-  "totalCapacityGW": 450.29,
+  "note": "Official CEA all-India installed capacity as on 30.09.2026. Total 558,896 MW (558.9 GW). Non-fossil (incl. large hydro & nuclear) 55.11%, fossil 44.89%. Biomass figure includes BM Power (10,869 MW) + Waste-to-Energy (878 MW). Minor decimal differences may occur due to rounding.",
+  "totalCapacityGW": 558.896,
   "byCategory": [
-    { "category": "fossil", "capacityGW": 243.87, "percentageShare": 54.2 },
-    { "category": "non_fossil", "capacityGW": 206.42, "percentageShare": 45.8 }
+    { "category": "fossil", "capacityGW": 250.87, "percentageShare": 44.89 },
+    { "category": "non_fossil", "capacityGW": 308.03, "percentageShare": 55.11 }
   ],
   "bySource": [
-    { "source": "coal", "capacityMW": 211540, "category": "fossil" },
-    { "source": "lignite", "capacityMW": 6740, "category": "fossil" },
-    { "source": "gas", "capacityMW": 24900, "category": "fossil" },
-    { "source": "diesel", "capacityMW": 690, "category": "fossil" },
-    { "source": "solar", "capacityMW": 88070, "category": "non_fossil" },
-    { "source": "wind", "capacityMW": 46650, "category": "non_fossil" },
-    { "source": "small_hydro", "capacityMW": 5050, "category": "non_fossil" },
-    { "source": "large_hydro", "capacityMW": 47050, "category": "non_fossil" },
-    { "source": "biomass", "capacityMW": 11420, "category": "non_fossil" },
-    { "source": "nuclear", "capacityMW": 8180, "category": "non_fossil" }
+    { "source": "coal", "capacityMW": 225068, "category": "fossil" },
+    { "source": "lignite", "capacityMW": 6370, "category": "fossil" },
+    { "source": "gas", "capacityMW": 19144, "category": "fossil" },
+    { "source": "diesel", "capacityMW": 288, "category": "fossil" },
+    { "source": "solar", "capacityMW": 171051, "category": "non_fossil" },
+    { "source": "wind", "capacityMW": 59201, "category": "non_fossil" },
+    { "source": "small_hydro", "capacityMW": 5182, "category": "non_fossil" },
+    { "source": "large_hydro", "capacityMW": 52065, "category": "non_fossil" },
+    { "source": "biomass", "capacityMW": 11747, "category": "non_fossil" },
+    { "source": "nuclear", "capacityMW": 8780, "category": "non_fossil" }
   ],
   "byOwnership": [
-    { "ownership": "central_psu", "capacityGW": 103.45, "percentage": 23.0 },
-    { "ownership": "state_psu", "capacityGW": 105.82, "percentage": 23.5 },
-    { "ownership": "private", "capacityGW": 241.02, "percentage": 53.5 }
+    { "ownership": "central_psu", "capacityGW": 126.308, "percentage": 22.6 },
+    { "ownership": "state_psu", "capacityGW": 130.631, "percentage": 23.4 },
+    { "ownership": "private", "capacityGW": 301.958, "percentage": 54.0 }
   ]
 }

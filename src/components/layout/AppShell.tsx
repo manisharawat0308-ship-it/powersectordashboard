@@ -15,6 +15,7 @@ const SECTIONS = [
   { id: 'bess', label: 'BESS', icon: '🔋' },
   { id: 'market-players', label: 'Players', icon: '🏢' },
   { id: 'geography', label: 'Map', icon: '🗺️' },
+  { id: 'claims', label: 'Case Studies', icon: '📂' },
   { id: 'news', label: 'News', icon: '📰' },
   { id: 'data-methodology', label: 'Data', icon: '📖' },
   { id: 'quiz', label: 'Quiz', icon: '🎮' },

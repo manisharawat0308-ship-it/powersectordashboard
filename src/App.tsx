@@ -13,6 +13,7 @@ import { GenerationSection } from '@/components/sections/GenerationSection';
 import { OwnershipSection } from '@/components/sections/OwnershipSection';
 import { TimelineSection } from '@/components/sections/TimelineSection';
 import { RiskAnalysis } from '@/components/sections/RiskAnalysis';
+import { ClaimsCaseStudies } from '@/components/sections/ClaimsCaseStudies';
 import { NuclearSection } from '@/components/sections/NuclearSection';
 import { DataMethodology } from '@/components/sections/DataMethodology';
 import { BESSDeepDive } from '@/components/sections/BESSDeepDive';
@@ -134,6 +135,13 @@ function DashboardContent() {
         return (
           <SectionErrorBoundary sectionName="Geography">
             <GeographySection />
+          </SectionErrorBoundary>
+        );
+
+      case 'claims':
+        return (
+          <SectionErrorBoundary sectionName="Claims Case Studies">
+            <ClaimsCaseStudies />
           </SectionErrorBoundary>
         );
 
